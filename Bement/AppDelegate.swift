@@ -36,16 +36,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         // Register the category.
         center.setNotificationCategories([defaultCategory])
         
-        var count = 0
-        for item in TermDates.terms {
-            
-            let date = tools.component2Date(item)
-            
-            if date as Date > Date() {
-                tools.pushTerms(termName: TermDates.names[count], date: item)
-                break
-            } else {
-                count += 1
+        if UserDefaults().bool(forKey: "alert") == true {
+            var count = 0
+            for item in TermDates.terms {
+                
+                let date = tools.component2Date(item)
+                
+                if date as Date > Date() {
+                    tools.pushTerms(termName: TermDates.names[count], date: item)
+                    globalVariable.dateCount = count
+                    break
+                } else {
+                    count += 1
+                }
             }
         }
         
@@ -111,12 +114,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 extension AppDelegate: WCSessionDelegate {
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
-        guard let request = message["alert"] as? String else {
+        guard let alertRequest = message["alert"] as? String else {
             replyHandler([:])
             return
         }
         
-        switch request {
+        switch alertRequest {
         case "true":
             replyHandler(["alert":"On"])
             UserDefaults().set(true, forKey: "alert")

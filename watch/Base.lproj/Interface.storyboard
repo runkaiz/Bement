@@ -22,10 +22,14 @@
         <!--Upcoming Interface Controller-->
         <scene sceneID="AAM-37-JPN">
             <objects>
-                <controller id="38E-4L-0Z7" customClass="UpcomingInterfaceController" customModule="watch_Extension">
+                <controller animationDuration="1" id="38E-4L-0Z7" customClass="UpcomingInterfaceController" customModule="watch_Extension">
                     <items>
                         <label alignment="left" text="Upcoming" id="Zbk-v3-avD">
                             <fontDescription key="font" name="SFProDisplay-Light" family="SF Pro Display" pointSize="13"/>
+                        </label>
+                        <label width="48" height="36" alignment="left" text="99" id="XwK-WR-ZbD">
+                            <color key="textColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <fontDescription key="font" type="system" pointSize="44"/>
                         </label>
                         <table alignment="left" id="zme-pS-KNb">
                             <items>
@@ -55,6 +59,7 @@
                         </switch>
                     </items>
                     <connections>
+                        <outlet property="dateLeft" destination="XwK-WR-ZbD" id="TiD-f3-0uq"/>
                         <outlet property="notifyMe" destination="EcL-1P-Syc" id="IXv-ug-xhA"/>
                         <outlet property="termCell" destination="zme-pS-KNb" id="FC3-Qm-zdg"/>
                     </connections>
