@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04F1062320F31E250051199D /* Screen Shot 2018-07-09 at 12.35.45 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 04F1062220F31E250051199D /* Screen Shot 2018-07-09 at 12.35.45 PM.png */; };
 		B2BA44D520EB9FD1009437A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA44D420EB9FD1009437A7 /* AppDelegate.swift */; };
 		B2BA44D720EB9FD1009437A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA44D620EB9FD1009437A7 /* ViewController.swift */; };
 		B2BA44DA20EB9FD1009437A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2BA44D820EB9FD1009437A7 /* Main.storyboard */; };
@@ -16,7 +15,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		04F1062220F31E250051199D /* Screen Shot 2018-07-09 at 12.35.45 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Screen Shot 2018-07-09 at 12.35.45 PM.png"; path = "../../../Desktop/Screen Shot 2018-07-09 at 12.35.45 PM.png"; sourceTree = "<group>"; };
 		B2BA44D120EB9FD1009437A7 /* Bement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2BA44D420EB9FD1009437A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2BA44D620EB9FD1009437A7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,7 +59,6 @@
 				B2BA44D820EB9FD1009437A7 /* Main.storyboard */,
 				B2BA44DB20EB9FD6009437A7 /* Assets.xcassets */,
 				B2BA44DD20EB9FD6009437A7 /* LaunchScreen.storyboard */,
-				04F1062220F31E250051199D /* Screen Shot 2018-07-09 at 12.35.45 PM.png */,
 				B2BA44E020EB9FD6009437A7 /* Info.plist */,
 			);
 			path = Bement;
@@ -126,7 +123,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2BA44DF20EB9FD6009437A7 /* LaunchScreen.storyboard in Resources */,
-				04F1062320F31E250051199D /* Screen Shot 2018-07-09 at 12.35.45 PM.png in Resources */,
 				B2BA44DC20EB9FD6009437A7 /* Assets.xcassets in Resources */,
 				B2BA44DA20EB9FD1009437A7 /* Main.storyboard in Resources */,
 			);
