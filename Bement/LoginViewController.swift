@@ -43,7 +43,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         if username.text != "" {
             if username.text == "admin" {
-                if password.text == "bementadminpassword " {
+                if password.text == "bemendDeerfield" {
                     print("Admin logged in")
                     performSegue(withIdentifier: "admin", sender: self)
                 }
