@@ -48,10 +48,6 @@ class SupportTableViewController: UITableViewController {
             self.makeAPhoneCall()
         }
         
-        let message = UIAlertAction(title: "Message", style: .default) { action in
-            
-        }
-        
         let icloud = UIAlertAction(title: "Quick Submit(Recommanded)", style: .default ) { action in
             
             CKContainer.default().accountStatus(completionHandler: { accountStatus, error in
@@ -78,18 +74,16 @@ class SupportTableViewController: UITableViewController {
         }
         
         actionSheet.addAction(icloud)
-        actionSheet.addAction(message)
         actionSheet.addAction(email)
         actionSheet.addAction(phone)
         actionSheet.addAction(cancel)
         phone.isEnabled = false
-        message.isEnabled = false
         
         present(actionSheet, animated: true, completion: nil)
     }
     
     func makeAPhoneCall()  {
-        let url: NSURL = URL(string: "TEL://1234567890")! as NSURL
+        let url: NSURL = URL(string: "TEL://4137735967")! as NSURL
         UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
     }
 }
