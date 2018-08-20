@@ -36,6 +36,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let str = NSLocalizedString("Test", comment: "")
+        print("\(str)")
+        
         tools.beautifulButton(LoginButton)
         tools.beautifulButton(SupportButton)
         username.delegate = self
