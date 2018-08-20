@@ -37,4 +37,12 @@ class MessagesTableViewController: UITableViewController {
         
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        globalVariable.row = indexPath.row
+        globalVariable.section = indexPath.section
+        
+        self.performSegue(withIdentifier: "info", sender: self)
+    }
 }

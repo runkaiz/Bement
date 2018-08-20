@@ -56,6 +56,10 @@
 		B2BA44D520EB9FD1009437A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA44D420EB9FD1009437A7 /* AppDelegate.swift */; };
 		B2BA44DA20EB9FD1009437A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2BA44D820EB9FD1009437A7 /* Main.storyboard */; };
 		B2BA44DC20EB9FD6009437A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2BA44DB20EB9FD6009437A7 /* Assets.xcassets */; };
+		B2E5B43A212AD48600CF904E /* ErrorsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E5B439212AD48600CF904E /* ErrorsTableViewController.swift */; };
+		B2E5B43C212AD52900CF904E /* MessageInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E5B43B212AD52900CF904E /* MessageInfoViewController.swift */; };
+		B2E5B43E212ADCD800CF904E /* ErrorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E5B43D212ADCD800CF904E /* ErrorTableViewCell.swift */; };
+		B2E5B440212AE05500CF904E /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E5B43F212AE05500CF904E /* ErrorViewController.swift */; };
 		B2E97A23211AFFF70005BEA9 /* ForgotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E97A22211AFFF60005BEA9 /* ForgotViewController.swift */; };
 		B2E97A25211B2B4C0005BEA9 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E97A24211B2B4C0005BEA9 /* AdminViewController.swift */; };
 		B2E97A29211B2B8D0005BEA9 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2E97A28211B2B8D0005BEA9 /* CloudKit.framework */; };
@@ -114,6 +118,10 @@
 		B2BA44D920EB9FD1009437A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B2BA44DB20EB9FD6009437A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2BA44E020EB9FD6009437A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2E5B439212AD48600CF904E /* ErrorsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorsTableViewController.swift; sourceTree = "<group>"; };
+		B2E5B43B212AD52900CF904E /* MessageInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageInfoViewController.swift; sourceTree = "<group>"; };
+		B2E5B43D212ADCD800CF904E /* ErrorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTableViewCell.swift; sourceTree = "<group>"; };
+		B2E5B43F212AE05500CF904E /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
 		B2E97A22211AFFF60005BEA9 /* ForgotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotViewController.swift; sourceTree = "<group>"; };
 		B2E97A24211B2B4C0005BEA9 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
 		B2E97A26211B2B890005BEA9 /* Bement.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Bement.entitlements; sourceTree = "<group>"; };
@@ -219,6 +227,10 @@
 				B2E97A24211B2B4C0005BEA9 /* AdminViewController.swift */,
 				B2720438211D78590066AC5E /* MessagesTableViewController.swift */,
 				B2045D8B2129818800272036 /* MessagesTableViewCell.swift */,
+				B2E5B43B212AD52900CF904E /* MessageInfoViewController.swift */,
+				B2E5B439212AD48600CF904E /* ErrorsTableViewController.swift */,
+				B2E5B43D212ADCD800CF904E /* ErrorTableViewCell.swift */,
+				B2E5B43F212AE05500CF904E /* ErrorViewController.swift */,
 				B26C0F0F2119710900750545 /* SupportTableViewController.swift */,
 				B272043A211D7DAF0066AC5E /* QuickSubmitViewController.swift */,
 				B2E97A22211AFFF60005BEA9 /* ForgotViewController.swift */,
@@ -355,18 +367,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2E5B43A212AD48600CF904E /* ErrorsTableViewController.swift in Sources */,
 				B2720439211D78590066AC5E /* MessagesTableViewController.swift in Sources */,
 				B272043B211D7DAF0066AC5E /* QuickSubmitViewController.swift in Sources */,
 				B2045DEC212A7DD900272036 /* LocksmithSecurityClass.swift in Sources */,
 				B2045DEF212A7DD900272036 /* LocksmithInternetAuthenticationType.swift in Sources */,
 				B2045DEE212A7DD900272036 /* LocksmithAccessibleOption.swift in Sources */,
 				B26C0F102119710900750545 /* SupportTableViewController.swift in Sources */,
+				B2E5B440212AE05500CF904E /* ErrorViewController.swift in Sources */,
 				B268D40B21195B06001D7BF1 /* LoginViewController.swift in Sources */,
 				B2BA44D520EB9FD1009437A7 /* AppDelegate.swift in Sources */,
 				B2E97A25211B2B4C0005BEA9 /* AdminViewController.swift in Sources */,
 				B2045DED212A7DD900272036 /* Dictionary_Initializers.swift in Sources */,
 				B26C0F0A21196ACB00750545 /* Functions.swift in Sources */,
+				B2E5B43E212ADCD800CF904E /* ErrorTableViewCell.swift in Sources */,
 				B2045D8C2129818800272036 /* MessagesTableViewCell.swift in Sources */,
+				B2E5B43C212AD52900CF904E /* MessageInfoViewController.swift in Sources */,
 				B2045DE9212A7DD900272036 /* LocksmithError.swift in Sources */,
 				B2E97A23211AFFF70005BEA9 /* ForgotViewController.swift in Sources */,
 				B2045DEA212A7DD900272036 /* Locksmith.swift in Sources */,

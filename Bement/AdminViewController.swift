@@ -13,10 +13,13 @@ class AdminViewController: UIViewController {
 
     @IBOutlet var messageButton: UIButton!
     
+    @IBOutlet var errorButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tools.beautifulButton(messageButton)
+        tools.beautifulButton(errorButton)
     }
     
     @IBAction func message(_ sender: Any) {
@@ -33,6 +36,51 @@ class AdminViewController: UIViewController {
         showMessages()
     }
     
+    @IBAction func errorButtonPressed(_ sender: Any) {
+        
+        let alert = UIAlertController(title: nil, message: "Please wait...", preferredStyle: .alert)
+        
+        let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+        loadingIndicator.hidesWhenStopped = true
+        loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorView.Style.gray
+        loadingIndicator.startAnimating();
+        
+        alert.view.addSubview(loadingIndicator)
+        present(alert, animated: true, completion: nil)
+        showErrors()
+    }
+    
+    func showErrors() {
+        
+        DispatchQueue.main.async {
+            let container = CKContainer.default()
+            let database = container.publicCloudDatabase
+            let predicate = NSPredicate(value: true)
+            let query = CKQuery(recordType: "Error", predicate: predicate)
+            let operation = CKQueryOperation(query: query)
+            
+            var errorRecords: [CKRecord] = []
+            globalVariable.errorRecordsName = []
+            
+            operation.recordFetchedBlock = { record in
+                
+                errorRecords.append(record)
+            }
+            
+            operation.queryCompletionBlock = { cursor, error in
+                
+                globalVariable.errorRecordsName = errorRecords
+                DispatchQueue.main.async {
+                    self.dismiss(animated: false, completion: nil)
+                    self.performSegue(withIdentifier: "error", sender: self)
+                }
+            }
+            
+            database.add(operation)
+        }
+    }
+    
+    
     func showMessages() {
         
         DispatchQueue.main.async {
@@ -44,12 +92,10 @@ class AdminViewController: UIViewController {
             
             var messageRecords: [CKRecord] = []
             globalVariable.messageRecordsName = []
-            globalVariable.messageRecords = []
             
             operation.recordFetchedBlock = { record in
                 
                 messageRecords.append(record)
-                globalVariable.messageRecords.append(record.recordID)
             }
             
             operation.queryCompletionBlock = { cursor, error in

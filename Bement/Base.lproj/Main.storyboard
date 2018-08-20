@@ -26,6 +26,84 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Errors-->
+        <scene sceneID="tah-He-hId">
+            <objects>
+                <tableViewController id="zrO-jP-WWb" customClass="ErrorsTableViewController" customModule="Bement" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="J9c-Ff-GxR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="6KK-e4-VbC" style="IBUITableViewCellStyleDefault" id="hrG-GK-9gD" customClass="ErrorTableViewCell" customModule="Bement" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hrG-GK-9gD" id="aTT-Km-EEM">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6KK-e4-VbC">
+                                            <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="title" destination="6KK-e4-VbC" id="iPb-2k-l3P"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="zrO-jP-WWb" id="Qe4-Ks-SW1"/>
+                            <outlet property="delegate" destination="zrO-jP-WWb" id="aWz-nY-XWQ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Errors" largeTitleDisplayMode="never" id="trg-Yp-FSb"/>
+                    <connections>
+                        <segue destination="qbn-rn-iXz" kind="show" identifier="errorInfo" id="QlD-UR-IvD"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tal-GM-hNn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3646" y="-1030"/>
+        </scene>
+        <!--Information-->
+        <scene sceneID="qpW-pG-ETG">
+            <objects>
+                <viewController id="qbn-rn-iXz" customClass="ErrorViewController" customModule="Bement" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DLK-C6-Cku">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZGh-vw-Bba">
+                                <rect key="frame" x="16" y="64" width="343" height="583"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZGh-vw-Bba" firstAttribute="top" secondItem="4V2-cf-wxh" secondAttribute="top" id="F7z-g9-a3T"/>
+                            <constraint firstItem="4V2-cf-wxh" firstAttribute="trailing" secondItem="ZGh-vw-Bba" secondAttribute="trailing" constant="16" id="gHb-bn-rqi"/>
+                            <constraint firstItem="ZGh-vw-Bba" firstAttribute="leading" secondItem="4V2-cf-wxh" secondAttribute="leading" constant="16" id="hme-ts-o63"/>
+                            <constraint firstAttribute="bottom" secondItem="ZGh-vw-Bba" secondAttribute="bottom" constant="20" symbolic="YES" id="nBH-p0-HzR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4V2-cf-wxh"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Information" id="h3i-AP-moN"/>
+                    <connections>
+                        <outlet property="information" destination="ZGh-vw-Bba" id="FXs-kc-v2i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cuv-oF-354" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4404" y="-1030.4347826086957"/>
+        </scene>
         <!--Welcome, Admin-->
         <scene sceneID="EVu-0r-tMk">
             <objects>
@@ -46,13 +124,28 @@
                                     <action selector="message:" destination="tQg-eZ-bCw" eventType="touchUpInside" id="1O4-eh-NwC"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJU-yI-q8r">
+                                <rect key="frame" x="16" y="239" width="343" height="44"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="eU0-o2-YSS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="17"/>
+                                <state key="normal" title="Error Uploaded"/>
+                                <connections>
+                                    <action selector="errorButtonPressed:" destination="tQg-eZ-bCw" eventType="touchUpInside" id="6wy-UE-gzc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="rkA-ag-QMF" firstAttribute="top" secondItem="gId-Lt-jzV" secondAttribute="top" constant="39" id="5nc-VT-Zw6"/>
+                            <constraint firstItem="pJU-yI-q8r" firstAttribute="top" secondItem="rkA-ag-QMF" secondAttribute="bottom" constant="40" id="aFo-nW-S5H"/>
                             <constraint firstItem="rkA-ag-QMF" firstAttribute="leading" secondItem="gId-Lt-jzV" secondAttribute="leading" constant="16" id="cH9-2a-gNY"/>
                             <constraint firstItem="gId-Lt-jzV" firstAttribute="trailing" secondItem="rkA-ag-QMF" secondAttribute="trailing" constant="16" id="lib-TA-FVA"/>
                             <constraint firstItem="rkA-ag-QMF" firstAttribute="centerX" secondItem="RNT-9Z-bI3" secondAttribute="centerX" id="rEc-l8-w6U"/>
+                            <constraint firstItem="pJU-yI-q8r" firstAttribute="leading" secondItem="gId-Lt-jzV" secondAttribute="leading" constant="16" id="s17-u1-kRS"/>
+                            <constraint firstItem="gId-Lt-jzV" firstAttribute="trailing" secondItem="pJU-yI-q8r" secondAttribute="trailing" constant="16" id="uOx-hd-OqO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gId-Lt-jzV"/>
                     </view>
@@ -66,8 +159,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="errorButton" destination="pJU-yI-q8r" id="Rlv-rq-tJ6"/>
                         <outlet property="messageButton" destination="rkA-ag-QMF" id="1Qa-mr-5cf"/>
                         <segue destination="1zm-eU-v0x" kind="show" identifier="messages" id="HoI-va-AfE"/>
+                        <segue destination="zrO-jP-WWb" kind="show" identifier="error" id="mOW-hD-QQM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vok-RW-tky" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -118,10 +213,66 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Messages" largeTitleDisplayMode="never" id="Sgp-JN-zTD"/>
+                    <connections>
+                        <segue destination="aTs-Tf-Cef" kind="show" identifier="info" id="TYf-jM-Rgg"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aEf-R1-ilh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3646" y="-344"/>
+        </scene>
+        <!--Information-->
+        <scene sceneID="w1C-2w-aVX">
+            <objects>
+                <viewController id="aTs-Tf-Cef" customClass="MessageInfoViewController" customModule="Bement" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bTg-DM-iY2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nSv-gi-2WM">
+                                <rect key="frame" x="16" y="64" width="343" height="260"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="260" id="pHN-Ys-q3x"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kuV-Hi-pDx">
+                                <rect key="frame" x="16" y="375" width="48" height="21"/>
+                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="example@example.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ayr-2A-IkI">
+                                <rect key="frame" x="80" y="375" width="188.5" height="20"/>
+                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iTm-sL-1Wf" firstAttribute="trailing" secondItem="nSv-gi-2WM" secondAttribute="trailing" constant="16" id="1c6-MU-4aC"/>
+                            <constraint firstItem="kuV-Hi-pDx" firstAttribute="leading" secondItem="iTm-sL-1Wf" secondAttribute="leading" constant="16" id="TEx-Q4-viv"/>
+                            <constraint firstItem="kuV-Hi-pDx" firstAttribute="top" secondItem="nSv-gi-2WM" secondAttribute="bottom" constant="51" id="ddH-jF-iY9"/>
+                            <constraint firstItem="nSv-gi-2WM" firstAttribute="top" secondItem="iTm-sL-1Wf" secondAttribute="top" id="g8E-Zz-nce"/>
+                            <constraint firstItem="Ayr-2A-IkI" firstAttribute="leading" secondItem="kuV-Hi-pDx" secondAttribute="trailing" constant="16" id="gWj-Fe-Ko0"/>
+                            <constraint firstItem="Ayr-2A-IkI" firstAttribute="top" secondItem="nSv-gi-2WM" secondAttribute="bottom" constant="51" id="qRD-q0-SAl"/>
+                            <constraint firstItem="nSv-gi-2WM" firstAttribute="leading" secondItem="iTm-sL-1Wf" secondAttribute="leading" constant="16" id="x3s-97-0Fg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iTm-sL-1Wf"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Information" id="OJF-1R-Jzj"/>
+                    <connections>
+                        <outlet property="email" destination="Ayr-2A-IkI" id="GhP-X6-86d"/>
+                        <outlet property="information" destination="nSv-gi-2WM" id="Uch-l0-cNA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2jG-By-Q3g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4404" y="-344.07796101949026"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="fQe-Gm-6yp">
@@ -343,7 +494,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gDV-fQ-UNQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2802.4000000000001" y="1052.9556650246307"/>
+            <point key="canvasLocation" x="2799" y="1053"/>
         </scene>
         <!--Could not login?-->
         <scene sceneID="KBb-ob-Gd5">
