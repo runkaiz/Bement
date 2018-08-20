@@ -1,4 +1,4 @@
-# Bement
+# Bement Parent Portal
 This app is for our beloved Bement School.
 
 
