@@ -36,12 +36,6 @@ class SupportTableViewController: UITableViewController {
         let actionSheet = UIAlertController(title: "Contact Support", message: "Please select an option from below to contact for supports, supports are not always available instantly.", preferredStyle: .actionSheet)
         
         let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        let email = UIAlertAction(title: "Email", style: .default) { action in
-            
-            DispatchQueue.main.async {
-                self.performSegue(withIdentifier: "compose", sender: self)
-            }
-        }
         
         let phone = UIAlertAction(title: "Phone", style: .destructive) { action in
             
@@ -74,10 +68,9 @@ class SupportTableViewController: UITableViewController {
         }
         
         actionSheet.addAction(icloud)
-        actionSheet.addAction(email)
         actionSheet.addAction(phone)
         actionSheet.addAction(cancel)
-        phone.isEnabled = false
+        phone.isEnabled = true
         
         present(actionSheet, animated: true, completion: nil)
     }

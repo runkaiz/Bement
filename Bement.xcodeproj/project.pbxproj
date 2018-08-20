@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B2045D8A21297F7000272036 /* GlobalVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2045D8921297F7000272036 /* GlobalVariable.swift */; };
+		B2045D8C2129818800272036 /* MessagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2045D8B2129818800272036 /* MessagesTableViewCell.swift */; };
+		B2045DE9212A7DD900272036 /* LocksmithError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2045DE0212A7DD900272036 /* LocksmithError.swift */; };
+		B2045DEA212A7DD900272036 /* Locksmith.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2045DE1212A7DD900272036 /* Locksmith.swift */; };
+		B2045DEB212A7DD900272036 /* LocksmithInternetProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2045DE2212A7DD900272036 /* LocksmithInternetProtocol.swift */; };
+		B2045DEC212A7DD900272036 /* LocksmithSecurityClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2045DE3212A7DD900272036 /* LocksmithSecurityClass.swift */; };
+		B2045DED212A7DD900272036 /* Dictionary_Initializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2045DE4212A7DD900272036 /* Dictionary_Initializers.swift */; };
+		B2045DEE212A7DD900272036 /* LocksmithAccessibleOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2045DE5212A7DD900272036 /* LocksmithAccessibleOption.swift */; };
+		B2045DEF212A7DD900272036 /* LocksmithInternetAuthenticationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2045DE6212A7DD900272036 /* LocksmithInternetAuthenticationType.swift */; };
+		B2045DF2212A7DF700272036 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2045DF1212A7DF700272036 /* Security.framework */; };
 		B268D40B21195B06001D7BF1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B268D40A21195B06001D7BF1 /* LoginViewController.swift */; };
 		B26C0EEB2119670500750545 /* SF-Pro-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = B26C0ECD2119670500750545 /* SF-Pro-Display-Thin.otf */; };
 		B26C0EEC2119670500750545 /* SF-Pro-Display-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B26C0ECE2119670500750545 /* SF-Pro-Display-SemiboldItalic.otf */; };
@@ -46,13 +56,23 @@
 		B2BA44D520EB9FD1009437A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA44D420EB9FD1009437A7 /* AppDelegate.swift */; };
 		B2BA44DA20EB9FD1009437A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2BA44D820EB9FD1009437A7 /* Main.storyboard */; };
 		B2BA44DC20EB9FD6009437A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2BA44DB20EB9FD6009437A7 /* Assets.xcassets */; };
-		B2E97A212119947C0005BEA9 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E97A202119947C0005BEA9 /* ComposeViewController.swift */; };
 		B2E97A23211AFFF70005BEA9 /* ForgotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E97A22211AFFF60005BEA9 /* ForgotViewController.swift */; };
 		B2E97A25211B2B4C0005BEA9 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E97A24211B2B4C0005BEA9 /* AdminViewController.swift */; };
 		B2E97A29211B2B8D0005BEA9 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2E97A28211B2B8D0005BEA9 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B2045D8921297F7000272036 /* GlobalVariable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariable.swift; sourceTree = "<group>"; };
+		B2045D8B2129818800272036 /* MessagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesTableViewCell.swift; sourceTree = "<group>"; };
+		B2045DE0212A7DD900272036 /* LocksmithError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocksmithError.swift; sourceTree = "<group>"; };
+		B2045DE1212A7DD900272036 /* Locksmith.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Locksmith.swift; sourceTree = "<group>"; };
+		B2045DE2212A7DD900272036 /* LocksmithInternetProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocksmithInternetProtocol.swift; sourceTree = "<group>"; };
+		B2045DE3212A7DD900272036 /* LocksmithSecurityClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocksmithSecurityClass.swift; sourceTree = "<group>"; };
+		B2045DE4212A7DD900272036 /* Dictionary_Initializers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dictionary_Initializers.swift; sourceTree = "<group>"; };
+		B2045DE5212A7DD900272036 /* LocksmithAccessibleOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocksmithAccessibleOption.swift; sourceTree = "<group>"; };
+		B2045DE6212A7DD900272036 /* LocksmithInternetAuthenticationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocksmithInternetAuthenticationType.swift; sourceTree = "<group>"; };
+		B2045DE7212A7DD900272036 /* Locksmith.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Locksmith.h; sourceTree = "<group>"; };
+		B2045DF1212A7DF700272036 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		B268D40A21195B06001D7BF1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B26C0ECD2119670500750545 /* SF-Pro-Display-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Thin.otf"; sourceTree = "<group>"; };
 		B26C0ECE2119670500750545 /* SF-Pro-Display-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-SemiboldItalic.otf"; sourceTree = "<group>"; };
@@ -94,7 +114,6 @@
 		B2BA44D920EB9FD1009437A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B2BA44DB20EB9FD6009437A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2BA44E020EB9FD6009437A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B2E97A202119947C0005BEA9 /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		B2E97A22211AFFF60005BEA9 /* ForgotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotViewController.swift; sourceTree = "<group>"; };
 		B2E97A24211B2B4C0005BEA9 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
 		B2E97A26211B2B890005BEA9 /* Bement.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Bement.entitlements; sourceTree = "<group>"; };
@@ -106,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2045DF2212A7DF700272036 /* Security.framework in Frameworks */,
 				B2E97A29211B2B8D0005BEA9 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -113,6 +133,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B2045DDF212A7DD900272036 /* Locksmith */ = {
+			isa = PBXGroup;
+			children = (
+				B2045DE0212A7DD900272036 /* LocksmithError.swift */,
+				B2045DE1212A7DD900272036 /* Locksmith.swift */,
+				B2045DE2212A7DD900272036 /* LocksmithInternetProtocol.swift */,
+				B2045DE3212A7DD900272036 /* LocksmithSecurityClass.swift */,
+				B2045DE4212A7DD900272036 /* Dictionary_Initializers.swift */,
+				B2045DE5212A7DD900272036 /* LocksmithAccessibleOption.swift */,
+				B2045DE6212A7DD900272036 /* LocksmithInternetAuthenticationType.swift */,
+				B2045DE7212A7DD900272036 /* Locksmith.h */,
+			);
+			path = Locksmith;
+			sourceTree = "<group>";
+		};
 		B268D40C2119667B001D7BF1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,13 +218,15 @@
 				B268D40A21195B06001D7BF1 /* LoginViewController.swift */,
 				B2E97A24211B2B4C0005BEA9 /* AdminViewController.swift */,
 				B2720438211D78590066AC5E /* MessagesTableViewController.swift */,
+				B2045D8B2129818800272036 /* MessagesTableViewCell.swift */,
 				B26C0F0F2119710900750545 /* SupportTableViewController.swift */,
-				B2E97A202119947C0005BEA9 /* ComposeViewController.swift */,
 				B272043A211D7DAF0066AC5E /* QuickSubmitViewController.swift */,
 				B2E97A22211AFFF60005BEA9 /* ForgotViewController.swift */,
+				B2045D8921297F7000272036 /* GlobalVariable.swift */,
 				B26C0F0921196ACB00750545 /* Functions.swift */,
 				B2BA44D820EB9FD1009437A7 /* Main.storyboard */,
 				B2BA44DB20EB9FD6009437A7 /* Assets.xcassets */,
+				B2045DDF212A7DD900272036 /* Locksmith */,
 				B26C0F112119861100750545 /* LaunchScreen.storyboard */,
 				B268D40C2119667B001D7BF1 /* Resources */,
 				B2BA44E020EB9FD6009437A7 /* Info.plist */,
@@ -200,6 +237,7 @@
 		B2E97A27211B2B8D0005BEA9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B2045DF1212A7DF700272036 /* Security.framework */,
 				B2E97A28211B2B8D0005BEA9 /* CloudKit.framework */,
 			);
 			name = Frameworks;
@@ -238,6 +276,9 @@
 					B2BA44D020EB9FD1009437A7 = {
 						CreatedOnToolsVersion = 10.0;
 						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
 							com.apple.Push = {
 								enabled = 1;
 							};
@@ -314,15 +355,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2E97A212119947C0005BEA9 /* ComposeViewController.swift in Sources */,
 				B2720439211D78590066AC5E /* MessagesTableViewController.swift in Sources */,
 				B272043B211D7DAF0066AC5E /* QuickSubmitViewController.swift in Sources */,
+				B2045DEC212A7DD900272036 /* LocksmithSecurityClass.swift in Sources */,
+				B2045DEF212A7DD900272036 /* LocksmithInternetAuthenticationType.swift in Sources */,
+				B2045DEE212A7DD900272036 /* LocksmithAccessibleOption.swift in Sources */,
 				B26C0F102119710900750545 /* SupportTableViewController.swift in Sources */,
 				B268D40B21195B06001D7BF1 /* LoginViewController.swift in Sources */,
 				B2BA44D520EB9FD1009437A7 /* AppDelegate.swift in Sources */,
 				B2E97A25211B2B4C0005BEA9 /* AdminViewController.swift in Sources */,
+				B2045DED212A7DD900272036 /* Dictionary_Initializers.swift in Sources */,
 				B26C0F0A21196ACB00750545 /* Functions.swift in Sources */,
+				B2045D8C2129818800272036 /* MessagesTableViewCell.swift in Sources */,
+				B2045DE9212A7DD900272036 /* LocksmithError.swift in Sources */,
 				B2E97A23211AFFF70005BEA9 /* ForgotViewController.swift in Sources */,
+				B2045DEA212A7DD900272036 /* Locksmith.swift in Sources */,
+				B2045D8A21297F7000272036 /* GlobalVariable.swift in Sources */,
+				B2045DEB212A7DD900272036 /* LocksmithInternetProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,7 +519,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.numericdesign.Bement;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -490,7 +539,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.numericdesign.Bement;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

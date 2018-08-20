@@ -8,8 +8,19 @@
 
 import UIKit
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
+struct Credentials {
+    var username: String
+    var password: String
+}
 
+enum KeychainError: Error {
+    case noPassword
+    case unexpectedPasswordData
+    case unhandledError(status: OSStatus)
+}
+
+class LoginViewController: UIViewController, UITextFieldDelegate {
+    
     @IBOutlet var LoginButton: UIButton!
     
     @IBOutlet var SupportButton: UIButton!
@@ -25,6 +36,19 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         tools.beautifulButton(SupportButton)
         username.delegate = self
         username.delegate = self
+        
+        let dictionary = Locksmith.loadDataForUserAccount(userAccount: "admin")
+        let passwords = Locksmith.loadDataForUserAccount(userAccount: "admin-password")
+        
+        if dictionary != nil {
+            print(dictionary!)
+            print(passwords!)
+            username.text = dictionary?["username"] as? String
+            password.text = passwords?["password"] as? String
+        }
+        else {
+            print("haahhahahahahah")
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -43,9 +67,27 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         if username.text != "" {
             if username.text == "admin" {
-                if password.text == "bemendDeerfield" {
-                    print("Admin logged in")
+                if password.text == "bementdeerfield" {
                     performSegue(withIdentifier: "admin", sender: self)
+                    
+                    if Locksmith.loadDataForUserAccount(userAccount: "admin") == nil {
+                        do {
+                            
+                            try Locksmith.saveData(data: ["username": "admin"], forUserAccount: "admin")
+                            try Locksmith.saveData(data: ["password": "bementdeerfield"], forUserAccount: "admin-password")
+                            print("saved")
+                        } catch {
+                            print("A error appeared")
+                            print("First: \(error)")
+                        }
+                    } else {
+                        do {
+                            try Locksmith.updateData(data: ["username": "admin"], forUserAccount: "admin", inService: "error fixing")
+                            try Locksmith.updateData(data: ["password": "bementdeerfield"], forUserAccount: "admin-password", inService: "error fixing")
+                        } catch {
+                            print(error)
+                        }
+                    }
                 }
                 else {
                     let alert = UIAlertController(title: "Access Denied", message: "A admin need a password", preferredStyle: .alert)

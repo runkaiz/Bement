@@ -63,6 +63,16 @@ class QuickSubmitViewController: UIViewController, UITextViewDelegate {
             else {
                 
                 DispatchQueue.main.async {
+                    
+                    let alert = UIAlertController(title: nil, message: "Please wait...", preferredStyle: .alert)
+                    
+                    let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+                    loadingIndicator.hidesWhenStopped = true
+                    loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorView.Style.gray
+                    loadingIndicator.startAnimating();
+                    
+                    alert.view.addSubview(loadingIndicator)
+                    self.present(alert, animated: true, completion: nil)
                     self.uploadRecords()
                 }
                 
@@ -78,8 +88,7 @@ class QuickSubmitViewController: UIViewController, UITextViewDelegate {
         let dformatter = DateFormatter()
         dformatter.dateFormat = "yyyy/MM/dd/ HH:mm:ss"
         
-        let messageRecordID = CKRecord.ID(recordName: "messageID")
-        let messageRecord = CKRecord(recordType: "Message", recordID: messageRecordID)
+        let messageRecord = CKRecord(recordType: "Message")
         
         messageRecord["time"] = dformatter.string(from: now) as NSString
         messageRecord["message"] = messageField.text as NSString
@@ -120,6 +129,7 @@ class QuickSubmitViewController: UIViewController, UITextViewDelegate {
                 alert.addAction(dismiss)
                 
                 DispatchQueue.main.async {
+                    self.dismiss(animated: false, completion: nil)
                     self.present(alert, animated: true, completion: nil)
                 }
                 
@@ -128,8 +138,7 @@ class QuickSubmitViewController: UIViewController, UITextViewDelegate {
     }
     
     func uploadError(_ error: Error) {
-        let errorRecordID = CKRecord.ID(recordName: "errorID")
-        let errorRecord = CKRecord(recordType: "Error", recordID: errorRecordID)
+        let errorRecord = CKRecord(recordType: "Error")
         
         let string = String(describing: error) as NSString
         
