@@ -83,7 +83,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         UIView.animate(withDuration: 0.25, animations: {
                 
             self.view.layoutIfNeeded()
-            self.stackView.frame.origin.y = 269.5
+            self.stackView.frame.origin.y = 231
             self.logoTop.constant = 0
         })
     }
@@ -98,7 +98,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             UIView.animate(withDuration: 0.25, animations: {
                 
                 self.view.layoutIfNeeded()
-                self.stackView.frame.origin.y = 269.5
+                self.stackView.frame.origin.y = 231
                 self.logoTop.constant = 0
             })
         } else if textField == password {
