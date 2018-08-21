@@ -18,6 +18,7 @@
 		B2045DEF212A7DD900272036 /* LocksmithInternetAuthenticationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2045DE6212A7DD900272036 /* LocksmithInternetAuthenticationType.swift */; };
 		B2045DF2212A7DF700272036 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2045DF1212A7DF700272036 /* Security.framework */; };
 		B24B2688212C4ECB00D316F5 /* wifiTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24B2687212C4ECB00D316F5 /* wifiTableViewController.swift */; };
+		B24B268A212C51DD00D316F5 /* OtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24B2689212C51DD00D316F5 /* OtherViewController.swift */; };
 		B268D40B21195B06001D7BF1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B268D40A21195B06001D7BF1 /* LoginViewController.swift */; };
 		B26C0EEB2119670500750545 /* SF-Pro-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = B26C0ECD2119670500750545 /* SF-Pro-Display-Thin.otf */; };
 		B26C0EEC2119670500750545 /* SF-Pro-Display-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B26C0ECE2119670500750545 /* SF-Pro-Display-SemiboldItalic.otf */; };
@@ -81,6 +82,7 @@
 		B2045DF1212A7DF700272036 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		B24B2686212C30CE00D316F5 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		B24B2687212C4ECB00D316F5 /* wifiTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wifiTableViewController.swift; sourceTree = "<group>"; };
+		B24B2689212C51DD00D316F5 /* OtherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherViewController.swift; sourceTree = "<group>"; };
 		B268D40A21195B06001D7BF1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B26C0ECD2119670500750545 /* SF-Pro-Display-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Thin.otf"; sourceTree = "<group>"; };
 		B26C0ECE2119670500750545 /* SF-Pro-Display-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-SemiboldItalic.otf"; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 				B272043A211D7DAF0066AC5E /* QuickSubmitViewController.swift */,
 				B2E97A22211AFFF60005BEA9 /* ForgotViewController.swift */,
 				B24B2687212C4ECB00D316F5 /* wifiTableViewController.swift */,
+				B24B2689212C51DD00D316F5 /* OtherViewController.swift */,
 				B2045D8921297F7000272036 /* GlobalVariable.swift */,
 				B26C0F0921196ACB00750545 /* Functions.swift */,
 				B2BA44D820EB9FD1009437A7 /* Main.storyboard */,
@@ -388,6 +391,7 @@
 				B2E5B440212AE05500CF904E /* ErrorViewController.swift in Sources */,
 				B268D40B21195B06001D7BF1 /* LoginViewController.swift in Sources */,
 				B2BA44D520EB9FD1009437A7 /* AppDelegate.swift in Sources */,
+				B24B268A212C51DD00D316F5 /* OtherViewController.swift in Sources */,
 				B2E97A25211B2B4C0005BEA9 /* AdminViewController.swift in Sources */,
 				B2045DED212A7DD900272036 /* Dictionary_Initializers.swift in Sources */,
 				B26C0F0A21196ACB00750545 /* Functions.swift in Sources */,

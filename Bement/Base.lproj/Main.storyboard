@@ -335,7 +335,6 @@
                                 <color key="backgroundColor" red="0.99546068906784058" green="0.58943367004394531" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Bmr-9B-1r5"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="327" id="cuh-U9-LHa"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="17"/>
                                 <state key="normal" title="Support">
@@ -370,11 +369,13 @@
                             <constraint firstItem="x0b-lu-wxJ" firstAttribute="leading" secondItem="Din-wj-xIg" secondAttribute="leading" constant="18" id="9yg-yQ-iom"/>
                             <constraint firstItem="Din-wj-xIg" firstAttribute="trailing" secondItem="3sl-bx-Jbb" secondAttribute="trailing" constant="24" id="B1b-mV-V8o"/>
                             <constraint firstItem="0Hn-kO-qDx" firstAttribute="centerX" secondItem="G6m-8m-qua" secondAttribute="centerX" id="B2l-dp-imh"/>
+                            <constraint firstItem="0Qw-s0-1J0" firstAttribute="leading" secondItem="Din-wj-xIg" secondAttribute="leading" constant="24" id="IeK-XU-ecF"/>
                             <constraint firstItem="3sl-bx-Jbb" firstAttribute="centerX" secondItem="G6m-8m-qua" secondAttribute="centerX" id="KGf-fk-8We"/>
                             <constraint firstItem="0Hn-kO-qDx" firstAttribute="top" secondItem="Din-wj-xIg" secondAttribute="top" id="e36-pD-3n2"/>
                             <constraint firstItem="0Qw-s0-1J0" firstAttribute="centerX" secondItem="G6m-8m-qua" secondAttribute="centerX" id="moa-In-u7G"/>
                             <constraint firstItem="Din-wj-xIg" firstAttribute="bottom" secondItem="0Qw-s0-1J0" secondAttribute="bottom" constant="20" id="mou-hW-lsw"/>
                             <constraint firstItem="0Qw-s0-1J0" firstAttribute="top" secondItem="3sl-bx-Jbb" secondAttribute="bottom" constant="8" id="rYp-kD-JE8"/>
+                            <constraint firstItem="Din-wj-xIg" firstAttribute="trailing" secondItem="0Qw-s0-1J0" secondAttribute="trailing" constant="24" id="sp5-BK-V3t"/>
                             <constraint firstItem="x0b-lu-wxJ" firstAttribute="centerX" secondItem="G6m-8m-qua" secondAttribute="centerX" id="tcm-PS-9BK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Din-wj-xIg"/>
@@ -535,6 +536,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="gNP-o5-XNl" kind="show" id="zlt-jN-VUs"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -549,6 +553,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Huh-JH-ccB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3609" y="1053"/>
+        </scene>
+        <!--Other-->
+        <scene sceneID="Uuo-TF-EdD">
+            <objects>
+                <viewController id="gNP-o5-XNl" customClass="OtherViewController" customModule="Bement" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VIm-ib-e0b">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coming soon..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGj-Yw-WdI">
+                                <rect key="frame" x="63.5" y="312.5" width="248" height="42"/>
+                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="35"/>
+                                <color key="textColor" red="0.55764974359999997" green="0.34240914309999998" blue="0.82745098039999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="CGj-Yw-WdI" firstAttribute="centerX" secondItem="VIm-ib-e0b" secondAttribute="centerX" id="gu9-bu-lM8"/>
+                            <constraint firstItem="CGj-Yw-WdI" firstAttribute="centerY" secondItem="VIm-ib-e0b" secondAttribute="centerY" id="lzK-Un-75D"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="O14-sE-DlY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Other" id="HNy-Dc-RcG"/>
+                    <connections>
+                        <outlet property="soon" destination="CGj-Yw-WdI" id="XPb-Qt-lHP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JxG-bq-lET" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2799" y="1753"/>
         </scene>
         <!--Forgot-->
         <scene sceneID="dVh-NY-4Cw">
@@ -938,6 +973,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="7Ct-1N-6kR"/>
         <segue reference="JUg-PJ-UlK"/>
-        <segue reference="JUG-49-Nbx"/>
+        <segue reference="Bbo-aY-B7p"/>
     </inferredMetricsTieBreakers>
 </document>
