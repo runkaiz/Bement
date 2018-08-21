@@ -7,3 +7,28 @@
 */
 
 "Test"="This is a language test";
+"QuickSubmit"="Quick Submit(Recommanded)";
+"Phone"="Phone";
+"Cancel"="Cancel";
+"CS"="Contact Support";
+"CSD"="Please select an option from below to contact for supports, supports are not always available instantly.";
+"SignICloud"="Sign in to iCloud";
+"iCloudMessage"="Sign in to your iCloud account to write records. On the Home screen, launch Settings, tap iCloud, and enter your Apple ID. Turn iCloud Drive on. If you don't have an iCloud account, tap Create a new Apple ID.";
+"toSettings"="Take me to Settings";
+"noText"="I can't see!";
+"noTextInfo"="You must write something!";
+"sorry"="Sorry";
+"wait"="Please wait...";
+"AD"="Access Denied";
+"AdminNoPassword"="An admin need a password";
+"NoUsername"="The Username field can't be empty!";
+"NoPassword"="The Password field can't be empty!";
+"ok"="Ok";
+"comments"="Comments";
+"error"="Error";
+"suggestion"="Suggestion";
+"help"="Help";
+"forgotPasswordWarning"="Sorry for your inconvenience, but for the protection of privacy, please contact the school yourself";
+"wifi-first"="First, go to Settings by clicking on this icon in the Home page";
+"wifi-second"="Second, click on the Wi-Fi option";
+"wifi-third"="Lastly, check both highlighted icon to see if they are in place, if not, try connect to a wireless network before proceeding.";

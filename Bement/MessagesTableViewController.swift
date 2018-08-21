@@ -10,7 +10,7 @@ import UIKit
 
 class MessagesTableViewController: UITableViewController {
 
-    let sectionName = ["Comments", "Error", "Suggestion", "Help"]
+    let sectionName = [NSLocalizedString("comments", comment: ""), NSLocalizedString("error", comment: ""), NSLocalizedString("suggestion", comment: ""), NSLocalizedString("help", comment: "")]
     
     override func viewDidLoad() {
         super.viewDidLoad()

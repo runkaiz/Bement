@@ -12,11 +12,14 @@ class ForgotViewController: UIViewController {
 
     @IBOutlet var contactSchool: UIButton!
     
+    @IBOutlet var warning: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tools.beautifulButton(contactSchool)
         contactSchool.isEnabled = false
+        warning.text = NSLocalizedString("forgotPasswordWarning", comment: "")
     }
 
     @IBAction func contactSchool(_ sender: Any) {

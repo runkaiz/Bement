@@ -48,13 +48,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         let passwords = Locksmith.loadDataForUserAccount(userAccount: "admin-password")
         
         if dictionary != nil {
-            print(dictionary!)
-            print(passwords!)
             username.text = dictionary?["username"] as? String
             password.text = passwords?["password"] as? String
-        }
-        else {
-            print("haahhahahahahah")
         }
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -137,19 +132,28 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     }
                 }
                 else {
-                    let alert = UIAlertController(title: "Access Denied", message: "A admin need a password", preferredStyle: .alert)
-                    let sorry = UIAlertAction(title: "Sorry", style: .cancel, handler: nil)
+                    let alert = UIAlertController(title: NSLocalizedString("AD", comment: ""), message: NSLocalizedString("AdminNoPassword", comment: ""), preferredStyle: .alert)
+                    let sorry = UIAlertAction(title: NSLocalizedString("sorry", comment: ""), style: .cancel, handler: nil)
                     alert.addAction(sorry)
                     present(alert, animated: true, completion: nil)
                 }
             }
             else {
                 
+                if password.text != "" {
+                    
+                } else {
+                    
+                    let alert = UIAlertController(title: NSLocalizedString("noText", comment: ""), message: NSLocalizedString("NoPassword", comment: ""), preferredStyle: .alert)
+                    let dismiss = UIAlertAction(title: NSLocalizedString("ok", comment: ""), style: .cancel, handler: nil)
+                    alert.addAction(dismiss)
+                    present(alert, animated: true, completion: nil)
+                }
             }
         }
         else {
-            let alert = UIAlertController(title: "I can't see!", message: "The Username field can't be empty!", preferredStyle: .alert)
-            let dismiss = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+            let alert = UIAlertController(title: NSLocalizedString("noText", comment: ""), message: NSLocalizedString("NoUsername", comment: ""), preferredStyle: .alert)
+            let dismiss = UIAlertAction(title: NSLocalizedString("ok", comment: ""), style: .cancel, handler: nil)
             alert.addAction(dismiss)
             present(alert, animated: true, completion: nil)
         }

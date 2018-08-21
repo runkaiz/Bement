@@ -33,23 +33,23 @@ class SupportTableViewController: UITableViewController {
     
     func showActionSheets() {
         
-        let actionSheet = UIAlertController(title: "Contact Support", message: "Please select an option from below to contact for supports, supports are not always available instantly.", preferredStyle: .actionSheet)
+        let actionSheet = UIAlertController(title: NSLocalizedString("CS", comment: ""), message: NSLocalizedString("CSD", comment: ""), preferredStyle: .actionSheet)
         
-        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let cancel = UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: nil)
         
-        let phone = UIAlertAction(title: "Phone", style: .destructive) { action in
+        let phone = UIAlertAction(title: NSLocalizedString("Phone", comment: ""), style: .destructive) { action in
             
             self.makeAPhoneCall()
         }
         
-        let icloud = UIAlertAction(title: "Quick Submit(Recommanded)", style: .default ) { action in
+        let icloud = UIAlertAction(title: NSLocalizedString("QuickSubmit", comment: ""), style: .default ) { action in
             
             CKContainer.default().accountStatus(completionHandler: { accountStatus, error in
                 if accountStatus == .noAccount {
                     
-                    let noiCloudAlert = UIAlertController(title: "Sign in to iCloud", message: "Sign in to your iCloud account to write records. On the Home screen, launch Settings, tap iCloud, and enter your Apple ID. Turn iCloud Drive on. If you don't have an iCloud account, tap Create a new Apple ID.", preferredStyle: .alert)
+                    let noiCloudAlert = UIAlertController(title: NSLocalizedString("SignICloud", comment: ""), message: NSLocalizedString("iCloudMessage", comment: ""), preferredStyle: .alert)
                     
-                    let button = UIAlertAction(title: "Take me to Settings", style: .default, handler: { action in
+                    let button = UIAlertAction(title: NSLocalizedString("toSettings", comment: ""), style: .default, handler: { action in
                         UIApplication.shared.open(URL(string:UIApplication.openSettingsURLString)!)
                     })
                     

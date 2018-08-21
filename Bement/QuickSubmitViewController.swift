@@ -31,19 +31,9 @@ class QuickSubmitViewController: UIViewController, UITextViewDelegate {
 
     @IBAction func sendPressed(_ sender: Any) {
         
-        var title = "Sorry"
-        
-        let max: UInt32 = 100
-        let min: UInt32 = 0
-        
-        let result = arc4random_uniform(max - min) + min
-        if result <= 20 {
-            title = "Sorry, Mr. Belcher"
-        }
-        
         if messageField.text == "" {
-            let alert = UIAlertController(title: "I can't see!", message: "You must write something!", preferredStyle: .alert)
-            let dismiss = UIAlertAction(title: title, style: .default, handler: nil)
+            let alert = UIAlertController(title: NSLocalizedString("noText", comment: ""), message: NSLocalizedString("noTextInfo", comment: ""), preferredStyle: .alert)
+            let dismiss = UIAlertAction(title: NSLocalizedString("sorry", comment: ""), style: .default, handler: nil)
             alert.addAction(dismiss)
             
             DispatchQueue.main.async {
@@ -52,8 +42,8 @@ class QuickSubmitViewController: UIViewController, UITextViewDelegate {
         }
         else {
             if emailField.text == "" {
-                let alert = UIAlertController(title: "I can't see!", message: "You must write something!", preferredStyle: .alert)
-                let dismiss = UIAlertAction(title: title, style: .default, handler: nil)
+                let alert = UIAlertController(title: NSLocalizedString("noText", comment: ""), message: NSLocalizedString("noTextInfo", comment: ""), preferredStyle: .alert)
+                let dismiss = UIAlertAction(title: NSLocalizedString("sorry", comment: ""), style: .default, handler: nil)
                 alert.addAction(dismiss)
                 
                 DispatchQueue.main.async {
@@ -64,7 +54,7 @@ class QuickSubmitViewController: UIViewController, UITextViewDelegate {
                 
                 DispatchQueue.main.async {
                     
-                    let alert = UIAlertController(title: nil, message: "Please wait...", preferredStyle: .alert)
+                    let alert = UIAlertController(title: nil, message: NSLocalizedString("wait", comment: ""), preferredStyle: .alert)
                     
                     let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
                     loadingIndicator.hidesWhenStopped = true

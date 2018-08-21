@@ -7,3 +7,28 @@
 */
 
 "Test"="这是一个语言测试";
+"QuickSubmit"="快速提交(推荐)";
+"Phone"="电话";
+"Cancel"="取消";
+"CS"="联系客服";
+"CSD"="请选择一项方式，但客服并不是随时都可用";
+"SignICloud"="iCloud 未登陆";
+"iCloudMessage"="请登陆iCloud账户，然后继续";
+"toSettings"="带我到设置";
+"noText"="我看不见任何东西!";
+"noTextInfo"="你最好写些什么。";
+"sorry"="对不起";
+"wait"="请等待...";
+"AD"="请求被拒接";
+"AdminNoPassword"="一个管理员需要一个密码";
+"NoUsername"="用户名不可以为空!";
+"NoPassword"="密码不可以为空!";
+"ok"="好的";
+"comments"="评论";
+"error"="错误";
+"suggestion"="建议";
+"help"="帮助";
+"forgotPasswordWarning"="对不起，对您带来了不便，但是为了保护他人的隐私，请自行联系学校";
+"wifi-first"="第一步，来到「设置」";
+"wifi-second"="然后，点击 「Wi-Fi」";
+"wifi-third"="最后，检查所有标注的图标，如果它们没有出现，试着在继续之前连上一个可用的网络。";
