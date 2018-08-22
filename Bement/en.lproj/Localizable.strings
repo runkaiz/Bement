@@ -33,3 +33,4 @@
 "wifi-second"="Second, click on the Wi-Fi option";
 "wifi-third"="Lastly, check both highlighted icon to see if they are in place, if not, try connect to a wireless network before proceeding.";
 "coming-soon"="Coming soon...";
+"touchIdMessage"="Authentication is needed to access 「Username: ";

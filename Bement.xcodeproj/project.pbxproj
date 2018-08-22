@@ -55,6 +55,7 @@
 		B26C0F122119861100750545 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B26C0F112119861100750545 /* LaunchScreen.storyboard */; };
 		B2720439211D78590066AC5E /* MessagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2720438211D78590066AC5E /* MessagesTableViewController.swift */; };
 		B272043B211D7DAF0066AC5E /* QuickSubmitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B272043A211D7DAF0066AC5E /* QuickSubmitViewController.swift */; };
+		B2A4E662212D98B10079C7E6 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2A4E660212D98AC0079C7E6 /* LocalAuthentication.framework */; };
 		B2B46E79212B046600CA7480 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B2B46E7B212B046600CA7480 /* Localizable.strings */; };
 		B2BA44D520EB9FD1009437A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA44D420EB9FD1009437A7 /* AppDelegate.swift */; };
 		B2BA44DA20EB9FD1009437A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2BA44D820EB9FD1009437A7 /* Main.storyboard */; };
@@ -119,6 +120,7 @@
 		B26C0F112119861100750545 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2720438211D78590066AC5E /* MessagesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesTableViewController.swift; sourceTree = "<group>"; };
 		B272043A211D7DAF0066AC5E /* QuickSubmitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickSubmitViewController.swift; sourceTree = "<group>"; };
+		B2A4E660212D98AC0079C7E6 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		B2B46E7A212B046600CA7480 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B2B46E7C212B046A00CA7480 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		B2BA44D120EB9FD1009437A7 /* Bement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bement.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +143,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2A4E662212D98B10079C7E6 /* LocalAuthentication.framework in Frameworks */,
 				B2045DF2212A7DF700272036 /* Security.framework in Frameworks */,
 				B2E97A29211B2B8D0005BEA9 /* CloudKit.framework in Frameworks */,
 			);
@@ -260,6 +263,7 @@
 		B2E97A27211B2B8D0005BEA9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B2A4E660212D98AC0079C7E6 /* LocalAuthentication.framework */,
 				B2045DF1212A7DF700272036 /* Security.framework */,
 				B2E97A28211B2B8D0005BEA9 /* CloudKit.framework */,
 			);

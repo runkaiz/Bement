@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import LocalAuthentication
 
 struct Credentials {
     var username: String
@@ -33,27 +34,97 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var logoTop: NSLayoutConstraint!
     
+    let dictionary = Locksmith.loadDataForUserAccount(userAccount: "admin")
+    let passwords = Locksmith.loadDataForUserAccount(userAccount: "admin-password")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let str = NSLocalizedString("Test", comment: "")
-        print("\(str)")
         
         tools.beautifulButton(LoginButton)
         tools.beautifulButton(SupportButton)
         username.delegate = self
         password.delegate = self
         
-        let dictionary = Locksmith.loadDataForUserAccount(userAccount: "admin")
-        let passwords = Locksmith.loadDataForUserAccount(userAccount: "admin-password")
-        
         if dictionary != nil {
-            username.text = dictionary?["username"] as? String
-            password.text = passwords?["password"] as? String
+            self.authenticateUserTouchID()
         }
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    func authenticateUserTouchID() {
+        let context : LAContext = LAContext()
+        // Declare a NSError variable.
+        let message = NSLocalizedString("touchIdMessage", comment: "")
+        let accountName = self.dictionary?["username"] as? String
+        let ending = "」"
+        let messageFull = message + accountName! + ending
+        
+        let myLocalizedReasonString = messageFull
+        var authError: NSError?
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &authError) {
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: myLocalizedReasonString) { success, evaluateError in
+                if success // IF TOUCH ID AUTHENTICATION IS SUCCESSFUL, NAVIGATE TO NEXT VIEW CONTROLLER
+                {
+                    DispatchQueue.main.async {
+                        self.username.text = self.dictionary?["username"] as? String
+                        self.password.text = self.passwords?["password"] as? String
+                    }
+                }
+                else // IF TOUCH ID AUTHENTICATION IS FAILED, PRINT ERROR MSG
+                {
+                    if let error = evaluateError {
+                        let message = self.showErrorMessageForLAErrorCode(error._code)
+                        print(message)
+                    }
+                }
+            }
+        }
+    }
+    
+    
+    
+    func showErrorMessageForLAErrorCode(_ errorCode:Int ) -> String {
+        
+        var message = ""
+        
+        switch errorCode {
+            
+        case LAError.appCancel.rawValue:
+            message = "Authentication was cancelled by application"
+            
+        case LAError.authenticationFailed.rawValue:
+            message = "The user failed to provide valid credentials"
+            
+        case LAError.invalidContext.rawValue:
+            message = "The context is invalid"
+            
+        case LAError.passcodeNotSet.rawValue:
+            message = "Passcode is not set on the device"
+            
+        case LAError.systemCancel.rawValue:
+            message = "Authentication was cancelled by the system"
+            
+        case LAError.biometryLockout.rawValue:
+            message = "Too many failed attempts."
+            
+        case LAError.biometryNotAvailable.rawValue:
+            message = "TouchID is not available on the device"
+            
+        case LAError.userCancel.rawValue:
+            message = "The user did cancel"
+            
+        case LAError.userFallback.rawValue:
+            message = "The user chose to use the fallback"
+            
+        default:
+            message = "Did not find error code on LAError object"
+            
+        }
+        
+        return message
+        
     }
     
     @objc func keyboardWillShow(notification:NSNotification) {
@@ -106,6 +177,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func login(_ sender: Any) {
+        
+        login()
+    }
+    
+    func login() {
         
         if username.text != "" {
             if username.text == "admin" {
