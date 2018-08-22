@@ -46,7 +46,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         password.delegate = self
         
         if dictionary != nil {
-            self.authenticateUserTouchID()
+            
+            if globalVariable.firstTimeIndicator == false {
+                self.authenticateUserTouchID()
+                globalVariable.firstTimeIndicator = true
+            }
         }
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)

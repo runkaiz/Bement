@@ -15,4 +15,5 @@ class globalVariable {
     public static var row = Int()
     public static var section = Int()
     public static var errorRecordsName: [CKRecord] = []
+    public static var firstTimeIndicator = false
 }

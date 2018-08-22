@@ -148,9 +148,7 @@
                     <navigationItem key="navigationItem" title="Welcome, Admin" id="o8K-0w-fHN">
                         <barButtonItem key="rightBarButtonItem" title="Log out" id="mDj-aF-nRb">
                             <connections>
-                                <segue destination="vhr-DB-jCY" kind="popoverPresentation" popoverAnchorBarButtonItem="mDj-aF-nRb" id="JUG-49-Nbx">
-                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                </segue>
+                                <action selector="loggedOut:" destination="tQg-eZ-bCw" id="7r4-GP-m9B"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -369,7 +367,7 @@
                             <constraint firstItem="x0b-lu-wxJ" firstAttribute="leading" secondItem="Din-wj-xIg" secondAttribute="leading" constant="18" id="9yg-yQ-iom"/>
                             <constraint firstItem="Din-wj-xIg" firstAttribute="trailing" secondItem="3sl-bx-Jbb" secondAttribute="trailing" constant="24" id="B1b-mV-V8o"/>
                             <constraint firstItem="0Hn-kO-qDx" firstAttribute="centerX" secondItem="G6m-8m-qua" secondAttribute="centerX" id="B2l-dp-imh"/>
-                            <constraint firstItem="0Qw-s0-1J0" firstAttribute="leading" secondItem="Din-wj-xIg" secondAttribute="leading" constant="24" id="IeK-XU-ecF"/>
+                            <constraint firstItem="0Qw-s0-1J0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Din-wj-xIg" secondAttribute="leading" id="IeK-XU-ecF"/>
                             <constraint firstItem="3sl-bx-Jbb" firstAttribute="centerX" secondItem="G6m-8m-qua" secondAttribute="centerX" id="KGf-fk-8We"/>
                             <constraint firstItem="0Hn-kO-qDx" firstAttribute="top" secondItem="Din-wj-xIg" secondAttribute="top" id="e36-pD-3n2"/>
                             <constraint firstItem="0Qw-s0-1J0" firstAttribute="centerX" secondItem="G6m-8m-qua" secondAttribute="centerX" id="moa-In-u7G"/>
@@ -616,7 +614,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot the username or password? " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xhR-sm-eod">
-                                <rect key="frame" x="28" y="83" width="319.5" height="24"/>
+                                <rect key="frame" x="36.5" y="83" width="302.5" height="24"/>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="20"/>
                                 <color key="textColor" red="0.1246260181" green="0.49039733410000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -973,6 +971,5 @@
     <inferredMetricsTieBreakers>
         <segue reference="7Ct-1N-6kR"/>
         <segue reference="JUg-PJ-UlK"/>
-        <segue reference="Bbo-aY-B7p"/>
     </inferredMetricsTieBreakers>
 </document>
