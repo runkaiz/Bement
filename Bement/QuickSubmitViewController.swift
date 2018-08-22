@@ -21,12 +21,24 @@ class QuickSubmitViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet var emailField: UITextField!
     
+    @IBOutlet var detailLabel: UILabel!
+    
+    @IBOutlet var emailLabel: UILabel!
+    
+    @IBOutlet var categoryLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         messageField.delegate = self
         textViewDidChange(messageField)
         tools.beautifulButton(send)
+        
+        send.setTitle(NSLocalizedString("send", comment: ""), for: .normal)
+        categoryLabel.text = NSLocalizedString("categoryLabel", comment: "")
+        emailLabel.text = NSLocalizedString("emailLabel", comment: "")
+        detailLabel.text = NSLocalizedString("describeLabel", comment: "")
+        Placeholder.text = NSLocalizedString("placeholder", comment: "")
     }
 
     @IBAction func sendPressed(_ sender: Any) {

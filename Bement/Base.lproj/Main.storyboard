@@ -148,7 +148,7 @@
                     <navigationItem key="navigationItem" title="Welcome, Admin" id="o8K-0w-fHN">
                         <barButtonItem key="rightBarButtonItem" title="Log out" id="mDj-aF-nRb">
                             <connections>
-                                <action selector="loggedOut:" destination="tQg-eZ-bCw" id="7r4-GP-m9B"/>
+                                <segue destination="vhr-DB-jCY" kind="showDetail" id="dup-fg-Rch"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -777,16 +777,10 @@
                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="22"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes" spellCheckingType="yes" returnKeyType="done"/>
                                     </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pC-WN-aJH">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Describe your problem:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pC-WN-aJH">
                                         <rect key="frame" x="8" y="9" width="170" height="20"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="Describe your problem:">
-                                                <attributes>
-                                                    <font key="NSFont" size="17" name="SFProDisplay-Medium"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="17"/>
+                                        <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="YiU-gb-DVy">
@@ -798,61 +792,34 @@
                                             <segment title="Help"/>
                                         </segments>
                                     </segmentedControl>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XvB-Wt-pbi">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XvB-Wt-pbi">
                                         <rect key="frame" x="20" y="545" width="335" height="50"/>
                                         <color key="backgroundColor" red="0.99587005376815796" green="0.17403936386108398" blue="0.33331087231636047" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="QV5-iu-EO6"/>
                                         </constraints>
-                                        <state key="normal">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="Send">
-                                                    <attributes>
-                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                        <font key="NSFont" size="17" name="SFProText-Semibold"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </state>
+                                        <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="17"/>
+                                        <state key="normal" title="Send"/>
                                         <connections>
                                             <action selector="sendPressed:" destination="T70-Os-hTy" eventType="touchUpInside" id="aug-9D-oR2"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccC-P3-JZ9">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccC-P3-JZ9">
                                         <rect key="frame" x="16" y="433" width="72.5" height="20"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="Category:">
-                                                <attributes>
-                                                    <font key="NSFont" size="17" name="SFProDisplay-Medium"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="17"/>
+                                        <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XCQ-9M-AkN">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My problem is......" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XCQ-9M-AkN">
                                         <rect key="frame" x="16" y="44" width="185" height="26"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="My problem is......">
-                                                <attributes>
-                                                    <font key="NSFont" size="22" name="SFProText-Regular"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
+                                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="22"/>
+                                        <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9g5-qt-cVZ">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your contact email:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9g5-qt-cVZ">
                                         <rect key="frame" x="16" y="311" width="139.5" height="20"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="Your contact email:">
-                                                <attributes>
-                                                    <font key="NSFont" size="17" name="SFProDisplay-Medium"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="17"/>
+                                        <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="myemail@example.com" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ecw-fQ-kR3">
@@ -864,6 +831,7 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="XvB-Wt-pbi" firstAttribute="leading" secondItem="FKZ-X0-TfH" secondAttribute="leading" constant="20" id="58V-zh-Q9B"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="YiU-gb-DVy" secondAttribute="trailing" id="7qi-2J-8ZY"/>
                                     <constraint firstItem="XCQ-9M-AkN" firstAttribute="top" secondItem="9pC-WN-aJH" secondAttribute="bottom" constant="15" id="B0u-Bz-Y6M"/>
                                     <constraint firstItem="DXj-kh-2fc" firstAttribute="leading" secondItem="9pC-WN-aJH" secondAttribute="leading" id="Es9-mU-9WP"/>
                                     <constraint firstItem="XvB-Wt-pbi" firstAttribute="bottom" secondItem="FKZ-X0-TfH" secondAttribute="bottomMargin" id="HUd-F9-7Jf"/>
@@ -871,6 +839,7 @@
                                     <constraint firstItem="ecw-fQ-kR3" firstAttribute="top" secondItem="9g5-qt-cVZ" secondAttribute="bottom" constant="19" id="LCX-lK-iMC"/>
                                     <constraint firstItem="ccC-P3-JZ9" firstAttribute="leading" secondItem="FKZ-X0-TfH" secondAttribute="leading" constant="16" id="NcG-fa-hjN"/>
                                     <constraint firstItem="ecw-fQ-kR3" firstAttribute="leading" secondItem="FKZ-X0-TfH" secondAttribute="leading" constant="20" id="RBA-9C-c5j"/>
+                                    <constraint firstItem="YiU-gb-DVy" firstAttribute="leading" secondItem="FKZ-X0-TfH" secondAttribute="leading" constant="20" id="THm-sK-E2Q"/>
                                     <constraint firstItem="DXj-kh-2fc" firstAttribute="centerX" secondItem="YiU-gb-DVy" secondAttribute="centerX" id="TxA-B5-SQN"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ccC-P3-JZ9" secondAttribute="trailing" constant="20" symbolic="YES" id="Wym-os-J0m"/>
                                     <constraint firstItem="ccC-P3-JZ9" firstAttribute="leading" secondItem="XCQ-9M-AkN" secondAttribute="leading" id="Z6L-MV-4Gc"/>
@@ -904,7 +873,10 @@
                     <connections>
                         <outlet property="Category" destination="YiU-gb-DVy" id="5uT-G9-lHW"/>
                         <outlet property="Placeholder" destination="XCQ-9M-AkN" id="QAl-W6-mD3"/>
-                        <outlet property="emailField" destination="ecw-fQ-kR3" id="Owk-01-K6t"/>
+                        <outlet property="categoryLabel" destination="ccC-P3-JZ9" id="mZv-mU-3SN"/>
+                        <outlet property="detailLabel" destination="9pC-WN-aJH" id="G6O-oo-B3a"/>
+                        <outlet property="emailField" destination="ecw-fQ-kR3" id="VIs-hr-nKX"/>
+                        <outlet property="emailLabel" destination="9g5-qt-cVZ" id="jB5-lx-4ep"/>
                         <outlet property="messageField" destination="DXj-kh-2fc" id="wYp-fS-lav"/>
                         <outlet property="send" destination="XvB-Wt-pbi" id="eb6-qK-0q4"/>
                     </connections>
@@ -971,5 +943,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="7Ct-1N-6kR"/>
         <segue reference="JUg-PJ-UlK"/>
+        <segue reference="dup-fg-Rch"/>
     </inferredMetricsTieBreakers>
 </document>
