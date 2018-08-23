@@ -45,23 +45,27 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         username.delegate = self
         password.delegate = self
         
-        if dictionary != nil {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+        if dictionary!["username"] != nil {
             
             if globalVariable.firstTimeIndicator == false {
-                self.authenticateUserTouchID()
+                authenticateUserTouchID()
                 globalVariable.firstTimeIndicator = true
             }
         }
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @IBAction func support(_ sender: Any) {
+        globalVariable.firstTimeIndicator = true
     }
     
     func authenticateUserTouchID() {
         let context : LAContext = LAContext()
         // Declare a NSError variable.
         let message = NSLocalizedString("touchIdMessage", comment: "")
-        let accountName = self.dictionary?["username"] as? String
+        let accountName = dictionary?["username"] as? String
         let ending = "」"
         let messageFull = message + accountName! + ending
         

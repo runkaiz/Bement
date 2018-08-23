@@ -16,4 +16,6 @@ class globalVariable {
     public static var section = Int()
     public static var errorRecordsName: [CKRecord] = []
     public static var firstTimeIndicator = false
+    public static var username = String()
+    public static var password = String()
 }

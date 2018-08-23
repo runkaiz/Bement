@@ -339,6 +339,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="support:" destination="vhr-DB-jCY" eventType="touchUpInside" id="gs3-Qf-C65"/>
                                     <segue destination="jf5-JA-kOF" kind="show" id="2d2-yy-n2X">
                                         <segue key="commit" inheritsFrom="parent" id="7Ct-1N-6kR"/>
                                         <segue key="preview" inheritsFrom="commit" id="8Ai-Li-JEN"/>
@@ -941,8 +942,8 @@
         <image name="Settings" width="150" height="180"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7Ct-1N-6kR"/>
+        <segue reference="2d2-yy-n2X"/>
         <segue reference="JUg-PJ-UlK"/>
-        <segue reference="dup-fg-Rch"/>
+        <segue reference="Bbo-aY-B7p"/>
     </inferredMetricsTieBreakers>
 </document>
