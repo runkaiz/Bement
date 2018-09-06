@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vhr-DB-jCY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DQ8-Oq-XHZ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.9"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -148,7 +148,7 @@
                     <navigationItem key="navigationItem" title="Welcome, Admin" id="o8K-0w-fHN">
                         <barButtonItem key="rightBarButtonItem" title="Log out" id="mDj-aF-nRb">
                             <connections>
-                                <segue destination="vhr-DB-jCY" kind="showDetail" id="dup-fg-Rch"/>
+                                <segue destination="DQ8-Oq-XHZ" kind="showDetail" id="dup-fg-Rch"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -340,10 +340,7 @@
                                 </state>
                                 <connections>
                                     <action selector="support:" destination="vhr-DB-jCY" eventType="touchUpInside" id="gs3-Qf-C65"/>
-                                    <segue destination="jf5-JA-kOF" kind="show" id="2d2-yy-n2X">
-                                        <segue key="commit" inheritsFrom="parent" id="7Ct-1N-6kR"/>
-                                        <segue key="preview" inheritsFrom="commit" id="8Ai-Li-JEN"/>
-                                    </segue>
+                                    <segue destination="jf5-JA-kOF" kind="show" id="iTf-iS-hnu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3sl-bx-Jbb">
@@ -392,7 +389,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4r8-NZ-kjR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1860" y="361.16941529235385"/>
+            <point key="canvasLocation" x="2799.1999999999998" y="361.16941529235385"/>
         </scene>
         <!--Support-->
         <scene sceneID="RtA-be-deY">
@@ -456,7 +453,7 @@
                     <navigationItem key="navigationItem" title="Support" id="98y-id-uSV">
                         <barButtonItem key="rightBarButtonItem" title="Back to Login" id="4TS-7Y-eFD">
                             <connections>
-                                <segue destination="vhr-DB-jCY" kind="showDetail" id="Bbo-aY-B7p"/>
+                                <segue destination="DQ8-Oq-XHZ" kind="showDetail" id="Pf3-Sw-JDI"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -889,6 +886,7 @@
         <!--Navigation Controller-->
         <scene sceneID="vt7-UO-lnS">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6ay-Lx-d9T" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jf5-JA-kOF" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Rgo-bd-g72">
@@ -906,7 +904,6 @@
                         <segue destination="04C-wz-CeJ" kind="relationship" relationship="rootViewController" id="SCP-1g-zf1"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6ay-Lx-d9T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1860" y="1052"/>
         </scene>
@@ -934,16 +931,32 @@
             </objects>
             <point key="canvasLocation" x="1860" y="-344.07796101949026"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="N3p-pv-8QZ">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NC8-ao-yk7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="DQ8-Oq-XHZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bsp-Um-7Wp">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vhr-DB-jCY" kind="relationship" relationship="rootViewController" id="Pgr-Dl-Kh8"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="1860" y="361.16941529235385"/>
+        </scene>
     </scenes>
     <resources>
         <image name="IMG_1324" width="640" height="1136"/>
         <image name="IMG_1325" width="640" height="1136"/>
-        <image name="Logo-1" width="2990" height="2932"/>
+        <image name="Logo-1" width="89.699996948242188" height="88"/>
         <image name="Settings" width="150" height="180"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2d2-yy-n2X"/>
+        <segue reference="Pf3-Sw-JDI"/>
         <segue reference="JUg-PJ-UlK"/>
-        <segue reference="Bbo-aY-B7p"/>
     </inferredMetricsTieBreakers>
 </document>

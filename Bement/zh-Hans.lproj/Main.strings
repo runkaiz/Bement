@@ -1,0 +1,147 @@
+
+/* Class = "UIButton"; normalTitle = "帮助"; ObjectID = "0Qw-s0-1J0"; */
+"0Qw-s0-1J0.normalTitle" = "帮助";
+
+/* Class = "UILabel"; text = "用户名:"; ObjectID = "2Zv-sx-vkO"; */
+"2Zv-sx-vkO.text" = "用户名:";
+
+/* Class = "UITextField"; placeholder = "用户名"; ObjectID = "2pO-ZR-lzZ"; */
+"2pO-ZR-lzZ.placeholder" = "用户名";
+
+/* Class = "UIButton"; normalTitle = "登陆"; ObjectID = "3sl-bx-Jbb"; */
+"3sl-bx-Jbb.normalTitle" = "登陆";
+
+/* Class = "UIBarButtonItem"; title = "返回登录界面"; ObjectID = "4TS-7Y-eFD"; */
+"4TS-7Y-eFD.title" = "返回登录界面";
+
+/* Class = "UINavigationItem"; title = "遇到了问题?"; ObjectID = "5L3-Tx-tAg"; */
+"5L3-Tx-tAg.title" = "遇到了问题?";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "6KK-e4-VbC"; */
+"6KK-e4-VbC.text" = "Title";
+
+/* Class = "UINavigationItem"; title = "帮助"; ObjectID = "98y-id-uSV"; */
+"98y-id-uSV.title" = "帮助";
+
+/* Class = "UILabel"; text = "您的邮箱："; ObjectID = "9g5-qt-cVZ"; */
+"9g5-qt-cVZ.text" = "您的邮箱：";
+
+/* Class = "UILabel"; text = "请描述您的问题："; ObjectID = "9pC-WN-aJH"; */
+"9pC-WN-aJH.text" = "请描述您的问题：";
+
+/* Class = "UILabel"; text = "example@example.com"; ObjectID = "Ayr-2A-IkI"; */
+"Ayr-2A-IkI.text" = "example@example.com";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "Cew-zv-zKe"; */
+"Cew-zv-zKe.text" = "Detail";
+
+/* Class = "UITextView"; text = "然后, 点击 「Wi-Fi」"; ObjectID = "DAh-lr-EBM"; */
+"DAh-lr-EBM.text" = "然后, 点击 「Wi-Fi」";
+
+/* Class = "UINavigationItem"; title = "检查网络是否可用"; ObjectID = "J8a-gn-PKd"; */
+"J8a-gn-PKd.title" = "检查网络是否可用";
+
+/* Class = "UINavigationItem"; title = "快速提交"; ObjectID = "MY6-Df-Gnh"; */
+"MY6-Df-Gnh.title" = "快速提交";
+
+/* Class = "UITextView"; text = "最后, 检查所有标注的图标, 如果它们没有出现, 试着在继续之前连上一个可用的网络."; ObjectID = "O9P-tQ-hHl"; */
+"O9P-tQ-hHl.text" = "最后, 检查所有标注的图标, 如果它们没有出现, 试着在继续之前连上一个可用的网络.";
+
+/* Class = "UINavigationItem"; title = "信息"; ObjectID = "OJF-1R-Jzj"; */
+"OJF-1R-Jzj.title" = "信息";
+
+/* Class = "UILabel"; text = "其他方案"; ObjectID = "R0e-pD-r1e"; */
+"R0e-pD-r1e.text" = "其他方案";
+
+/* Class = "UINavigationItem"; title = "消息"; ObjectID = "Sgp-JN-zTD"; */
+"Sgp-JN-zTD.title" = "消息";
+
+/* Class = "UILabel"; text = "联系客服"; ObjectID = "Vtb-QU-eMo"; */
+"Vtb-QU-eMo.text" = "联系客服";
+
+/* Class = "UILabel"; text = "我的问题是。。。"; ObjectID = "XCQ-9M-AkN"; */
+"XCQ-9M-AkN.text" = "我的问题是。。。";
+
+/* Class = "UIButton"; normalTitle = "发送"; ObjectID = "XvB-Wt-pbi"; */
+"XvB-Wt-pbi.normalTitle" = "发送";
+
+/* Class = "UISegmentedControl"; YiU-gb-DVy.segmentTitles[0] = "评论"; ObjectID = "YiU-gb-DVy"; */
+"YiU-gb-DVy.segmentTitles[0]" = "评论";
+
+/* Class = "UISegmentedControl"; YiU-gb-DVy.segmentTitles[1] = "错误"; ObjectID = "YiU-gb-DVy"; */
+"YiU-gb-DVy.segmentTitles[1]" = "错误";
+
+/* Class = "UISegmentedControl"; YiU-gb-DVy.segmentTitles[2] = "建议"; ObjectID = "YiU-gb-DVy"; */
+"YiU-gb-DVy.segmentTitles[2]" = "建议";
+
+/* Class = "UISegmentedControl"; YiU-gb-DVy.segmentTitles[3] = "帮助"; ObjectID = "YiU-gb-DVy"; */
+"YiU-gb-DVy.segmentTitles[3]" = "帮助";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "ZGh-vw-Bba"; */
+"ZGh-vw-Bba.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UILabel"; text = "类别："; ObjectID = "ccC-P3-JZ9"; */
+"ccC-P3-JZ9.text" = "类别：";
+
+/* Class = "UILabel"; text = "密码:"; ObjectID = "dc6-mW-nnk"; */
+"dc6-mW-nnk.text" = "密码:";
+
+/* Class = "UINavigationItem"; title = "忘记密码了？"; ObjectID = "drP-xC-5jG"; */
+"drP-xC-5jG.title" = "忘记密码了？";
+
+/* Class = "UITextField"; placeholder = "myemail@example.com"; ObjectID = "ecw-fQ-kR3"; */
+"ecw-fQ-kR3.placeholder" = "myemail@example.com";
+
+/* Class = "UITextView"; text = "对不起，对您带来了不便，但是为了保护他人的隐私，请自行联系学校"; ObjectID = "g5x-ri-9SA"; */
+"g5x-ri-9SA.text" = "对不起，对您带来了不便，但是为了保护他人的隐私，请自行联系学校";
+
+/* Class = "UINavigationItem"; title = "信息"; ObjectID = "h3i-AP-moN"; */
+"h3i-AP-moN.title" = "信息";
+
+/* Class = "UILabel"; text = "忘记了用户名或者密码?"; ObjectID = "jQ4-vP-aPW"; */
+"jQ4-vP-aPW.text" = "忘记了用户名或者密码?";
+
+/* Class = "UITextField"; placeholder = "密码"; ObjectID = "knF-Bg-tbL"; */
+"knF-Bg-tbL.placeholder" = "密码";
+
+/* Class = "UILabel"; text = "邮箱:"; ObjectID = "kuV-Hi-pDx"; */
+"kuV-Hi-pDx.text" = "邮箱:";
+
+/* Class = "UIBarButtonItem"; title = "注销"; ObjectID = "mDj-aF-nRb"; */
+"mDj-aF-nRb.title" = "注销";
+
+/* Class = "UITextView"; text = "第一步, 来到「设置」"; ObjectID = "mFY-IJ-HgE"; */
+"mFY-IJ-HgE.text" = "第一步, 来到「设置」";
+
+/* Class = "UIButton"; normalTitle = "联系学校"; ObjectID = "mRb-4r-4S1"; */
+"mRb-4r-4S1.normalTitle" = "联系学校";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "nSv-gi-2WM"; */
+"nSv-gi-2WM.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UINavigationItem"; title = "欢迎, 管理员"; ObjectID = "o8K-0w-fHN"; */
+"o8K-0w-fHN.title" = "欢迎, 管理员";
+
+/* Class = "UIButton"; normalTitle = "已上传的错误"; ObjectID = "pJU-yI-q8r"; */
+"pJU-yI-q8r.normalTitle" = "已上传的错误";
+
+/* Class = "UITableViewSection"; headerTitle = "请从一下选择以诊断问题"; ObjectID = "q9M-Up-KUw"; */
+"q9M-Up-KUw.headerTitle" = "请从一下选择以诊断问题";
+
+/* Class = "UIButton"; normalTitle = "收到的消息"; ObjectID = "rkA-ag-QMF"; */
+"rkA-ag-QMF.normalTitle" = "收到的消息";
+
+/* Class = "UILabel"; text = "无法登陆?"; ObjectID = "tPj-ui-RpQ"; */
+"tPj-ui-RpQ.text" = "无法登陆?";
+
+/* Class = "UINavigationItem"; title = "错误"; ObjectID = "trg-Yp-FSb"; */
+"trg-Yp-FSb.title" = "错误";
+
+/* Class = "UILabel"; text = "检查互联网是否可用"; ObjectID = "uiB-6w-LQM"; */
+"uiB-6w-LQM.text" = "检查互联网是否可用";
+
+/* Class = "UILabel"; text = "忘记了用户名或者密码?"; ObjectID = "xhR-sm-eod"; */
+"xhR-sm-eod.text" = "忘记了用户名或者密码?";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "xrb-sB-4Wa"; */
+"xrb-sB-4Wa.text" = "Title";
