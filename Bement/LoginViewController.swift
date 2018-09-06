@@ -57,6 +57,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    @IBAction func done(_ segue: UIStoryboardSegue) {
+        //print("Popping back to this view controller!")
+        // reset UI elements etc here
+    }
+    
     @IBAction func support(_ sender: Any) {
         globalVariable.firstTimeIndicator = true
     }
