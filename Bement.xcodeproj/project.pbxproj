@@ -250,10 +250,10 @@
 				B2045D8921297F7000272036 /* GlobalVariable.swift */,
 				B26C0F0921196ACB00750545 /* Functions.swift */,
 				B2BA44D820EB9FD1009437A7 /* Main.storyboard */,
+				B26C0F112119861100750545 /* LaunchScreen.storyboard */,
 				B2BA44DB20EB9FD6009437A7 /* Assets.xcassets */,
 				B2B46E7B212B046600CA7480 /* Localizable.strings */,
 				B2045DDF212A7DD900272036 /* Locksmith */,
-				B26C0F112119861100750545 /* LaunchScreen.storyboard */,
 				B268D40C2119667B001D7BF1 /* Resources */,
 				B2BA44E020EB9FD6009437A7 /* Info.plist */,
 			);
