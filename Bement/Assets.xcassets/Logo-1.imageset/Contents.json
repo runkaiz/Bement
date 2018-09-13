@@ -2,7 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "logo.png"
+      "filename" : "logo~iphone@3x.jpg"
     }
   ],
   "info" : {
@@ -10,6 +10,7 @@
     "author" : "xcode"
   },
   "properties" : {
-    "compression-type" : "gpu-optimized-best"
+    "compression-type" : "automatic",
+    "template-rendering-intent" : "original"
   }
 }
