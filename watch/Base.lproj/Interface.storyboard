@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14313.18" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch40" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14238.10"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Medium.otf">
+            <string>SFProDisplay-Medium</string>
+        </array>
+        <array key="SF-Pro-Display-Regular.otf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+        <array key="SF-Pro-Display-ThinItalic.otf">
+            <string>SFProDisplay-ThinItalic</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Upcoming Interface Controller-->
+        <scene sceneID="AAM-37-JPN">
+            <objects>
+                <controller id="38E-4L-0Z7" customClass="UpcomingInterfaceController" customModule="watch_Extension">
+                    <items>
+                        <table alignment="left" id="zme-pS-KNb">
+                            <items>
+                                <tableRow identifier="termName" id="fHm-99-nn9" customClass="NextDateTableCell" customModule="watch_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="8af-Nj-sJ1">
+                                        <items>
+                                            <label width="46" height="56" alignment="left" text="Term:" id="t7y-A5-soV">
+                                                <fontDescription key="font" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="17"/>
+                                            </label>
+                                            <label width="101" height="52" alignment="left" text="Label" id="KZI-Zh-hpC"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="termName" destination="KZI-Zh-hpC" id="ZfF-zt-nFc"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <label alignment="left" text="Last updated:" id="Cs9-OS-JN3">
+                            <fontDescription key="font" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="11"/>
+                        </label>
+                        <dateLabel alignment="left" id="sda-3h-N9c">
+                            <fontDescription key="font" name="SFProDisplay-ThinItalic" family="SF Pro Display" pointSize="13"/>
+                            <dateFormatterStyle key="dateStyle" short="YES"/>
+                            <dateFormatterStyle key="timeStyle" short="YES"/>
+                        </dateLabel>
+                        <separator alignment="left" id="KSy-q1-fUq"/>
+                        <switch width="1" alignment="left" value="YES" title="Notify me" id="EcL-1P-Syc">
+                            <connections>
+                                <action selector="notifySettings:" destination="38E-4L-0Z7" id="99o-ZU-s5t"/>
+                            </connections>
+                        </switch>
+                    </items>
+                    <connections>
+                        <outlet property="lastUpdated" destination="sda-3h-N9c" id="eWh-qG-pP3"/>
+                        <outlet property="notifyMe" destination="EcL-1P-Syc" id="IXv-ug-xhA"/>
+                        <outlet property="termCell" destination="zme-pS-KNb" id="FC3-Qm-zdg"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="219.95061728395061" y="70.329949238578678"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="watch" customModuleProvider="target">
+                    <items>
+                        <table alignment="left" id="v5H-yU-VUB">
+                            <items>
+                                <tableRow identifier="main" id="cn6-nU-5FZ">
+                                    <group key="rootItem" width="1" alignment="left" id="yxt-wh-56B">
+                                        <items>
+                                            <label width="136" height="80" alignment="left" text="Upcoming" textAlignment="center" id="tDU-X6-kQu">
+                                                <fontDescription key="font" style="UICTFontTextStyleTitle3"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <segue destination="38E-4L-0Z7" kind="push" id="G8R-1d-CZs"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="v5H-yU-VUB" id="QKs-lQ-0Qm"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="219.95061728395061" y="344.74619289340097"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" numberOfLines="0" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                        <segue destination="eXb-UN-Cd0" kind="relationship" relationship="dynamicInteractiveNotificationInterface" id="mpB-YA-K8N"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="watch" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="Niz-AI-uX2">
+            <objects>
+                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="watch" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="345"/>
+        </scene>
+    </scenes>
+</document>
