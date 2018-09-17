@@ -101,7 +101,10 @@
                     <items>
                         <label alignment="left" text="Alert Label" numberOfLines="0" id="IdU-wH-bcW"/>
                     </items>
-                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <notificationCategory key="notificationCategory" identifier="default" wantsSashBlur="YES" id="JfB-70-Muf">
+                        <color key="sashColor" red="0.94509803920000002" green="0.6045607328" blue="0.21945464610000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </notificationCategory>
+                    <color key="backgroundColor" white="1" alpha="0.17999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <connections>
                         <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
                         <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
@@ -114,14 +117,23 @@
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="watch" customModuleProvider="target"/>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="watch" customModuleProvider="target">
+                    <color key="backgroundColor" red="0.2823035717010498" green="0.57043850421905518" blue="0.95298475027084351" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                </controller>
             </objects>
             <point key="canvasLocation" x="468" y="643"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="Niz-AI-uX2">
             <objects>
-                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="watch" customModuleProvider="target"/>
+                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="watch" customModuleProvider="target">
+                    <items>
+                        <label alignment="left" text="Alert Label" numberOfLines="0" id="EX4-CD-jRh"/>
+                    </items>
+                    <connections>
+                        <outlet property="label" destination="EX4-CD-jRh" id="xlV-w6-dZy"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="468" y="345"/>
         </scene>

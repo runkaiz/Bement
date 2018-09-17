@@ -13,6 +13,8 @@ import UserNotifications
 
 class NotificationController: WKUserNotificationInterfaceController {
 
+    @IBOutlet var label: WKInterfaceLabel!
+    
     override init() {
         // Initialize variables here.
         super.init()
@@ -23,6 +25,7 @@ class NotificationController: WKUserNotificationInterfaceController {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        
     }
 
     override func didDeactivate() {
@@ -34,5 +37,7 @@ class NotificationController: WKUserNotificationInterfaceController {
         // This method is called when a notification needs to be presented.
         // Implement it if you use a dynamic notification interface.
         // Populate your dynamic notification interface as quickly as possible.
+        
+        label.setText(notification.request.content.body)
     }
 }

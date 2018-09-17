@@ -23,6 +23,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             session.activate()
         }
         
+        let center =  UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .sound, .badge]) { (result, error) in
+            //handle result of request failure
+        }
+        
+        let defaultCategory = UNNotificationCategory(identifier: "default",
+                                                     actions: [],
+                                                     intentIdentifiers: [],
+                                                     options: .customDismissAction)
+        
+        // Register the category.
+        center.setNotificationCategories([defaultCategory])
+        
         return true
     }
 

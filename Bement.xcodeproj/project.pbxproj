@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9EF96DF9F0F59B16B6A28AFB /* Pods_Bement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09035B2370FAF12FC310E549 /* Pods_Bement.framework */; };
 		B2045D8A21297F7000272036 /* GlobalVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2045D8921297F7000272036 /* GlobalVariable.swift */; };
 		B2045D8C2129818800272036 /* MessagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2045D8B2129818800272036 /* MessagesTableViewCell.swift */; };
 		B2045DE9212A7DD900272036 /* LocksmithError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2045DE0212A7DD900272036 /* LocksmithError.swift */; };
@@ -135,7 +134,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		09035B2370FAF12FC310E549 /* Pods_Bement.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bement.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2045D8921297F7000272036 /* GlobalVariable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariable.swift; sourceTree = "<group>"; };
 		B2045D8B2129818800272036 /* MessagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesTableViewCell.swift; sourceTree = "<group>"; };
 		B2045DE0212A7DD900272036 /* LocksmithError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocksmithError.swift; sourceTree = "<group>"; };
@@ -147,7 +145,6 @@
 		B2045DE6212A7DD900272036 /* LocksmithInternetAuthenticationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocksmithInternetAuthenticationType.swift; sourceTree = "<group>"; };
 		B2045DE7212A7DD900272036 /* Locksmith.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Locksmith.h; sourceTree = "<group>"; };
 		B2045DF1212A7DF700272036 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		B23C8E3B214C0E53007F1220 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
 		B23C8E53214C14DF007F1220 /* watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = watch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B23C8E56214C14DF007F1220 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		B23C8E58214C14E1007F1220 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -243,7 +240,6 @@
 				B2A4E662212D98B10079C7E6 /* LocalAuthentication.framework in Frameworks */,
 				B295BE82214F325600D7E63C /* CloudKit.framework in Frameworks */,
 				B2045DF2212A7DF700272036 /* Security.framework in Frameworks */,
-				9EF96DF9F0F59B16B6A28AFB /* Pods_Bement.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,8 +392,6 @@
 				B295BE81214F325600D7E63C /* CloudKit.framework */,
 				B2A4E660212D98AC0079C7E6 /* LocalAuthentication.framework */,
 				B2045DF1212A7DF700272036 /* Security.framework */,
-				09035B2370FAF12FC310E549 /* Pods_Bement.framework */,
-				B23C8E3B214C0E53007F1220 /* IntentsUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -444,7 +438,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B2BA44E320EB9FD6009437A7 /* Build configuration list for PBXNativeTarget "Bement" */;
 			buildPhases = (
-				BEA5911B8CD02F60A7DF98ED /* [CP] Check Pods Manifest.lock */,
 				B2BA44CD20EB9FD1009437A7 /* Sources */,
 				B2BA44CE20EB9FD1009437A7 /* Frameworks */,
 				B2BA44CF20EB9FD1009437A7 /* Resources */,
@@ -586,27 +579,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		BEA5911B8CD02F60A7DF98ED /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Bement-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B23C8E5B214C14E1007F1220 /* Sources */ = {
