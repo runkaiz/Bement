@@ -64,6 +64,8 @@
 		B26C0F122119861100750545 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B26C0F112119861100750545 /* LaunchScreen.storyboard */; };
 		B2720439211D78590066AC5E /* MessagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2720438211D78590066AC5E /* MessagesTableViewController.swift */; };
 		B272043B211D7DAF0066AC5E /* QuickSubmitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B272043A211D7DAF0066AC5E /* QuickSubmitViewController.swift */; };
+		B2766A23214F253300C1D2A9 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2766A22214F253300C1D2A9 /* Data.swift */; };
+		B295BE82214F325600D7E63C /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B295BE81214F325600D7E63C /* CloudKit.framework */; };
 		B2A4E662212D98B10079C7E6 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2A4E660212D98AC0079C7E6 /* LocalAuthentication.framework */; };
 		B2B46E79212B046600CA7480 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B2B46E7B212B046600CA7480 /* Localizable.strings */; };
 		B2BA44D520EB9FD1009437A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA44D420EB9FD1009437A7 /* AppDelegate.swift */; };
@@ -78,7 +80,6 @@
 		B2E5B440212AE05500CF904E /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E5B43F212AE05500CF904E /* ErrorViewController.swift */; };
 		B2E97A23211AFFF70005BEA9 /* ForgotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E97A22211AFFF60005BEA9 /* ForgotViewController.swift */; };
 		B2E97A25211B2B4C0005BEA9 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E97A24211B2B4C0005BEA9 /* AdminViewController.swift */; };
-		B2E97A29211B2B8D0005BEA9 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2E97A28211B2B8D0005BEA9 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -198,7 +199,10 @@
 		B26C0F112119861100750545 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2720438211D78590066AC5E /* MessagesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesTableViewController.swift; sourceTree = "<group>"; };
 		B272043A211D7DAF0066AC5E /* QuickSubmitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickSubmitViewController.swift; sourceTree = "<group>"; };
+		B2766A21214F20FA00C1D2A9 /* watch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = watch.entitlements; sourceTree = "<group>"; };
+		B2766A22214F253300C1D2A9 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		B284DC39212EA58F0052AD67 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		B295BE81214F325600D7E63C /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		B2A4E660212D98AC0079C7E6 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		B2B46E7A212B046600CA7480 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B2B46E7C212B046A00CA7480 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -217,10 +221,16 @@
 		B2E97A22211AFFF60005BEA9 /* ForgotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotViewController.swift; sourceTree = "<group>"; };
 		B2E97A24211B2B4C0005BEA9 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
 		B2E97A26211B2B890005BEA9 /* Bement.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Bement.entitlements; sourceTree = "<group>"; };
-		B2E97A28211B2B8D0005BEA9 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0D3B4D75C2DE181B92FBB7AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B23C8E5C214C14E1007F1220 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -233,8 +243,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2A4E662212D98B10079C7E6 /* LocalAuthentication.framework in Frameworks */,
+				B295BE82214F325600D7E63C /* CloudKit.framework in Frameworks */,
 				B2045DF2212A7DF700272036 /* Security.framework in Frameworks */,
-				B2E97A29211B2B8D0005BEA9 /* CloudKit.framework in Frameworks */,
 				9EF96DF9F0F59B16B6A28AFB /* Pods_Bement.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,6 +270,7 @@
 		B23C8E54214C14DF007F1220 /* watch */ = {
 			isa = PBXGroup;
 			children = (
+				B2766A21214F20FA00C1D2A9 /* watch.entitlements */,
 				B23C8E55214C14DF007F1220 /* Interface.storyboard */,
 				B23C8E58214C14E1007F1220 /* Assets.xcassets */,
 				B23C8E5A214C14E1007F1220 /* Info.plist */,
@@ -275,6 +286,7 @@
 				B2C8C972214F0EEF00A5AF67 /* NextDateTableCell.swift */,
 				B23C8E66214C14E1007F1220 /* ExtensionDelegate.swift */,
 				B23C8E68214C14E1007F1220 /* NotificationController.swift */,
+				B2766A22214F253300C1D2A9 /* Data.swift */,
 				B23C8E6A214C14E2007F1220 /* Assets.xcassets */,
 				B23C8E6C214C14E2007F1220 /* Info.plist */,
 				B23C8E6D214C14E2007F1220 /* PushNotificationPayload.apns */,
@@ -384,9 +396,9 @@
 		B2E97A27211B2B8D0005BEA9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B295BE81214F325600D7E63C /* CloudKit.framework */,
 				B2A4E660212D98AC0079C7E6 /* LocalAuthentication.framework */,
 				B2045DF1212A7DF700272036 /* Security.framework */,
-				B2E97A28211B2B8D0005BEA9 /* CloudKit.framework */,
 				09035B2370FAF12FC310E549 /* Pods_Bement.framework */,
 				B23C8E3B214C0E53007F1220 /* IntentsUI.framework */,
 			);
@@ -411,6 +423,7 @@
 			buildPhases = (
 				B23C8E51214C14DF007F1220 /* Resources */,
 				B23C8E74214C14E2007F1220 /* Embed App Extensions */,
+				0D3B4D75C2DE181B92FBB7AE /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -447,8 +460,6 @@
 				B2BA44CD20EB9FD1009437A7 /* Sources */,
 				B2BA44CE20EB9FD1009437A7 /* Frameworks */,
 				B2BA44CF20EB9FD1009437A7 /* Resources */,
-				F42E66C95639B55C3290807D /* [CP] Embed Pods Frameworks */,
-				135F29A937BBF82AAEE184FD /* [CP] Copy Pods Resources */,
 				B23C8E50214C0E53007F1220 /* Embed App Extensions */,
 				B23C8E78214C14E2007F1220 /* Embed Watch Content */,
 			);
@@ -474,6 +485,11 @@
 				TargetAttributes = {
 					B23C8E52214C14DF007F1220 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					B23C8E5E214C14E1007F1220 = {
 						CreatedOnToolsVersion = 10.0;
@@ -481,6 +497,9 @@
 					B2BA44D020EB9FD1009437A7 = {
 						CreatedOnToolsVersion = 10.0;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
 							com.apple.Keychain = {
 								enabled = 1;
 							};
@@ -581,24 +600,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		135F29A937BBF82AAEE184FD /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Bement/Pods-Bement-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseInAppMessaging/InAppMessagingResources.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/InAppMessagingResources.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bement/Pods-Bement-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		BEA5911B8CD02F60A7DF98ED /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -617,28 +618,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F42E66C95639B55C3290807D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Bement/Pods-Bement-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bement/Pods-Bement-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -647,6 +626,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B23C8E69214C14E1007F1220 /* NotificationController.swift in Sources */,
+				B2766A23214F253300C1D2A9 /* Data.swift in Sources */,
 				B2C8C973214F0EEF00A5AF67 /* NextDateTableCell.swift in Sources */,
 				B2C8C971214ED10600A5AF67 /* UpcomingInterfaceController.swift in Sources */,
 				B23C8E67214C14E1007F1220 /* ExtensionDelegate.swift in Sources */,

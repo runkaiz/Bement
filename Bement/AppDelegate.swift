@@ -8,37 +8,19 @@
 
 import UIKit
 import UserNotifications
-import Firebase
-import FirebaseMessaging
-import Intents
+import WatchConnectivity
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate, MessagingDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         
-        FirebaseApp.configure()
-        
-        if #available(iOS 10.0, *) {
-            // For iOS 10 display notification (sent via APNS)
-            UNUserNotificationCenter.current().delegate = self
-            
-            let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
-            UNUserNotificationCenter.current().requestAuthorization(
-                options: authOptions,
-                completionHandler: {_, _ in })
-        } else {
-            let settings: UIUserNotificationSettings =
-                UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
-            application.registerUserNotificationSettings(settings)
-        }
-        
-        Messaging.messaging().delegate = self
-        
-        application.registerForRemoteNotifications()
-        INPreferences.requestSiriAuthorization { (authStatus: INSiriAuthorizationStatus) in
+        if WCSession.isSupported() {
+            let session = WCSession.default
+            session.delegate = self
+            session.activate()
         }
         
         return true
@@ -64,5 +46,44 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+}
+
+extension AppDelegate: WCSessionDelegate {
+    
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
+        guard let request = message["alert"] as? String else {
+            replyHandler([:])
+            return
+        }
+        
+        switch request {
+        case "true":
+            replyHandler(["alert":"On"])
+            UserDefaults().set(true, forKey: "alert")
+        case "false":
+            replyHandler(["alert":"Off"])
+            UserDefaults().set(false, forKey: "alert")
+        case "?":
+            let stats = String(UserDefaults().bool(forKey: "alert"))
+            replyHandler(["alert":stats])
+        default:
+            replyHandler(["alert":"If you see this, something is wrong and this should never appear!"])
+        }
+    }
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        
+        if error != nil {
+            print(error!)
+        }
+    }
+    
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        print("Session Inactive")
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+        print("Session Deactivated")
     }
 }

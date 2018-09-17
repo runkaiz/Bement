@@ -8,6 +8,7 @@
 
 import WatchKit
 import Foundation
+import WatchConnectivity
 
 
 class InterfaceController: WKInterfaceController {
@@ -20,6 +21,24 @@ class InterfaceController: WKInterfaceController {
         // Configure interface objects here.
         
         table.setNumberOfRows(1, withRowType: "main")
+        getData()
+    }
+    
+    func getData() {
+        
+        if WCSession.isSupported() == true {
+            
+            let session = WCSession.default
+            
+            session.sendMessage(["alert":"?"], replyHandler: { response in
+                print("Reply from phone: \(response)")
+                let data = response as! [String:String]
+                database.alert = Bool(data["alert"]!)!
+            }, errorHandler: { error in
+                print(error)
+                } as (Error) -> Void)
+        }
+        
     }
     
     override func willActivate() {

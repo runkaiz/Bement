@@ -8,7 +8,7 @@
 
 import WatchKit
 import Foundation
-
+import WatchConnectivity
 
 class UpcomingInterfaceController: WKInterfaceController {
 
@@ -17,6 +17,8 @@ class UpcomingInterfaceController: WKInterfaceController {
     @IBOutlet var notifyMe: WKInterfaceSwitch!
 
     @IBOutlet var termCell: WKInterfaceTable!
+    
+    var alert = Bool()
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -29,6 +31,33 @@ class UpcomingInterfaceController: WKInterfaceController {
         
         cell.setTerm(text: "None")
         
+        if database.alert == true {
+            self.notifyMe.setOn(true)
+        } else {
+            self.notifyMe.setOn(false)
+        }
+        
+        getAlertStats()
+    }
+    
+    func getAlertStats() {
+        if WCSession.isSupported() == true {
+            
+            let session = WCSession.default
+            
+            session.sendMessage(["alert":"?"], replyHandler: { response in
+                print("Reply from phone: \(response)")
+                let data = response as! [String:String]
+                database.alert = Bool(data["alert"]!)!
+                if database.alert == true {
+                    self.notifyMe.setOn(true)
+                } else {
+                    self.notifyMe.setOn(false)
+                }
+            }, errorHandler: { error in
+                print(error)
+                } as (Error) -> Void)
+        }
     }
 
     override func willActivate() {
@@ -43,6 +72,28 @@ class UpcomingInterfaceController: WKInterfaceController {
     
     @IBAction func notifySettings(_ value: Bool) {
         
+        alert = value
         
+        if alert == true {
+            
+            reloadData(["alert":"true"])
+        } else {
+            
+            reloadData(["alert":"false"])
+        }
+    }
+    
+    func reloadData(_ data: [String : Any]) {
+        
+        if WCSession.isSupported() == true {
+            
+            let session = WCSession.default
+            
+            session.sendMessage(data, replyHandler: { response in
+                print("Reply from phone: \(response)")
+            }, errorHandler: { error in
+                print(error)
+                } as (Error) -> Void)
+        }
     }
 }

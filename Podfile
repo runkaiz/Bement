@@ -7,8 +7,4 @@ target 'Bement' do
 
   # Pods for Bement
   
-  pod 'Firebase/Core'
-  pod 'Firebase/InAppMessagingDisplay'
-  pod 'Firebase/Messaging'
-  
 end
