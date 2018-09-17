@@ -136,8 +136,6 @@
 
 /* Begin PBXFileReference section */
 		09035B2370FAF12FC310E549 /* Pods_Bement.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bement.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		87378BDE1C89278C99CDD4A3 /* Pods-Bement.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bement.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bement/Pods-Bement.release.xcconfig"; sourceTree = "<group>"; };
-		89756CF765EE7057C37DB718 /* Pods-Bement.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bement.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bement/Pods-Bement.debug.xcconfig"; sourceTree = "<group>"; };
 		B2045D8921297F7000272036 /* GlobalVariable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariable.swift; sourceTree = "<group>"; };
 		B2045D8B2129818800272036 /* MessagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesTableViewCell.swift; sourceTree = "<group>"; };
 		B2045DE0212A7DD900272036 /* LocksmithError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocksmithError.swift; sourceTree = "<group>"; };
@@ -347,7 +345,6 @@
 				B23C8E63214C14E1007F1220 /* watch Extension */,
 				B2BA44D220EB9FD1009437A7 /* Products */,
 				B2E97A27211B2B8D0005BEA9 /* Frameworks */,
-				DB06198027B10763ACEAC26B /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -403,15 +400,6 @@
 				B23C8E3B214C0E53007F1220 /* IntentsUI.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		DB06198027B10763ACEAC26B /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				89756CF765EE7057C37DB718 /* Pods-Bement.debug.xcconfig */,
-				87378BDE1C89278C99CDD4A3 /* Pods-Bement.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -913,7 +901,6 @@
 		};
 		B2BA44E420EB9FD6009437A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89756CF765EE7057C37DB718 /* Pods-Bement.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Bement/Bement.entitlements;
@@ -934,7 +921,6 @@
 		};
 		B2BA44E520EB9FD6009437A7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 87378BDE1C89278C99CDD4A3 /* Pods-Bement.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Bement/Bement.entitlements;
