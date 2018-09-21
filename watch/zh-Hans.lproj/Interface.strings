@@ -1,0 +1,30 @@
+
+/* Class = "WKInterfaceLabel"; text = "Alert Label"; ObjectID = "EX4-CD-jRh"; */
+"EX4-CD-jRh.text" = "Alert Label";
+
+/* Class = "WKInterfaceSwitch"; title = "Notify me"; ObjectID = "EcL-1P-Syc"; */
+"EcL-1P-Syc.title" = "提醒我";
+
+/* Class = "WKInterfaceLabel"; text = "Alert Label"; ObjectID = "IdU-wH-bcW"; */
+"IdU-wH-bcW.text" = "Alert Label";
+
+/* Class = "WKInterfaceLabel"; text = "Label"; ObjectID = "KZI-Zh-hpC"; */
+"KZI-Zh-hpC.text" = "Label";
+
+/* Class = "WKInterfaceLabel"; text = "Upcoming"; ObjectID = "Zbk-v3-avD"; */
+"Zbk-v3-avD.text" = "即将到来";
+
+/* Class = "WKInterfaceLabel"; text = "Notification Setting"; ObjectID = "Zyl-Nr-kwF"; */
+"Zyl-Nr-kwF.text" = "消息设置";
+
+/* Class = "WKInterfaceLabel"; text = "Troubleshoot"; ObjectID = "iZw-5F-IaT"; */
+"iZw-5F-IaT.text" = "诊断";
+
+/* Class = "WKInterfaceLabel"; text = "Please visit the phone app for supports!"; ObjectID = "lAV-J3-xTg"; */
+"lAV-J3-xTg.text" = "请前往手机应用！";
+
+/* Class = "WKInterfaceLabel"; text = "Term:"; ObjectID = "t7y-A5-soV"; */
+"t7y-A5-soV.text" = "学期：";
+
+/* Class = "WKInterfaceLabel"; text = "Upcoming"; ObjectID = "tDU-X6-kQu"; */
+"tDU-X6-kQu.text" = "即将到来";

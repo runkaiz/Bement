@@ -209,6 +209,7 @@
 		B2C21A23214B20720086FF11 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B2C8C970214ED10600A5AF67 /* UpcomingInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingInterfaceController.swift; sourceTree = "<group>"; };
 		B2C8C972214F0EEF00A5AF67 /* NextDateTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextDateTableCell.swift; sourceTree = "<group>"; };
+		B2E4145C2155B4E100E7F0B8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Interface.strings"; sourceTree = "<group>"; };
 		B2E5B439212AD48600CF904E /* ErrorsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorsTableViewController.swift; sourceTree = "<group>"; };
 		B2E5B43B212AD52900CF904E /* MessageInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageInfoViewController.swift; sourceTree = "<group>"; };
 		B2E5B43D212ADCD800CF904E /* ErrorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTableViewCell.swift; sourceTree = "<group>"; };
@@ -644,6 +645,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				B23C8E56214C14DF007F1220 /* Base */,
+				B2E4145C2155B4E100E7F0B8 /* zh-Hans */,
 			);
 			name = Interface.storyboard;
 			sourceTree = "<group>";
