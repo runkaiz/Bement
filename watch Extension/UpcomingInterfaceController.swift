@@ -11,8 +11,6 @@ import Foundation
 import WatchConnectivity
 
 class UpcomingInterfaceController: WKInterfaceController {
-
-    @IBOutlet var lastUpdated: WKInterfaceDate!
     
     @IBOutlet var notifyMe: WKInterfaceSwitch!
 
@@ -25,17 +23,17 @@ class UpcomingInterfaceController: WKInterfaceController {
         
         // Configure interface objects here.
         
-        termCell.setNumberOfRows(1, withRowType: "termName")
-        
-        let cell = termCell.rowController(at: 0) as! NextDateTableCell
-        
-        cell.setTerm(text: "None")
-        
         if database.alert == true {
             self.notifyMe.setOn(true)
         } else {
             self.notifyMe.setOn(false)
         }
+        
+        termCell.setNumberOfRows(1, withRowType: "termName")
+        
+        let cell = termCell.rowController(at: 0) as! NextDateTableCell
+        
+        cell.setTerm(text: "None")
         
         getAlertStats()
     }

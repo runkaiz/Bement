@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vhr-DB-jCY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vhr-DB-jCY">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.9"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -765,107 +765,96 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="FKZ-X0-TfH">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1ap-pm-a1s">
+                                <rect key="frame" x="8" y="72" width="359" height="300"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="DXj-kh-2fc">
-                                        <rect key="frame" x="8" y="37" width="359" height="221"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Describe your problem:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pC-WN-aJH">
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="e8U-62-17B"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="DXj-kh-2fc">
+                                        <rect key="frame" x="0.0" y="20" width="359" height="150"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="221" id="wD1-El-DA3"/>
+                                            <constraint firstAttribute="height" constant="150" id="X3H-YF-c36"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="22"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes" spellCheckingType="yes" returnKeyType="done"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes" spellCheckingType="yes" returnKeyType="next"/>
                                     </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Describe your problem:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pC-WN-aJH">
-                                        <rect key="frame" x="8" y="9" width="170" height="20"/>
-                                        <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="YiU-gb-DVy">
-                                        <rect key="frame" x="20" y="481" width="335" height="29"/>
-                                        <segments>
-                                            <segment title="Comments"/>
-                                            <segment title="Error"/>
-                                            <segment title="Suggestion"/>
-                                            <segment title="Help"/>
-                                        </segments>
-                                    </segmentedControl>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XvB-Wt-pbi">
-                                        <rect key="frame" x="20" y="545" width="335" height="50"/>
-                                        <color key="backgroundColor" red="0.99587005376815796" green="0.17403936386108398" blue="0.33331087231636047" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="QV5-iu-EO6"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="17"/>
-                                        <state key="normal" title="Send"/>
-                                        <connections>
-                                            <action selector="sendPressed:" destination="T70-Os-hTy" eventType="touchUpInside" id="aug-9D-oR2"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccC-P3-JZ9">
-                                        <rect key="frame" x="16" y="433" width="72.5" height="20"/>
-                                        <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My problem is......" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XCQ-9M-AkN">
-                                        <rect key="frame" x="16" y="44" width="185" height="26"/>
-                                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="22"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your contact email:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9g5-qt-cVZ">
-                                        <rect key="frame" x="16" y="311" width="139.5" height="20"/>
+                                        <rect key="frame" x="0.0" y="170" width="359" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="Oor-ya-s6E"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="myemail@example.com" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ecw-fQ-kR3">
-                                        <rect key="frame" x="20" y="350" width="335" height="30"/>
+                                        <rect key="frame" x="0.0" y="205" width="359" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="dxI-pG-DQp"/>
+                                        </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done" textContentType="email"/>
                                     </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccC-P3-JZ9">
+                                        <rect key="frame" x="0.0" y="235" width="359" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="XAn-1s-hdp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="YiU-gb-DVy">
+                                        <rect key="frame" x="0.0" y="270" width="359" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="kQT-AO-HMX"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="Help"/>
+                                            <segment title="Error"/>
+                                        </segments>
+                                    </segmentedControl>
                                 </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My problem is......" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XCQ-9M-AkN">
+                                <rect key="frame" x="12" y="100" width="185" height="26.5"/>
+                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XvB-Wt-pbi">
+                                <rect key="frame" x="8" y="597" width="359" height="50"/>
+                                <color key="backgroundColor" red="0.99587005376815796" green="0.17403936386108398" blue="0.33331087231636047" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstItem="XvB-Wt-pbi" firstAttribute="leading" secondItem="FKZ-X0-TfH" secondAttribute="leading" constant="20" id="58V-zh-Q9B"/>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="YiU-gb-DVy" secondAttribute="trailing" id="7qi-2J-8ZY"/>
-                                    <constraint firstItem="XCQ-9M-AkN" firstAttribute="top" secondItem="9pC-WN-aJH" secondAttribute="bottom" constant="15" id="B0u-Bz-Y6M"/>
-                                    <constraint firstItem="DXj-kh-2fc" firstAttribute="leading" secondItem="9pC-WN-aJH" secondAttribute="leading" id="Es9-mU-9WP"/>
-                                    <constraint firstItem="XvB-Wt-pbi" firstAttribute="bottom" secondItem="FKZ-X0-TfH" secondAttribute="bottomMargin" id="HUd-F9-7Jf"/>
-                                    <constraint firstItem="DXj-kh-2fc" firstAttribute="centerX" secondItem="FKZ-X0-TfH" secondAttribute="centerX" id="Hnq-Y9-Ou2"/>
-                                    <constraint firstItem="ecw-fQ-kR3" firstAttribute="top" secondItem="9g5-qt-cVZ" secondAttribute="bottom" constant="19" id="LCX-lK-iMC"/>
-                                    <constraint firstItem="ccC-P3-JZ9" firstAttribute="leading" secondItem="FKZ-X0-TfH" secondAttribute="leading" constant="16" id="NcG-fa-hjN"/>
-                                    <constraint firstItem="ecw-fQ-kR3" firstAttribute="leading" secondItem="FKZ-X0-TfH" secondAttribute="leading" constant="20" id="RBA-9C-c5j"/>
-                                    <constraint firstItem="YiU-gb-DVy" firstAttribute="leading" secondItem="FKZ-X0-TfH" secondAttribute="leading" constant="20" id="THm-sK-E2Q"/>
-                                    <constraint firstItem="DXj-kh-2fc" firstAttribute="centerX" secondItem="YiU-gb-DVy" secondAttribute="centerX" id="TxA-B5-SQN"/>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ccC-P3-JZ9" secondAttribute="trailing" constant="20" symbolic="YES" id="Wym-os-J0m"/>
-                                    <constraint firstItem="ccC-P3-JZ9" firstAttribute="leading" secondItem="XCQ-9M-AkN" secondAttribute="leading" id="Z6L-MV-4Gc"/>
-                                    <constraint firstItem="9g5-qt-cVZ" firstAttribute="top" secondItem="DXj-kh-2fc" secondAttribute="bottom" constant="53" id="a6x-2w-WRx"/>
-                                    <constraint firstItem="XvB-Wt-pbi" firstAttribute="top" secondItem="YiU-gb-DVy" secondAttribute="bottom" constant="36" id="cve-Wb-ZkZ"/>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="9pC-WN-aJH" secondAttribute="trailing" constant="20" symbolic="YES" id="etY-3N-HyO"/>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XCQ-9M-AkN" secondAttribute="trailing" constant="20" symbolic="YES" id="fCI-IN-THT"/>
-                                    <constraint firstAttribute="bottom" secondItem="DXj-kh-2fc" secondAttribute="bottom" constant="345" id="fKU-Iy-AdM"/>
-                                    <constraint firstItem="ccC-P3-JZ9" firstAttribute="top" secondItem="ecw-fQ-kR3" secondAttribute="bottom" constant="53" id="ivw-0M-7Zd"/>
-                                    <constraint firstItem="DXj-kh-2fc" firstAttribute="leading" secondItem="FKZ-X0-TfH" secondAttribute="leadingMargin" id="lE8-jM-BzH"/>
-                                    <constraint firstItem="DXj-kh-2fc" firstAttribute="top" secondItem="FKZ-X0-TfH" secondAttribute="top" constant="37" id="q7o-3Y-GVc"/>
-                                    <constraint firstItem="ccC-P3-JZ9" firstAttribute="leading" secondItem="9g5-qt-cVZ" secondAttribute="leading" id="qaB-lh-dfd"/>
-                                    <constraint firstItem="DXj-kh-2fc" firstAttribute="trailing" secondItem="FKZ-X0-TfH" secondAttribute="trailingMargin" id="tyb-L4-30P"/>
-                                    <constraint firstItem="DXj-kh-2fc" firstAttribute="top" secondItem="9pC-WN-aJH" secondAttribute="bottom" constant="8" symbolic="YES" id="vkP-wc-J0d"/>
-                                    <constraint firstAttribute="trailing" secondItem="XvB-Wt-pbi" secondAttribute="trailing" constant="20" id="wRE-OR-3Lo"/>
-                                    <constraint firstItem="DXj-kh-2fc" firstAttribute="centerX" secondItem="ecw-fQ-kR3" secondAttribute="centerX" id="xFa-kb-7hs"/>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="9g5-qt-cVZ" secondAttribute="trailing" constant="20" symbolic="YES" id="zqH-dr-rFS"/>
+                                    <constraint firstAttribute="height" constant="50" id="QV5-iu-EO6"/>
                                 </constraints>
-                            </scrollView>
+                                <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="17"/>
+                                <state key="normal" title="Send"/>
+                                <connections>
+                                    <action selector="sendPressed:" destination="T70-Os-hTy" eventType="touchUpInside" id="aug-9D-oR2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="FKZ-X0-TfH" secondAttribute="trailing" id="QEA-xP-YE5"/>
-                            <constraint firstItem="FKZ-X0-TfH" firstAttribute="top" secondItem="NYB-Gt-SZc" secondAttribute="top" id="Rj2-7i-WoC"/>
-                            <constraint firstItem="FKZ-X0-TfH" firstAttribute="bottom" secondItem="NYB-Gt-SZc" secondAttribute="bottom" id="gpx-hZ-jfe"/>
-                            <constraint firstItem="FKZ-X0-TfH" firstAttribute="leading" secondItem="ZJc-Us-Y4z" secondAttribute="leading" id="q2x-57-Oln"/>
+                            <constraint firstItem="XCQ-9M-AkN" firstAttribute="top" secondItem="NYB-Gt-SZc" secondAttribute="top" constant="36" id="2vN-Ix-qNi"/>
+                            <constraint firstItem="1ap-pm-a1s" firstAttribute="top" secondItem="NYB-Gt-SZc" secondAttribute="top" constant="8" id="7St-fN-if8"/>
+                            <constraint firstItem="1ap-pm-a1s" firstAttribute="leading" secondItem="NYB-Gt-SZc" secondAttribute="leading" constant="8" id="Bet-Gd-095"/>
+                            <constraint firstItem="XCQ-9M-AkN" firstAttribute="leading" secondItem="NYB-Gt-SZc" secondAttribute="leading" constant="12" id="NFw-eM-3ey"/>
+                            <constraint firstItem="NYB-Gt-SZc" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XCQ-9M-AkN" secondAttribute="trailing" symbolic="YES" id="QNe-aM-FhC"/>
+                            <constraint firstItem="XvB-Wt-pbi" firstAttribute="leading" secondItem="ZJc-Us-Y4z" secondAttribute="leading" constant="8" id="SzT-sJ-xW8"/>
+                            <constraint firstItem="NYB-Gt-SZc" firstAttribute="trailing" secondItem="1ap-pm-a1s" secondAttribute="trailing" constant="8" id="afg-4q-aRw"/>
+                            <constraint firstAttribute="trailing" secondItem="XvB-Wt-pbi" secondAttribute="trailing" constant="8" id="tOG-H0-VFV"/>
+                            <constraint firstItem="NYB-Gt-SZc" firstAttribute="bottom" secondItem="XvB-Wt-pbi" secondAttribute="bottom" constant="20" id="zNc-TK-2be"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NYB-Gt-SZc"/>
                     </view>
@@ -877,6 +866,7 @@
                         <outlet property="detailLabel" destination="9pC-WN-aJH" id="G6O-oo-B3a"/>
                         <outlet property="emailField" destination="ecw-fQ-kR3" id="VIs-hr-nKX"/>
                         <outlet property="emailLabel" destination="9g5-qt-cVZ" id="jB5-lx-4ep"/>
+                        <outlet property="form" destination="1ap-pm-a1s" id="nDg-v2-PJ3"/>
                         <outlet property="messageField" destination="DXj-kh-2fc" id="wYp-fS-lav"/>
                         <outlet property="send" destination="XvB-Wt-pbi" id="eb6-qK-0q4"/>
                     </connections>
@@ -937,7 +927,7 @@
     <resources>
         <image name="IMG_1324" width="640" height="1136"/>
         <image name="IMG_1325" width="640" height="1136"/>
-        <image name="Logo-1" width="89.699996948242188" height="88"/>
+        <image name="Logo-1" width="341.33334350585938" height="341.33334350585938"/>
         <image name="Settings" width="150" height="180"/>
     </resources>
     <inferredMetricsTieBreakers>

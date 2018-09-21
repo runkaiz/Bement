@@ -10,7 +10,7 @@ import UIKit
 
 class MessagesTableViewController: UITableViewController {
 
-    let sectionName = [NSLocalizedString("comments", comment: ""), NSLocalizedString("error", comment: ""), NSLocalizedString("suggestion", comment: ""), NSLocalizedString("help", comment: "")]
+    let sectionName = [NSLocalizedString("help", comment: ""), NSLocalizedString("error", comment: "")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +18,7 @@ class MessagesTableViewController: UITableViewController {
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 4
+        return 2
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -26,7 +26,7 @@ class MessagesTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (globalVariable.messageCategory[section]?.count)!
+        return globalVariable.messageCategory[section]!.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

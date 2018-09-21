@@ -9,8 +9,10 @@
 import UIKit
 import CloudKit
 
-class QuickSubmitViewController: UIViewController, UITextViewDelegate {
+class QuickSubmitViewController: UIViewController, UITextViewDelegate, UITextFieldDelegate {
 
+    @IBOutlet var form: UIStackView!
+    
     @IBOutlet var Placeholder: UILabel!
     
     @IBOutlet var messageField: UITextView!
@@ -29,8 +31,10 @@ class QuickSubmitViewController: UIViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         messageField.delegate = self
+        emailField.delegate = self
+        
         textViewDidChange(messageField)
         tools.beautifulButton(send)
         
@@ -40,7 +44,17 @@ class QuickSubmitViewController: UIViewController, UITextViewDelegate {
         detailLabel.text = NSLocalizedString("describeLabel", comment: "")
         Placeholder.text = NSLocalizedString("placeholder", comment: "")
     }
-
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        if textField == emailField {
+            textField.resignFirstResponder()
+            self.view.layoutIfNeeded()
+        }
+        
+        return true
+    }
+    
     @IBAction func sendPressed(_ sender: Any) {
         
         if messageField.text == "" {
@@ -64,77 +78,63 @@ class QuickSubmitViewController: UIViewController, UITextViewDelegate {
             }
             else {
                 
-                DispatchQueue.main.async {
+                let alert = UIAlertController(title: nil, message: NSLocalizedString("wait", comment: ""), preferredStyle: .alert)
                     
-                    let alert = UIAlertController(title: nil, message: NSLocalizedString("wait", comment: ""), preferredStyle: .alert)
+                let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+                loadingIndicator.hidesWhenStopped = true
+                loadingIndicator.style = UIActivityIndicatorView.Style.gray
+                loadingIndicator.startAnimating();
                     
-                    let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
-                    loadingIndicator.hidesWhenStopped = true
-                    loadingIndicator.style = UIActivityIndicatorView.Style.gray
-                    loadingIndicator.startAnimating();
+                alert.view.addSubview(loadingIndicator)
+                self.present(alert, animated: true, completion: nil)
+                //获取当前时间
+                let now = Date()
                     
-                    alert.view.addSubview(loadingIndicator)
-                    self.present(alert, animated: true, completion: nil)
-                    self.uploadRecords()
-                }
+                // 创建一个日期格式器
+                let dformatter = DateFormatter()
+                dformatter.dateFormat = "yyyy/MM/dd/ HH:mm:ss"
+                    
+                let messageRecord = CKRecord(recordType: "Message")
+                    
+                messageRecord["time"] = dformatter.string(from: now) as NSString
+                messageRecord["message"] = self.messageField.text as NSString
+                messageRecord["email"] = self.emailField.text! as NSString
+                messageRecord["category"] = self.Category.selectedSegmentIndex
+                    
+                let myContainer = CKContainer.default()
+                let publicDatabase = myContainer.publicCloudDatabase
                 
-            }
-        }
-    }
-    
-    func uploadRecords() {
-        //获取当前时间
-        let now = Date()
-        
-        // 创建一个日期格式器
-        let dformatter = DateFormatter()
-        dformatter.dateFormat = "yyyy/MM/dd/ HH:mm:ss"
-        
-        let messageRecord = CKRecord(recordType: "Message")
-        
-        messageRecord["time"] = dformatter.string(from: now) as NSString
-        messageRecord["message"] = messageField.text as NSString
-        messageRecord["email"] = emailField.text! as NSString
-        messageRecord["category"] = Category.selectedSegmentIndex
-        
-        let myContainer = CKContainer.default()
-        let publicDatabase = myContainer.publicCloudDatabase
-        
-        DispatchQueue.main.async {
-            publicDatabase.save(messageRecord) {
-                (record, error) in
-                if let error = error {
-                    
-                    let string = String(describing: error)
-                    
-                    if string != "" {
-                        self.uploadError(error)
+                publicDatabase.save(messageRecord) {
+                    (record, error) in
+                    if let error = error {
                         
-                        let alert = UIAlertController(title: "oh no...", message: "An error appeared", preferredStyle: .alert)
+                        let string = String(describing: error)
                         
-                        let dismiss = UIAlertAction(title: "Come on", style: .cancel, handler: nil)
-                        alert.addAction(dismiss)
-                        
-                        DispatchQueue.main.async {
+                        if string != "" {
+                            self.uploadError(error)
+                            
+                            let alert = UIAlertController(title: "oh no...", message: "An error appeared", preferredStyle: .alert)
+                            
+                            let dismiss = UIAlertAction(title: "Come on", style: .cancel, handler: nil)
+                            alert.addAction(dismiss)
+                            
                             self.present(alert, animated: true, completion: nil)
                         }
+                        
+                        return
                     }
                     
-                    
-                    return
+                    DispatchQueue.main.async {
+                        let alert = UIAlertController(title: "Successful", message: "Successfully uploaded your messages", preferredStyle: .alert)
+                        
+                        let dismiss = UIAlertAction(title: "Hurray!", style: .cancel, handler: nil)
+                        
+                        alert.addAction(dismiss)
+                        
+                        self.dismiss(animated: true, completion: nil)
+                        self.present(alert, animated: true, completion: nil)
+                    }
                 }
-                
-                let alert = UIAlertController(title: "Successful", message: "Successfully uploaded your messages", preferredStyle: .alert)
-                
-                let dismiss = UIAlertAction(title: "Hurray!", style: .cancel, handler: nil)
-                
-                alert.addAction(dismiss)
-                
-                DispatchQueue.main.async {
-                    self.dismiss(animated: false, completion: nil)
-                    self.present(alert, animated: true, completion: nil)
-                }
-                
             }
         }
     }

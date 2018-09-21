@@ -39,3 +39,5 @@
 "describeLabel"="请描述您的问题：";
 "send"="发送";
 "placeholder"="我的问题是。。。";
+"nilTitle" = "糟了";
+"nilDetail" = "好像暂时没有任何信息。";

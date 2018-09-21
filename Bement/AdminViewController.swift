@@ -103,7 +103,17 @@ class AdminViewController: UIViewController {
                 globalVariable.messageRecordsName = messageRecords
                 DispatchQueue.main.async {
                     self.dismiss(animated: false, completion: nil)
-                    self.performSegue(withIdentifier: "messages", sender: self)
+                    
+                    if messageRecords != [] {
+                        self.performSegue(withIdentifier: "messages", sender: self)
+                    } else {
+                        let alert = UIAlertController(title: NSLocalizedString("nilTitle", comment: ""), message: NSLocalizedString("nilDetail", comment: ""), preferredStyle: .alert)
+                        let action = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+                        alert.addAction(action)
+                        DispatchQueue.main.async {
+                            self.present(alert, animated: true, completion: nil)
+                        }
+                    }
                 }
                 self.catagorize(messageRecords)
             }
@@ -114,33 +124,21 @@ class AdminViewController: UIViewController {
     
     func catagorize(_ record: [CKRecord]) {
         
-        var Comments = [CKRecord]()
         var Errors = [CKRecord]()
-        var Suggestions = [CKRecord]()
         var Help = [CKRecord]()
         
         for item in record {
-            
-            if item["category"] == 0 {
-                Comments.append(item)
-            }
             
             if item["category"] == 1 {
                 Errors.append(item)
             }
             
-            if item["category"] == 2 {
-                Suggestions.append(item)
-            }
-            
-            if item["category"] == 3 {
+            if item["category"] == 0 {
                 Help.append(item)
             }
         }
         
-        globalVariable.messageCategory[0] = Comments
         globalVariable.messageCategory[1] = Errors
-        globalVariable.messageCategory[2] = Suggestions
         globalVariable.messageCategory[3] = Help
     }
 }

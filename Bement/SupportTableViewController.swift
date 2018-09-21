@@ -28,6 +28,7 @@ class SupportTableViewController: UITableViewController {
         if indexPath.row == 1 {
             
             showActionSheets()
+            tableView.deselectRow(at: indexPath, animated: true)
         }
     }
     

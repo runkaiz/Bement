@@ -8,14 +8,14 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14238.10"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="SF-Pro-Display-Medium.otf">
-            <string>SFProDisplay-Medium</string>
+        <array key="SF-Pro-Display-Light.otf">
+            <string>SFProDisplay-Light</string>
         </array>
         <array key="SF-Pro-Display-Regular.otf">
             <string>SFProDisplay-Regular</string>
         </array>
-        <array key="SF-Pro-Display-ThinItalic.otf">
-            <string>SFProDisplay-ThinItalic</string>
+        <array key="SF-Pro-Display-Semibold.otf">
+            <string>SFProDisplay-Semibold</string>
         </array>
     </customFonts>
     <scenes>
@@ -24,6 +24,9 @@
             <objects>
                 <controller id="38E-4L-0Z7" customClass="UpcomingInterfaceController" customModule="watch_Extension">
                     <items>
+                        <label alignment="left" text="Upcoming" id="Zbk-v3-avD">
+                            <fontDescription key="font" name="SFProDisplay-Light" family="SF Pro Display" pointSize="13"/>
+                        </label>
                         <table alignment="left" id="zme-pS-KNb">
                             <items>
                                 <tableRow identifier="termName" id="fHm-99-nn9" customClass="NextDateTableCell" customModule="watch_Extension">
@@ -41,15 +44,10 @@
                                 </tableRow>
                             </items>
                         </table>
-                        <label alignment="left" text="Last updated:" minimumScaleFactor="0.80000000000000004" id="Cs9-OS-JN3">
-                            <fontDescription key="font" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="11"/>
-                        </label>
-                        <dateLabel alignment="left" id="sda-3h-N9c">
-                            <fontDescription key="font" name="SFProDisplay-ThinItalic" family="SF Pro Display" pointSize="12"/>
-                            <dateFormatterStyle key="dateStyle" short="YES"/>
-                            <dateFormatterStyle key="timeStyle" short="YES"/>
-                        </dateLabel>
                         <separator alignment="left" id="KSy-q1-fUq"/>
+                        <label alignment="left" text="Notification Setting" id="Zyl-Nr-kwF">
+                            <fontDescription key="font" name="SFProDisplay-Light" family="SF Pro Display" pointSize="11"/>
+                        </label>
                         <switch width="1" alignment="left" title="Notify me" id="EcL-1P-Syc">
                             <connections>
                                 <action selector="notifySettings:" destination="38E-4L-0Z7" id="99o-ZU-s5t"/>
@@ -57,13 +55,23 @@
                         </switch>
                     </items>
                     <connections>
-                        <outlet property="lastUpdated" destination="sda-3h-N9c" id="eWh-qG-pP3"/>
                         <outlet property="notifyMe" destination="EcL-1P-Syc" id="IXv-ug-xhA"/>
                         <outlet property="termCell" destination="zme-pS-KNb" id="FC3-Qm-zdg"/>
                     </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="219.95061728395061" y="70.329949238578678"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="gvo-yQ-cCP">
+            <objects>
+                <controller id="NNy-X4-3ld">
+                    <items>
+                        <label width="173" height="188" alignment="left" text="Please visit the phone app for supports!" textAlignment="center" numberOfLines="3" id="lAV-J3-xTg"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="467.60493827160496" y="69.467005076142129"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
@@ -76,13 +84,25 @@
                                     <group key="rootItem" width="1" alignment="left" id="yxt-wh-56B">
                                         <items>
                                             <label width="136" height="80" alignment="left" text="Upcoming" textAlignment="center" id="tDU-X6-kQu">
-                                                <fontDescription key="font" style="UICTFontTextStyleTitle3"/>
+                                                <fontDescription key="font" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="18"/>
                                             </label>
                                         </items>
                                     </group>
                                     <connections>
                                         <segue destination="38E-4L-0Z7" kind="push" id="G8R-1d-CZs"/>
                                     </connections>
+                                </tableRow>
+                                <tableRow identifier="troubleshoot" id="bAs-PF-Pe9">
+                                    <group key="rootItem" width="1" alignment="left" id="KoW-qT-OsZ">
+                                        <items>
+                                            <label width="136" height="66" alignment="left" text="Troubleshoot" textAlignment="center" id="iZw-5F-IaT">
+                                                <fontDescription key="font" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="18"/>
+                                            </label>
+                                        </items>
+                                        <connections>
+                                            <segue destination="NNy-X4-3ld" kind="push" id="CyZ-gI-WIW"/>
+                                        </connections>
+                                    </group>
                                 </tableRow>
                             </items>
                         </table>
@@ -118,7 +138,7 @@
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
                 <controller id="4sK-HA-Art" customClass="NotificationController" customModule="watch" customModuleProvider="target">
-                    <color key="backgroundColor" red="0.2823035717010498" green="0.57043850421905518" blue="0.95298475027084351" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <color key="backgroundColor" red="0.94489330049999998" green="0.6045607328" blue="0.21945464610000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                 </controller>
             </objects>
             <point key="canvasLocation" x="468" y="643"/>
@@ -130,6 +150,7 @@
                     <items>
                         <label alignment="left" text="Alert Label" numberOfLines="0" id="EX4-CD-jRh"/>
                     </items>
+                    <color key="backgroundColor" red="0.94489330049999998" green="0.6045607328" blue="0.21945464610000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <connections>
                         <outlet property="label" destination="EX4-CD-jRh" id="xlV-w6-dZy"/>
                     </connections>

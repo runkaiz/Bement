@@ -191,15 +191,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func login(_ sender: Any) {
         
-        login()
-    }
-    
-    func login() {
-        
         if username.text != "" {
             if username.text == "admin" {
                 if password.text == "bementdeerfield" {
-                    performSegue(withIdentifier: "admin", sender: self)
+                    
+                    DispatchQueue.main.async {
+                        self.performSegue(withIdentifier: "admin", sender: self)
+                    }
                     
                     if Locksmith.loadDataForUserAccount(userAccount: "admin") == nil {
                         do {

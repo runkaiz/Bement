@@ -17,7 +17,6 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate {
             print(error!)
         }
     }
-    
 
     func applicationDidFinishLaunching() {
         // Perform any final initialization of your application.
@@ -67,5 +66,4 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate {
             }
         }
     }
-
 }
