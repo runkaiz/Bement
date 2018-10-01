@@ -13,7 +13,7 @@ import UserNotifications
 class tools {
     
     public static func beautifulButton(_ object:AnyObject) {
-        object.layer?.cornerRadius = 8
+        object.layer?.cornerRadius = 10
         object.layer?.masksToBounds = true
     }
     

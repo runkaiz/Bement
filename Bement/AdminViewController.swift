@@ -71,8 +71,9 @@ class AdminViewController: UIViewController {
                 
                 globalVariable.errorRecordsName = errorRecords
                 DispatchQueue.main.async {
-                    self.dismiss(animated: false, completion: nil)
-                    self.performSegue(withIdentifier: "error", sender: self)
+                    self.dismiss(animated: true) {
+                        self.performSegue(withIdentifier: "error", sender: self)
+                    }
                 }
             }
             
@@ -101,21 +102,24 @@ class AdminViewController: UIViewController {
             operation.queryCompletionBlock = { cursor, error in
                 
                 globalVariable.messageRecordsName = messageRecords
+                
                 DispatchQueue.main.async {
-                    self.dismiss(animated: false, completion: nil)
                     
                     if messageRecords != [] {
-                        self.performSegue(withIdentifier: "messages", sender: self)
+                        self.dismiss(animated: true, completion: nil)
+                        globalVariable.messageRecordsName = messageRecords
+                        self.catagorize(messageRecords)
                     } else {
-                        let alert = UIAlertController(title: NSLocalizedString("nilTitle", comment: ""), message: NSLocalizedString("nilDetail", comment: ""), preferredStyle: .alert)
-                        let action = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
-                        alert.addAction(action)
                         DispatchQueue.main.async {
-                            self.present(alert, animated: true, completion: nil)
+                            let alert = UIAlertController(title: NSLocalizedString("nilTitle", comment: ""), message: NSLocalizedString("nilDetail", comment: ""), preferredStyle: .alert)
+                            let action = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+                            alert.addAction(action)
+                            self.dismiss(animated: true, completion: {
+                                self.present(alert, animated: true, completion: nil)
+                            })
                         }
                     }
                 }
-                self.catagorize(messageRecords)
             }
             
             database.add(operation)
@@ -138,7 +142,11 @@ class AdminViewController: UIViewController {
             }
         }
         
-        globalVariable.messageCategory[1] = Errors
-        globalVariable.messageCategory[3] = Help
+        globalVariable.messageCategory[0] = Errors
+        globalVariable.messageCategory[1] = Help
+        
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "messages", sender: self)
+        }
     }
 }

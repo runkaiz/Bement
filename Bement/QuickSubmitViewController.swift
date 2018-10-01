@@ -127,7 +127,9 @@ class QuickSubmitViewController: UIViewController, UITextViewDelegate, UITextFie
                     DispatchQueue.main.async {
                         let alert = UIAlertController(title: "Successful", message: "Successfully uploaded your messages", preferredStyle: .alert)
                         
-                        let dismiss = UIAlertAction(title: "Hurray!", style: .cancel, handler: nil)
+                        let dismiss = UIAlertAction(title: "Hurray!", style: .cancel, handler: { action in
+                            self.performSegue(withIdentifier: "backToLogin", sender: self)
+                        })
                         
                         alert.addAction(dismiss)
                         

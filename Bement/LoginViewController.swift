@@ -57,6 +57,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.view.layoutIfNeeded()
+        self.stackView.frame.origin.y = 231
+        self.logoTop.constant = 0
+    }
+    
     @IBAction func done(_ segue: UIStoryboardSegue) {
         //print("Popping back to this view controller!")
         // reset UI elements etc here
@@ -148,12 +154,23 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             
             self.view.layoutIfNeeded()
             
-            UIView.animate(withDuration: 0.25, animations: {
+            if username.isFirstResponder {
+                UIView.animate(withDuration: 0.25, animations: {
+                    
+                    self.view.layoutIfNeeded()
+                    self.stackView.frame.origin.y = rect.height - 100
+                    self.logoTop.constant -= 100
+                })
+            } else if self.stackView.frame.origin.y == 255 {
+                UIView.animate(withDuration: 0.25, animations: {
+                    
+                    self.view.layoutIfNeeded()
+                    self.stackView.frame.origin.y = rect.height - 100
+                    self.logoTop.constant -= 100
+                })
+            } else {
                 
-                self.view.layoutIfNeeded()
-                self.stackView.frame.origin.y = rect.height - 100
-                self.logoTop.constant -= 100
-            })
+            }
             
         }
     }
@@ -161,13 +178,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @objc func keyboardWillHide(notification:NSNotification) {
         
         self.view.layoutIfNeeded()
-            
-        UIView.animate(withDuration: 0.25, animations: {
+        
+        if password.isFirstResponder {
+            UIView.animate(withDuration: 0.25, animations: {
                 
-            self.view.layoutIfNeeded()
-            self.stackView.frame.origin.y = 231
-            self.logoTop.constant = 0
-        })
+                self.view.layoutIfNeeded()
+                self.stackView.frame.origin.y = 231
+                self.logoTop.constant = 0
+            })
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -176,13 +195,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             textField.resignFirstResponder()
             password.becomeFirstResponder()
             self.view.layoutIfNeeded()
-            
-            UIView.animate(withDuration: 0.25, animations: {
-                
-                self.view.layoutIfNeeded()
-                self.stackView.frame.origin.y = 231
-                self.logoTop.constant = 0
-            })
         } else if textField == password {
             textField.resignFirstResponder()
         }

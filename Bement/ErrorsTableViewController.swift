@@ -39,6 +39,6 @@ class ErrorsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         globalVariable.row = indexPath.row
-        self.performSegue(withIdentifier: "errorInfo", sender: self)
+        self.performSegue(withIdentifier: "info", sender: self)
     }
 }

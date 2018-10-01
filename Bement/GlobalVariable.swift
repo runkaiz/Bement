@@ -9,7 +9,7 @@
 import Foundation
 import CloudKit
 
-class globalVariable {
+struct globalVariable {
     public static var messageRecordsName: [CKRecord] = []
     public static var messageCategory = [Int : [CKRecord]]()
     public static var row = Int()

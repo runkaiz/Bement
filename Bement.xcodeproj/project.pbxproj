@@ -17,6 +17,9 @@
 		B2045DEE212A7DD900272036 /* LocksmithAccessibleOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2045DE5212A7DD900272036 /* LocksmithAccessibleOption.swift */; };
 		B2045DEF212A7DD900272036 /* LocksmithInternetAuthenticationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2045DE6212A7DD900272036 /* LocksmithInternetAuthenticationType.swift */; };
 		B2045DF2212A7DF700272036 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2045DF1212A7DF700272036 /* Security.framework */; };
+		B2395B4C2159A583006B7F0A /* ResourcesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2395B4B2159A583006B7F0A /* ResourcesCollectionViewController.swift */; };
+		B2395B4E2159A5AD006B7F0A /* CatalogTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2395B4D2159A5AD006B7F0A /* CatalogTableViewController.swift */; };
+		B2395B502159A67F006B7F0A /* CatalogResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2395B4F2159A67F006B7F0A /* CatalogResources.swift */; };
 		B23C8E57214C14DF007F1220 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B23C8E55214C14DF007F1220 /* Interface.storyboard */; };
 		B23C8E59214C14E1007F1220 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B23C8E58214C14E1007F1220 /* Assets.xcassets */; };
 		B23C8E60214C14E1007F1220 /* watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B23C8E5F214C14E1007F1220 /* watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -70,7 +73,6 @@
 		B2BA44D520EB9FD1009437A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA44D420EB9FD1009437A7 /* AppDelegate.swift */; };
 		B2BA44DA20EB9FD1009437A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2BA44D820EB9FD1009437A7 /* Main.storyboard */; };
 		B2BA44DC20EB9FD6009437A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2BA44DB20EB9FD6009437A7 /* Assets.xcassets */; };
-		B2C21A24214B20720086FF11 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2C21A23214B20720086FF11 /* GoogleService-Info.plist */; };
 		B2C8C971214ED10600A5AF67 /* UpcomingInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C8C970214ED10600A5AF67 /* UpcomingInterfaceController.swift */; };
 		B2C8C973214F0EEF00A5AF67 /* NextDateTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C8C972214F0EEF00A5AF67 /* NextDateTableCell.swift */; };
 		B2E5B43A212AD48600CF904E /* ErrorsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E5B439212AD48600CF904E /* ErrorsTableViewController.swift */; };
@@ -79,6 +81,9 @@
 		B2E5B440212AE05500CF904E /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E5B43F212AE05500CF904E /* ErrorViewController.swift */; };
 		B2E97A23211AFFF70005BEA9 /* ForgotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E97A22211AFFF60005BEA9 /* ForgotViewController.swift */; };
 		B2E97A25211B2B4C0005BEA9 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E97A24211B2B4C0005BEA9 /* AdminViewController.swift */; };
+		B2F35212215C5B3300E0F436 /* ClagettViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F35211215C5B3300E0F436 /* ClagettViewController.swift */; };
+		B2F35214215DAFDB00E0F436 /* CatalogCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F35213215DAFDB00E0F436 /* CatalogCollectionViewCell.swift */; };
+		EA4AF79B89B391775142DBBD /* Pods_watch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C86ED8319AA6179D0029815 /* Pods_watch.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,6 +139,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9C86ED8319AA6179D0029815 /* Pods_watch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_watch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2045D8921297F7000272036 /* GlobalVariable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariable.swift; sourceTree = "<group>"; };
 		B2045D8B2129818800272036 /* MessagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesTableViewCell.swift; sourceTree = "<group>"; };
 		B2045DE0212A7DD900272036 /* LocksmithError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocksmithError.swift; sourceTree = "<group>"; };
@@ -145,6 +151,9 @@
 		B2045DE6212A7DD900272036 /* LocksmithInternetAuthenticationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocksmithInternetAuthenticationType.swift; sourceTree = "<group>"; };
 		B2045DE7212A7DD900272036 /* Locksmith.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Locksmith.h; sourceTree = "<group>"; };
 		B2045DF1212A7DF700272036 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		B2395B4B2159A583006B7F0A /* ResourcesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesCollectionViewController.swift; sourceTree = "<group>"; };
+		B2395B4D2159A5AD006B7F0A /* CatalogTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogTableViewController.swift; sourceTree = "<group>"; };
+		B2395B4F2159A67F006B7F0A /* CatalogResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogResources.swift; sourceTree = "<group>"; };
 		B23C8E53214C14DF007F1220 /* watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = watch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B23C8E56214C14DF007F1220 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		B23C8E58214C14E1007F1220 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -206,7 +215,6 @@
 		B2BA44D920EB9FD1009437A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B2BA44DB20EB9FD6009437A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2BA44E020EB9FD6009437A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B2C21A23214B20720086FF11 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B2C8C970214ED10600A5AF67 /* UpcomingInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingInterfaceController.swift; sourceTree = "<group>"; };
 		B2C8C972214F0EEF00A5AF67 /* NextDateTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextDateTableCell.swift; sourceTree = "<group>"; };
 		B2E4145C2155B4E100E7F0B8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Interface.strings"; sourceTree = "<group>"; };
@@ -217,6 +225,10 @@
 		B2E97A22211AFFF60005BEA9 /* ForgotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotViewController.swift; sourceTree = "<group>"; };
 		B2E97A24211B2B4C0005BEA9 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
 		B2E97A26211B2B890005BEA9 /* Bement.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Bement.entitlements; sourceTree = "<group>"; };
+		B2F35211215C5B3300E0F436 /* ClagettViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClagettViewController.swift; sourceTree = "<group>"; };
+		B2F35213215DAFDB00E0F436 /* CatalogCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogCollectionViewCell.swift; sourceTree = "<group>"; };
+		C836ACBBEB62D0DCB40A2562 /* Pods_watch_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_watch_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAF6F8E08F84FEB82BE13C51 /* Pods_Bement.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bement.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +236,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA4AF79B89B391775142DBBD /* Pods_watch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,17 +384,21 @@
 				B26C0F0F2119710900750545 /* SupportTableViewController.swift */,
 				B272043A211D7DAF0066AC5E /* QuickSubmitViewController.swift */,
 				B2E97A22211AFFF60005BEA9 /* ForgotViewController.swift */,
+				B2395B4D2159A5AD006B7F0A /* CatalogTableViewController.swift */,
+				B2395B4B2159A583006B7F0A /* ResourcesCollectionViewController.swift */,
+				B2F35213215DAFDB00E0F436 /* CatalogCollectionViewCell.swift */,
+				B2F35211215C5B3300E0F436 /* ClagettViewController.swift */,
 				B24B2687212C4ECB00D316F5 /* wifiTableViewController.swift */,
 				B24B2689212C51DD00D316F5 /* OtherViewController.swift */,
 				B26C0F0921196ACB00750545 /* Functions.swift */,
 				B2045D8921297F7000272036 /* GlobalVariable.swift */,
+				B2395B4F2159A67F006B7F0A /* CatalogResources.swift */,
 				B2BA44D820EB9FD1009437A7 /* Main.storyboard */,
 				B26C0F112119861100750545 /* LaunchScreen.storyboard */,
 				B2BA44DB20EB9FD6009437A7 /* Assets.xcassets */,
 				B2B46E7B212B046600CA7480 /* Localizable.strings */,
 				B2045DDF212A7DD900272036 /* Locksmith */,
 				B268D40C2119667B001D7BF1 /* Resources */,
-				B2C21A23214B20720086FF11 /* GoogleService-Info.plist */,
 				B2BA44E020EB9FD6009437A7 /* Info.plist */,
 			);
 			path = Bement;
@@ -393,6 +410,9 @@
 				B295BE81214F325600D7E63C /* CloudKit.framework */,
 				B2A4E660212D98AC0079C7E6 /* LocalAuthentication.framework */,
 				B2045DF1212A7DF700272036 /* Security.framework */,
+				FAF6F8E08F84FEB82BE13C51 /* Pods_Bement.framework */,
+				9C86ED8319AA6179D0029815 /* Pods_watch.framework */,
+				C836ACBBEB62D0DCB40A2562 /* Pods_watch_Extension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -568,7 +588,6 @@
 				B26C0EF42119670500750545 /* SF-Pro-Display-Heavy.otf in Resources */,
 				B26C0EF82119670500750545 /* SF-Pro-Text-Bold.otf in Resources */,
 				B2BA44DA20EB9FD1009437A7 /* Main.storyboard in Resources */,
-				B2C21A24214B20720086FF11 /* GoogleService-Info.plist in Resources */,
 				B26C0EEF2119670500750545 /* SF-Pro-Display-Light.otf in Resources */,
 				B26C0EF02119670500750545 /* SF-Pro-Display-Regular.otf in Resources */,
 				B26C0EEC2119670500750545 /* SF-Pro-Display-SemiboldItalic.otf in Resources */,
@@ -603,12 +622,15 @@
 				B2720439211D78590066AC5E /* MessagesTableViewController.swift in Sources */,
 				B272043B211D7DAF0066AC5E /* QuickSubmitViewController.swift in Sources */,
 				B2045DEC212A7DD900272036 /* LocksmithSecurityClass.swift in Sources */,
+				B2395B4C2159A583006B7F0A /* ResourcesCollectionViewController.swift in Sources */,
 				B24B2688212C4ECB00D316F5 /* wifiTableViewController.swift in Sources */,
 				B2045DEF212A7DD900272036 /* LocksmithInternetAuthenticationType.swift in Sources */,
 				B2045DEE212A7DD900272036 /* LocksmithAccessibleOption.swift in Sources */,
 				B26C0F102119710900750545 /* SupportTableViewController.swift in Sources */,
 				B2E5B440212AE05500CF904E /* ErrorViewController.swift in Sources */,
+				B2395B4E2159A5AD006B7F0A /* CatalogTableViewController.swift in Sources */,
 				B268D40B21195B06001D7BF1 /* LoginViewController.swift in Sources */,
+				B2F35214215DAFDB00E0F436 /* CatalogCollectionViewCell.swift in Sources */,
 				B2BA44D520EB9FD1009437A7 /* AppDelegate.swift in Sources */,
 				B24B268A212C51DD00D316F5 /* OtherViewController.swift in Sources */,
 				B2E97A25211B2B4C0005BEA9 /* AdminViewController.swift in Sources */,
@@ -616,8 +638,10 @@
 				B26C0F0A21196ACB00750545 /* Functions.swift in Sources */,
 				B2E5B43E212ADCD800CF904E /* ErrorTableViewCell.swift in Sources */,
 				B2045D8C2129818800272036 /* MessagesTableViewCell.swift in Sources */,
+				B2F35212215C5B3300E0F436 /* ClagettViewController.swift in Sources */,
 				B2E5B43C212AD52900CF904E /* MessageInfoViewController.swift in Sources */,
 				B2045DE9212A7DD900272036 /* LocksmithError.swift in Sources */,
+				B2395B502159A67F006B7F0A /* CatalogResources.swift in Sources */,
 				B2E97A23211AFFF70005BEA9 /* ForgotViewController.swift in Sources */,
 				B2045DEA212A7DD900272036 /* Locksmith.swift in Sources */,
 				B2045D8A21297F7000272036 /* GlobalVariable.swift in Sources */,

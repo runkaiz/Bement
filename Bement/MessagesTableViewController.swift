@@ -7,18 +7,26 @@
 //
 
 import UIKit
+import CloudKit
 
 class MessagesTableViewController: UITableViewController {
 
-    let sectionName = [NSLocalizedString("help", comment: ""), NSLocalizedString("error", comment: "")]
+    var sectionName = [NSLocalizedString("help", comment: ""), NSLocalizedString("error", comment: "")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if globalVariable.messageCategory[0] == nil {
+            sectionName.remove(at: 0)
+        } else if globalVariable.messageCategory[1] == nil {
+            sectionName.remove(at: 1)
+        }
+        
+        self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return sectionName.count
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -44,5 +52,28 @@ class MessagesTableViewController: UITableViewController {
         globalVariable.section = indexPath.section
         
         self.performSegue(withIdentifier: "info", sender: self)
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // Delete the row from the data source
+            let database = CKContainer.default().publicCloudDatabase
+            database.delete(withRecordID: globalVariable.messageCategory[indexPath.section]![indexPath.row].recordID) { recordID, error in
+                if error != nil {
+                    print(error!)
+                } else {
+                    DispatchQueue.main.async {
+                        
+                        globalVariable.messageCategory[indexPath.section]?.remove(at: indexPath.row)
+                        tableView.beginUpdates()
+                        self.tableView.deleteRows(at: [indexPath], with: .automatic)
+                        if tableView.numberOfRows(inSection: indexPath.section) == 0 {
+                            tableView.deleteSections(NSIndexSet(index: indexPath.section) as IndexSet, with: .fade)
+                        }
+                        tableView.endUpdates()
+                    }
+                }
+            }
+        }
     }
 }
