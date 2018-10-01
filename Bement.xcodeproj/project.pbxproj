@@ -67,6 +67,7 @@
 		B2720439211D78590066AC5E /* MessagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2720438211D78590066AC5E /* MessagesTableViewController.swift */; };
 		B272043B211D7DAF0066AC5E /* QuickSubmitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B272043A211D7DAF0066AC5E /* QuickSubmitViewController.swift */; };
 		B2766A23214F253300C1D2A9 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2766A22214F253300C1D2A9 /* Data.swift */; };
+		B283965A2161A7A200034DA4 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28396592161A7A200034DA4 /* UIViewExtensions.swift */; };
 		B295BE82214F325600D7E63C /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B295BE81214F325600D7E63C /* CloudKit.framework */; };
 		B2A4E662212D98B10079C7E6 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2A4E660212D98AC0079C7E6 /* LocalAuthentication.framework */; };
 		B2B46E79212B046600CA7480 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B2B46E7B212B046600CA7480 /* Localizable.strings */; };
@@ -205,6 +206,7 @@
 		B272043A211D7DAF0066AC5E /* QuickSubmitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickSubmitViewController.swift; sourceTree = "<group>"; };
 		B2766A21214F20FA00C1D2A9 /* watch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = watch.entitlements; sourceTree = "<group>"; };
 		B2766A22214F253300C1D2A9 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		B28396592161A7A200034DA4 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		B284DC39212EA58F0052AD67 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		B295BE81214F325600D7E63C /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		B2A4E660212D98AC0079C7E6 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
@@ -393,6 +395,7 @@
 				B26C0F0921196ACB00750545 /* Functions.swift */,
 				B2045D8921297F7000272036 /* GlobalVariable.swift */,
 				B2395B4F2159A67F006B7F0A /* CatalogResources.swift */,
+				B28396592161A7A200034DA4 /* UIViewExtensions.swift */,
 				B2BA44D820EB9FD1009437A7 /* Main.storyboard */,
 				B26C0F112119861100750545 /* LaunchScreen.storyboard */,
 				B2BA44DB20EB9FD6009437A7 /* Assets.xcassets */,
@@ -640,6 +643,7 @@
 				B2045D8C2129818800272036 /* MessagesTableViewCell.swift in Sources */,
 				B2F35212215C5B3300E0F436 /* ClagettViewController.swift in Sources */,
 				B2E5B43C212AD52900CF904E /* MessageInfoViewController.swift in Sources */,
+				B283965A2161A7A200034DA4 /* UIViewExtensions.swift in Sources */,
 				B2045DE9212A7DD900272036 /* LocksmithError.swift in Sources */,
 				B2395B502159A67F006B7F0A /* CatalogResources.swift in Sources */,
 				B2E97A23211AFFF70005BEA9 /* ForgotViewController.swift in Sources */,

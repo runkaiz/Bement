@@ -34,6 +34,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var logoTop: NSLayoutConstraint!
     
+    @IBOutlet var lockButton: UIButton!
+    
     let dictionary = Locksmith.loadDataForUserAccount(userAccount: "admin")
     let passwords = Locksmith.loadDataForUserAccount(userAccount: "admin-password")
     
@@ -87,6 +89,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 if success // IF TOUCH ID AUTHENTICATION IS SUCCESSFUL, NAVIGATE TO NEXT VIEW CONTROLLER
                 {
                     DispatchQueue.main.async {
+                        self.lockButton.fadeOut()
                         self.username.text = self.dictionary?["username"] as? String
                         self.password.text = self.passwords?["password"] as? String
                     }
@@ -256,5 +259,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             alert.addAction(dismiss)
             present(alert, animated: true, completion: nil)
         }
+    }
+    
+    @IBAction func activateBioAuth(_ sender: Any) {
+        
+        authenticateUserTouchID()
     }
 }

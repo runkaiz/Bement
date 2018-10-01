@@ -559,7 +559,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grade 8 &amp; 9" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ut7-x9-5NY">
-                                                    <rect key="frame" x="16" y="11" width="343" height="53"/>
+                                                    <rect key="frame" x="8" y="7.9999999999999964" width="359" height="58.666666666666657"/>
                                                     <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="20"/>
                                                     <color key="textColor" red="0.12022373829999999" green="0.30125951769999998" blue="0.68631225819999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
@@ -696,6 +696,17 @@
                                     <segue destination="8sd-b0-eqz" kind="show" id="Lln-X7-j33"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjp-YA-M4s">
+                                <rect key="frame" x="307" y="585" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="WBU-zN-J1U"/>
+                                    <constraint firstAttribute="height" constant="50" id="s3y-HH-BZ5"/>
+                                </constraints>
+                                <state key="normal" image="lock"/>
+                                <connections>
+                                    <action selector="activateBioAuth:" destination="vhr-DB-jCY" eventType="touchUpInside" id="9aL-BH-Wpq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -704,8 +715,10 @@
                             <constraint firstItem="x0b-lu-wxJ" firstAttribute="leading" secondItem="Din-wj-xIg" secondAttribute="leading" constant="18" id="9yg-yQ-iom"/>
                             <constraint firstItem="Din-wj-xIg" firstAttribute="trailing" secondItem="3sl-bx-Jbb" secondAttribute="trailing" constant="24" id="B1b-mV-V8o"/>
                             <constraint firstItem="0Hn-kO-qDx" firstAttribute="centerX" secondItem="G6m-8m-qua" secondAttribute="centerX" id="B2l-dp-imh"/>
+                            <constraint firstItem="3sl-bx-Jbb" firstAttribute="top" secondItem="qjp-YA-M4s" secondAttribute="bottom" constant="15" id="FW6-zg-cd2"/>
                             <constraint firstItem="0Qw-s0-1J0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Din-wj-xIg" secondAttribute="leading" id="IeK-XU-ecF"/>
                             <constraint firstItem="3sl-bx-Jbb" firstAttribute="centerX" secondItem="G6m-8m-qua" secondAttribute="centerX" id="KGf-fk-8We"/>
+                            <constraint firstItem="Din-wj-xIg" firstAttribute="trailing" secondItem="qjp-YA-M4s" secondAttribute="trailing" constant="18" id="Pda-fr-fZg"/>
                             <constraint firstItem="M5T-y3-bMv" firstAttribute="leading" secondItem="Din-wj-xIg" secondAttribute="leading" constant="16" id="aSe-AM-wcC"/>
                             <constraint firstItem="0Hn-kO-qDx" firstAttribute="top" secondItem="Din-wj-xIg" secondAttribute="top" id="e36-pD-3n2"/>
                             <constraint firstItem="M5T-y3-bMv" firstAttribute="top" secondItem="Din-wj-xIg" secondAttribute="top" id="fWc-Zm-bfL"/>
@@ -722,6 +735,7 @@
                     <connections>
                         <outlet property="LoginButton" destination="3sl-bx-Jbb" id="ojq-LI-gVb"/>
                         <outlet property="SupportButton" destination="0Qw-s0-1J0" id="5Mg-rK-iLd"/>
+                        <outlet property="lockButton" destination="qjp-YA-M4s" id="NXv-NU-yBV"/>
                         <outlet property="logoTop" destination="e36-pD-3n2" id="PbZ-uw-Ocx"/>
                         <outlet property="password" destination="knF-Bg-tbL" id="eBb-vp-FdI"/>
                         <outlet property="stackView" destination="x0b-lu-wxJ" id="RtR-uH-Toj"/>
@@ -731,7 +745,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4r8-NZ-kjR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2799" y="349"/>
+            <point key="canvasLocation" x="2797.5999999999999" y="348.02955665024632"/>
         </scene>
         <!--Support-->
         <scene sceneID="RtA-be-deY">
@@ -1326,6 +1340,7 @@
         <image name="Logo-1" width="341.33334350585938" height="341.33334350585938"/>
         <image name="Settings" width="150" height="180"/>
         <image name="library" width="341.33334350585938" height="341.33334350585938"/>
+        <image name="lock" width="1024" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="JUg-PJ-UlK"/>
