@@ -36,6 +36,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         // Register the category.
         center.setNotificationCategories([defaultCategory])
         
+        var count = 0
+        for item in TermDates.terms {
+            
+            let date = tools.component2Date(item)
+            
+            if date as Date > Date() {
+                tools.pushTerms(termName: TermDates.names[count], date: item)
+                break
+            } else {
+                count += 1
+            }
+        }
+        
+        /*
+        tools.pushTerms(termName: TermDates.names[0], date: TermDates.fallMidTerm)
+        tools.pushTerms(termName: TermDates.names[0], date: TermDates.fallTerm)
+        tools.pushTerms(termName: TermDates.names[0], date: TermDates.miniTerm)
+        tools.pushTerms(termName: TermDates.names[0], date: TermDates.winterMidTerm)
+        tools.pushTerms(termName: TermDates.names[0], date: TermDates.winterTerm)
+        tools.pushTerms(termName: TermDates.names[0], date: TermDates.springMidTerm)
+        tools.pushTerms(termName: TermDates.names[0], date: TermDates.springTerm)
+                */
         return true
     }
 

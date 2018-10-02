@@ -17,6 +17,7 @@
 		B2045DEE212A7DD900272036 /* LocksmithAccessibleOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2045DE5212A7DD900272036 /* LocksmithAccessibleOption.swift */; };
 		B2045DEF212A7DD900272036 /* LocksmithInternetAuthenticationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2045DE6212A7DD900272036 /* LocksmithInternetAuthenticationType.swift */; };
 		B2045DF2212A7DF700272036 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2045DF1212A7DF700272036 /* Security.framework */; };
+		B2074B8D2162E22200F5C229 /* TermDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2074B8C2162E22200F5C229 /* TermDates.swift */; };
 		B2395B4C2159A583006B7F0A /* ResourcesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2395B4B2159A583006B7F0A /* ResourcesCollectionViewController.swift */; };
 		B2395B4E2159A5AD006B7F0A /* CatalogTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2395B4D2159A5AD006B7F0A /* CatalogTableViewController.swift */; };
 		B2395B502159A67F006B7F0A /* CatalogResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2395B4F2159A67F006B7F0A /* CatalogResources.swift */; };
@@ -152,6 +153,7 @@
 		B2045DE6212A7DD900272036 /* LocksmithInternetAuthenticationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocksmithInternetAuthenticationType.swift; sourceTree = "<group>"; };
 		B2045DE7212A7DD900272036 /* Locksmith.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Locksmith.h; sourceTree = "<group>"; };
 		B2045DF1212A7DF700272036 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		B2074B8C2162E22200F5C229 /* TermDates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermDates.swift; sourceTree = "<group>"; };
 		B2395B4B2159A583006B7F0A /* ResourcesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesCollectionViewController.swift; sourceTree = "<group>"; };
 		B2395B4D2159A5AD006B7F0A /* CatalogTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogTableViewController.swift; sourceTree = "<group>"; };
 		B2395B4F2159A67F006B7F0A /* CatalogResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogResources.swift; sourceTree = "<group>"; };
@@ -396,6 +398,7 @@
 				B2045D8921297F7000272036 /* GlobalVariable.swift */,
 				B2395B4F2159A67F006B7F0A /* CatalogResources.swift */,
 				B28396592161A7A200034DA4 /* UIViewExtensions.swift */,
+				B2074B8C2162E22200F5C229 /* TermDates.swift */,
 				B2BA44D820EB9FD1009437A7 /* Main.storyboard */,
 				B26C0F112119861100750545 /* LaunchScreen.storyboard */,
 				B2BA44DB20EB9FD6009437A7 /* Assets.xcassets */,
@@ -640,6 +643,7 @@
 				B2045DED212A7DD900272036 /* Dictionary_Initializers.swift in Sources */,
 				B26C0F0A21196ACB00750545 /* Functions.swift in Sources */,
 				B2E5B43E212ADCD800CF904E /* ErrorTableViewCell.swift in Sources */,
+				B2074B8D2162E22200F5C229 /* TermDates.swift in Sources */,
 				B2045D8C2129818800272036 /* MessagesTableViewCell.swift in Sources */,
 				B2F35212215C5B3300E0F436 /* ClagettViewController.swift in Sources */,
 				B2E5B43C212AD52900CF904E /* MessageInfoViewController.swift in Sources */,
