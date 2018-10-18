@@ -1,8 +1,8 @@
 //
-//  ResourcesCollectionViewController.swift
+//  CatalogCollectionViewController.swift
 //  Bement
 //
-//  Created by Runkai Zhang on 9/24/18.
+//  Created by Runkai Zhang on 10/17/18.
 //  Copyright © 2018 Numeric Design. All rights reserved.
 //
 
@@ -10,7 +10,7 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class ResourcesCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+class CatalogCollectionViewController: UICollectionViewController {
     
     @IBOutlet var titleLabel: UINavigationItem!
     var segueData: Int = 0
@@ -25,7 +25,6 @@ class ResourcesCollectionViewController: UICollectionViewController, UICollectio
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
-        
         switch segueData {
         case 1:
             titleLabel.title = "Kindergarten"
@@ -59,7 +58,6 @@ class ResourcesCollectionViewController: UICollectionViewController, UICollectio
         }
     }
 
-    // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -71,12 +69,9 @@ class ResourcesCollectionViewController: UICollectionViewController, UICollectio
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        //1
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier,
-                                                      for: indexPath) as! CatalogCollectionViewCell
-        //2
+        // Configure the cell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier,for: indexPath) as! CatalogCollectionViewCell
         cell.backgroundColor = UIColor.white
-        //3
         cell.image.image = catalogs[indexPath.row]
         
         return cell
@@ -84,8 +79,9 @@ class ResourcesCollectionViewController: UICollectionViewController, UICollectio
     
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
-                        insetForSectionAt section: Int) -> UIEdgeInsets {
-        return sectionInsets
+                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        
+        return sectionInsets.left
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -94,11 +90,5 @@ class ResourcesCollectionViewController: UICollectionViewController, UICollectio
         let widthPerItem = availableWidth / itemsPerRow
         
         return CGSize(width: widthPerItem, height: widthPerItem)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return sectionInsets.left
     }
 }

@@ -11,7 +11,7 @@ import UIKit
 
 struct catalog {
     
-    public static let Kindergarden = [UIImage(named: "Britannica.png")!, UIImage(named: "codeorg.png")!, UIImage(named: "Core5.jpg")!, UIImage(named: "country-report.png")!, UIImage(named: "DK_Findout.png")!, UIImage(named: "infoBits"), UIImage(named: "KWT.png")!, UIImage(named: "thinkCentral"), UIImage(named: "Fact_Monster.png")!, UIImage(named: "wonderoplis"), UIImage(named: "pebblego")]
+    public static let Kindergarden = [UIImage(named: "Britannica.png")!, UIImage(named: "codeorg.png")!, UIImage(named: "Core5.jpg")!, UIImage(named: "country-report.png")!, UIImage(named: "DK_Findout.png")!, UIImage(named: "infoBits.png"), UIImage(named: "KWT.png")!, UIImage(named: "thinkCentral.png")!, UIImage(named: "Fact_Monster.png")!, UIImage(named: "wonderoplis.png")!, UIImage(named: "pebblego.png")!]
     public static let Grade1 = [UIImage]()
     public static let Grade2 = [UIImage]()
     public static let Grade3 = [UIImage]()

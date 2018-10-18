@@ -31,49 +31,31 @@ class CatalogTableViewController: UITableViewController {
         switch indexPath.row {
         case 1:
             indexRow = indexPath.row
-            self.dismiss(animated: true) {
-                self.present(ResourcesCollectionViewController(), animated: true)
-            }
+            self.performSegue(withIdentifier: "resource", sender: self)
         case 2:
             indexRow = indexPath.row
-            self.dismiss(animated: true) {
-                self.present(ResourcesCollectionViewController(), animated: true)
-            }
+            self.performSegue(withIdentifier: "resource", sender: self)
         case 3:
             indexRow = indexPath.row
-            self.dismiss(animated: true) {
-                self.present(ResourcesCollectionViewController(), animated: true)
-            }
+            self.performSegue(withIdentifier: "resource", sender: self)
         case 4:
             indexRow = indexPath.row
-            self.dismiss(animated: true) {
-                self.present(ResourcesCollectionViewController(), animated: true)
-            }
+            self.performSegue(withIdentifier: "resource", sender: self)
         case 5:
             indexRow = indexPath.row
-            self.dismiss(animated: true) {
-                self.present(ResourcesCollectionViewController(), animated: true)
-            }
+            self.performSegue(withIdentifier: "resource", sender: self)
         case 6:
             indexRow = indexPath.row
-            self.dismiss(animated: true) {
-                self.present(ResourcesCollectionViewController(), animated: true)
-            }
+            self.performSegue(withIdentifier: "resource", sender: self)
         case 7:
             indexRow = indexPath.row
-            self.dismiss(animated: true) {
-                self.present(ResourcesCollectionViewController(), animated: true)
-            }
+            self.performSegue(withIdentifier: "resource", sender: self)
         case 8:
             indexRow = indexPath.row
-            self.dismiss(animated: true) {
-                self.present(ResourcesCollectionViewController(), animated: true)
-            }
+            self.performSegue(withIdentifier: "resource", sender: self)
         case 9:
             indexRow = indexPath.row
-            self.dismiss(animated: true) {
-                self.present(ResourcesCollectionViewController(), animated: true)
-            }
+            self.performSegue(withIdentifier: "resource", sender: self)
         default:
             print("This is going to the library!")
         }
@@ -86,7 +68,7 @@ class CatalogTableViewController: UITableViewController {
             // Create a variable that you want to send
             let catalogID = indexRow
             
-            let destinationVC = segue.destination as! ResourcesCollectionViewController
+            let destinationVC = segue.destination as! CatalogCollectionViewController
             destinationVC.segueData = catalogID
         }
     }
