@@ -18,7 +18,7 @@
 		B2045DEF212A7DD900272036 /* LocksmithInternetAuthenticationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2045DE6212A7DD900272036 /* LocksmithInternetAuthenticationType.swift */; };
 		B2045DF2212A7DF700272036 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2045DF1212A7DF700272036 /* Security.framework */; };
 		B2074B8D2162E22200F5C229 /* TermDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2074B8C2162E22200F5C229 /* TermDates.swift */; };
-		B2395B4C2159A583006B7F0A /* ResourcesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2395B4B2159A583006B7F0A /* ResourcesCollectionViewController.swift */; };
+		B22236152178138700DD01B3 /* CatalogCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22236142178138700DD01B3 /* CatalogCollectionViewController.swift */; };
 		B2395B4E2159A5AD006B7F0A /* CatalogTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2395B4D2159A5AD006B7F0A /* CatalogTableViewController.swift */; };
 		B2395B502159A67F006B7F0A /* CatalogResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2395B4F2159A67F006B7F0A /* CatalogResources.swift */; };
 		B23C8E57214C14DF007F1220 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B23C8E55214C14DF007F1220 /* Interface.storyboard */; };
@@ -154,7 +154,7 @@
 		B2045DE7212A7DD900272036 /* Locksmith.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Locksmith.h; sourceTree = "<group>"; };
 		B2045DF1212A7DF700272036 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		B2074B8C2162E22200F5C229 /* TermDates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermDates.swift; sourceTree = "<group>"; };
-		B2395B4B2159A583006B7F0A /* ResourcesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesCollectionViewController.swift; sourceTree = "<group>"; };
+		B22236142178138700DD01B3 /* CatalogCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogCollectionViewController.swift; sourceTree = "<group>"; };
 		B2395B4D2159A5AD006B7F0A /* CatalogTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogTableViewController.swift; sourceTree = "<group>"; };
 		B2395B4F2159A67F006B7F0A /* CatalogResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogResources.swift; sourceTree = "<group>"; };
 		B23C8E53214C14DF007F1220 /* watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = watch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -389,7 +389,7 @@
 				B272043A211D7DAF0066AC5E /* QuickSubmitViewController.swift */,
 				B2E97A22211AFFF60005BEA9 /* ForgotViewController.swift */,
 				B2395B4D2159A5AD006B7F0A /* CatalogTableViewController.swift */,
-				B2395B4B2159A583006B7F0A /* ResourcesCollectionViewController.swift */,
+				B22236142178138700DD01B3 /* CatalogCollectionViewController.swift */,
 				B2F35213215DAFDB00E0F436 /* CatalogCollectionViewCell.swift */,
 				B2F35211215C5B3300E0F436 /* ClagettViewController.swift */,
 				B24B2687212C4ECB00D316F5 /* wifiTableViewController.swift */,
@@ -628,12 +628,12 @@
 				B2720439211D78590066AC5E /* MessagesTableViewController.swift in Sources */,
 				B272043B211D7DAF0066AC5E /* QuickSubmitViewController.swift in Sources */,
 				B2045DEC212A7DD900272036 /* LocksmithSecurityClass.swift in Sources */,
-				B2395B4C2159A583006B7F0A /* ResourcesCollectionViewController.swift in Sources */,
 				B24B2688212C4ECB00D316F5 /* wifiTableViewController.swift in Sources */,
 				B2045DEF212A7DD900272036 /* LocksmithInternetAuthenticationType.swift in Sources */,
 				B2045DEE212A7DD900272036 /* LocksmithAccessibleOption.swift in Sources */,
 				B26C0F102119710900750545 /* SupportTableViewController.swift in Sources */,
 				B2E5B440212AE05500CF904E /* ErrorViewController.swift in Sources */,
+				B22236152178138700DD01B3 /* CatalogCollectionViewController.swift in Sources */,
 				B2395B4E2159A5AD006B7F0A /* CatalogTableViewController.swift in Sources */,
 				B268D40B21195B06001D7BF1 /* LoginViewController.swift in Sources */,
 				B2F35214215DAFDB00E0F436 /* CatalogCollectionViewCell.swift in Sources */,

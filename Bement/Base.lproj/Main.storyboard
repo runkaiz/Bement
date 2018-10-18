@@ -269,7 +269,7 @@
         <!--Title-->
         <scene sceneID="REx-YT-FJq">
             <objects>
-                <collectionViewController id="vQr-z3-kw8" customClass="ResourcesCollectionViewController" customModule="Bement" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="vQr-z3-kw8" customClass="CatalogCollectionViewController" customModule="Bement" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" id="qOT-Vz-PuT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -310,9 +310,6 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Title" largeTitleDisplayMode="never" id="iNc-9N-fpH"/>
-                    <connections>
-                        <outlet property="titleLabel" destination="iNc-9N-fpH" id="h2W-he-W7L"/>
-                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hSb-JU-SbO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -623,6 +620,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="username"/>
+                                        <connections>
+                                            <action selector="usernameChanged:" destination="vhr-DB-jCY" eventType="editingDidEnd" id="DAn-sc-9Nx"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dc6-mW-nnk">
                                         <rect key="frame" x="0.0" y="64.666666666666686" width="339" height="20"/>
@@ -641,6 +641,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
+                                        <connections>
+                                            <action selector="passwordChanged:" destination="vhr-DB-jCY" eventType="editingDidEnd" id="mTk-QE-vLQ"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <constraints>

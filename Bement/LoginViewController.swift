@@ -265,4 +265,28 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         authenticateUserTouchID()
     }
+    
+    @IBAction func usernameChanged(_ sender: Any) {
+        
+        if username.text == "" {
+            if lockButton.isHidden == true {
+                lockButton.fadeIn()
+            }
+        }
+    }
+    
+    @IBAction func passwordChanged(_ sender: Any) {
+        
+        if password.text == "" {
+            if lockButton.isHidden == true {
+                lockButton.fadeIn()
+            }
+        } else {
+            if lockButton.isHidden == false {
+                if username.text != "" {
+                    lockButton.fadeOut()
+                }
+            }
+        }
+    }
 }
