@@ -68,6 +68,9 @@
 		B2720439211D78590066AC5E /* MessagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2720438211D78590066AC5E /* MessagesTableViewController.swift */; };
 		B272043B211D7DAF0066AC5E /* QuickSubmitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B272043A211D7DAF0066AC5E /* QuickSubmitViewController.swift */; };
 		B2766A23214F253300C1D2A9 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2766A22214F253300C1D2A9 /* Data.swift */; };
+		B27F6B3B217D625A003FF94E /* temp Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B27F6B3A217D625A003FF94E /* temp Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B27F6B4A217D625A003FF94E /* temp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = B27F6B2E217D6259003FF94E /* temp.app */; };
+		B27F6B52217D626B003FF94E /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27F6B43217D625A003FF94E /* ComplicationController.swift */; };
 		B283965A2161A7A200034DA4 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28396592161A7A200034DA4 /* UIViewExtensions.swift */; };
 		B295BE82214F325600D7E63C /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B295BE81214F325600D7E63C /* CloudKit.framework */; };
 		B2A4E662212D98B10079C7E6 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2A4E660212D98AC0079C7E6 /* LocalAuthentication.framework */; };
@@ -103,6 +106,20 @@
 			remoteGlobalIDString = B23C8E52214C14DF007F1220;
 			remoteInfo = watch;
 		};
+		B27F6B3C217D625A003FF94E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B2BA44C920EB9FD1009437A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B27F6B39217D625A003FF94E;
+			remoteInfo = "temp Extension";
+		};
+		B27F6B48217D625A003FF94E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B2BA44C920EB9FD1009437A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B27F6B2D217D6259003FF94E;
+			remoteInfo = temp;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -134,8 +151,20 @@
 			dstSubfolderSpec = 16;
 			files = (
 				B23C8E70214C14E2007F1220 /* watch.app in Embed Watch Content */,
+				B27F6B4A217D625A003FF94E /* temp.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B27F6B4E217D625A003FF94E /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B27F6B3B217D625A003FF94E /* temp Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -208,6 +237,9 @@
 		B272043A211D7DAF0066AC5E /* QuickSubmitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickSubmitViewController.swift; sourceTree = "<group>"; };
 		B2766A21214F20FA00C1D2A9 /* watch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = watch.entitlements; sourceTree = "<group>"; };
 		B2766A22214F253300C1D2A9 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		B27F6B2E217D6259003FF94E /* temp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = temp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B27F6B3A217D625A003FF94E /* temp Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "temp Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B27F6B43217D625A003FF94E /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		B28396592161A7A200034DA4 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		B284DC39212EA58F0052AD67 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		B295BE81214F325600D7E63C /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
@@ -245,6 +277,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		B23C8E5C214C14E1007F1220 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B27F6B37217D625A003FF94E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -299,6 +338,7 @@
 				B23C8E66214C14E1007F1220 /* ExtensionDelegate.swift */,
 				B23C8E68214C14E1007F1220 /* NotificationController.swift */,
 				B2766A22214F253300C1D2A9 /* Data.swift */,
+				B27F6B43217D625A003FF94E /* ComplicationController.swift */,
 				B23C8E6A214C14E2007F1220 /* Assets.xcassets */,
 				B23C8E6C214C14E2007F1220 /* Info.plist */,
 				B23C8E6D214C14E2007F1220 /* PushNotificationPayload.apns */,
@@ -368,6 +408,8 @@
 				B2BA44D120EB9FD1009437A7 /* Bement.app */,
 				B23C8E53214C14DF007F1220 /* watch.app */,
 				B23C8E5F214C14E1007F1220 /* watch Extension.appex */,
+				B27F6B2E217D6259003FF94E /* temp.app */,
+				B27F6B3A217D625A003FF94E /* temp Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -396,9 +438,9 @@
 				B24B2689212C51DD00D316F5 /* OtherViewController.swift */,
 				B26C0F0921196ACB00750545 /* Functions.swift */,
 				B2045D8921297F7000272036 /* GlobalVariable.swift */,
+				B2074B8C2162E22200F5C229 /* TermDates.swift */,
 				B2395B4F2159A67F006B7F0A /* CatalogResources.swift */,
 				B28396592161A7A200034DA4 /* UIViewExtensions.swift */,
-				B2074B8C2162E22200F5C229 /* TermDates.swift */,
 				B2BA44D820EB9FD1009437A7 /* Main.storyboard */,
 				B26C0F112119861100750545 /* LaunchScreen.storyboard */,
 				B2BA44DB20EB9FD6009437A7 /* Assets.xcassets */,
@@ -461,6 +503,40 @@
 			productReference = B23C8E5F214C14E1007F1220 /* watch Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
 		};
+		B27F6B2D217D6259003FF94E /* temp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B27F6B4F217D625A003FF94E /* Build configuration list for PBXNativeTarget "temp" */;
+			buildPhases = (
+				B27F6B2C217D6259003FF94E /* Resources */,
+				B27F6B4E217D625A003FF94E /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B27F6B3D217D625A003FF94E /* PBXTargetDependency */,
+			);
+			name = temp;
+			productName = temp;
+			productReference = B27F6B2E217D6259003FF94E /* temp.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		B27F6B39217D625A003FF94E /* temp Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B27F6B4B217D625A003FF94E /* Build configuration list for PBXNativeTarget "temp Extension" */;
+			buildPhases = (
+				B27F6B36217D625A003FF94E /* Sources */,
+				B27F6B37217D625A003FF94E /* Frameworks */,
+				B27F6B38217D625A003FF94E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "temp Extension";
+			productName = "temp Extension";
+			productReference = B27F6B3A217D625A003FF94E /* temp Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		B2BA44D020EB9FD1009437A7 /* Bement */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B2BA44E320EB9FD6009437A7 /* Build configuration list for PBXNativeTarget "Bement" */;
@@ -475,6 +551,7 @@
 			);
 			dependencies = (
 				B23C8E6F214C14E2007F1220 /* PBXTargetDependency */,
+				B27F6B49217D625A003FF94E /* PBXTargetDependency */,
 			);
 			name = Bement;
 			productName = Bement;
@@ -500,6 +577,12 @@
 						};
 					};
 					B23C8E5E214C14E1007F1220 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					B27F6B2D217D6259003FF94E = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					B27F6B39217D625A003FF94E = {
 						CreatedOnToolsVersion = 10.0;
 					};
 					B2BA44D020EB9FD1009437A7 = {
@@ -541,6 +624,8 @@
 				B2BA44D020EB9FD1009437A7 /* Bement */,
 				B23C8E52214C14DF007F1220 /* watch */,
 				B23C8E5E214C14E1007F1220 /* watch Extension */,
+				B27F6B2D217D6259003FF94E /* temp */,
+				B27F6B39217D625A003FF94E /* temp Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -560,6 +645,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				B23C8E6B214C14E2007F1220 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B27F6B2C217D6259003FF94E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B27F6B38217D625A003FF94E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -615,8 +714,16 @@
 				B2766A23214F253300C1D2A9 /* Data.swift in Sources */,
 				B2C8C973214F0EEF00A5AF67 /* NextDateTableCell.swift in Sources */,
 				B2C8C971214ED10600A5AF67 /* UpcomingInterfaceController.swift in Sources */,
+				B27F6B52217D626B003FF94E /* ComplicationController.swift in Sources */,
 				B23C8E67214C14E1007F1220 /* ExtensionDelegate.swift in Sources */,
 				B23C8E65214C14E1007F1220 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B27F6B36217D625A003FF94E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -669,6 +776,16 @@
 			isa = PBXTargetDependency;
 			target = B23C8E52214C14DF007F1220 /* watch */;
 			targetProxy = B23C8E6E214C14E2007F1220 /* PBXContainerItemProxy */;
+		};
+		B27F6B3D217D625A003FF94E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B27F6B39217D625A003FF94E /* temp Extension */;
+			targetProxy = B27F6B3C217D625A003FF94E /* PBXContainerItemProxy */;
+		};
+		B27F6B49217D625A003FF94E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B27F6B2D217D6259003FF94E /* temp */;
+			targetProxy = B27F6B48217D625A003FF94E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -778,6 +895,88 @@
 				DEVELOPMENT_TEAM = C58CLY4K2U;
 				IBSC_MODULE = watch_Extension;
 				INFOPLIST_FILE = watch/Info.plist;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = org.numericdesign.Bement.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.0;
+			};
+			name = Release;
+		};
+		B27F6B4C217D625A003FF94E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "temp Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = org.numericdesign.Bement.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.0;
+			};
+			name = Debug;
+		};
+		B27F6B4D217D625A003FF94E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "temp Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = org.numericdesign.Bement.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.0;
+			};
+			name = Release;
+		};
+		B27F6B50217D625A003FF94E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C58CLY4K2U;
+				IBSC_MODULE = temp_Extension;
+				INFOPLIST_FILE = temp/Info.plist;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = org.numericdesign.Bement.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.0;
+			};
+			name = Debug;
+		};
+		B27F6B51217D625A003FF94E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C58CLY4K2U;
+				IBSC_MODULE = temp_Extension;
+				INFOPLIST_FILE = temp/Info.plist;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = org.numericdesign.Bement.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -962,6 +1161,24 @@
 			buildConfigurations = (
 				B23C8E76214C14E2007F1220 /* Debug */,
 				B23C8E77214C14E2007F1220 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B27F6B4B217D625A003FF94E /* Build configuration list for PBXNativeTarget "temp Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B27F6B4C217D625A003FF94E /* Debug */,
+				B27F6B4D217D625A003FF94E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B27F6B4F217D625A003FF94E /* Build configuration list for PBXNativeTarget "temp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B27F6B50217D625A003FF94E /* Debug */,
+				B27F6B51217D625A003FF94E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

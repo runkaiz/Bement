@@ -18,4 +18,5 @@ struct globalVariable {
     public static var firstTimeIndicator = false
     public static var username = String()
     public static var password = String()
+    public static var dateCount = Int()
 }

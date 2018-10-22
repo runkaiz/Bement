@@ -22,10 +22,14 @@
         <!--Upcoming Interface Controller-->
         <scene sceneID="AAM-37-JPN">
             <objects>
-                <controller id="38E-4L-0Z7" customClass="UpcomingInterfaceController" customModule="watch_Extension">
+                <controller animationDuration="1" id="38E-4L-0Z7" customClass="UpcomingInterfaceController" customModule="watch_Extension">
                     <items>
                         <label alignment="left" text="Upcoming" id="Zbk-v3-avD">
                             <fontDescription key="font" name="SFProDisplay-Light" family="SF Pro Display" pointSize="13"/>
+                        </label>
+                        <label width="136" height="36" alignment="left" text="99" id="XwK-WR-ZbD">
+                            <color key="textColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <fontDescription key="font" type="system" pointSize="44"/>
                         </label>
                         <table alignment="left" id="zme-pS-KNb">
                             <items>
@@ -35,7 +39,9 @@
                                             <label width="46" height="56" alignment="left" text="Term:" id="t7y-A5-soV">
                                                 <fontDescription key="font" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="17"/>
                                             </label>
-                                            <label width="101" height="52" alignment="left" text="Label" id="KZI-Zh-hpC"/>
+                                            <label width="101" height="52" alignment="left" text="Label" id="KZI-Zh-hpC">
+                                                <color key="textColor" red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </label>
                                         </items>
                                     </group>
                                     <connections>
@@ -55,23 +61,13 @@
                         </switch>
                     </items>
                     <connections>
+                        <outlet property="dateLeft" destination="XwK-WR-ZbD" id="TiD-f3-0uq"/>
                         <outlet property="notifyMe" destination="EcL-1P-Syc" id="IXv-ug-xhA"/>
                         <outlet property="termCell" destination="zme-pS-KNb" id="FC3-Qm-zdg"/>
                     </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="219.95061728395061" y="70.329949238578678"/>
-        </scene>
-        <!--Interface Controller-->
-        <scene sceneID="gvo-yQ-cCP">
-            <objects>
-                <controller id="NNy-X4-3ld">
-                    <items>
-                        <label width="173" height="188" alignment="left" text="Please visit the phone app for supports!" textAlignment="center" numberOfLines="3" id="lAV-J3-xTg"/>
-                    </items>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="467.60493827160496" y="69.467005076142129"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
@@ -91,18 +87,6 @@
                                     <connections>
                                         <segue destination="38E-4L-0Z7" kind="push" id="G8R-1d-CZs"/>
                                     </connections>
-                                </tableRow>
-                                <tableRow identifier="troubleshoot" id="bAs-PF-Pe9">
-                                    <group key="rootItem" width="1" alignment="left" id="KoW-qT-OsZ">
-                                        <items>
-                                            <label width="136" height="66" alignment="left" text="Troubleshoot" textAlignment="center" id="iZw-5F-IaT">
-                                                <fontDescription key="font" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="18"/>
-                                            </label>
-                                        </items>
-                                        <connections>
-                                            <segue destination="NNy-X4-3ld" kind="push" id="CyZ-gI-WIW"/>
-                                        </connections>
-                                    </group>
                                 </tableRow>
                             </items>
                         </table>

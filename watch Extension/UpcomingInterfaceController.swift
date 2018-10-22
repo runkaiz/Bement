@@ -16,6 +16,8 @@ class UpcomingInterfaceController: WKInterfaceController {
 
     @IBOutlet var termCell: WKInterfaceTable!
     
+    @IBOutlet var dateLeft: WKInterfaceLabel!
+    
     var alert = Bool()
     
     override func awake(withContext context: Any?) {
@@ -33,9 +35,32 @@ class UpcomingInterfaceController: WKInterfaceController {
         
         let cell = termCell.rowController(at: 0) as! NextDateTableCell
         
-        cell.setTerm(text: "None")
-        
         getAlertStats()
+        
+        var count = 0
+        let calendar = NSCalendar.current
+        for item in database.terms {
+            
+            let date = component2Date(item)
+            let date1 = calendar.startOfDay(for: Date())
+            let date2 = calendar.startOfDay(for: date as Date)
+            
+            let components = calendar.dateComponents([.day], from: date1, to: date2)
+            
+            if date as Date > Date() {
+                dateLeft.setText("\(String(describing: components.day!))")
+                cell.setTerm(text: database.names[count])
+                break
+            } else {
+                count += 1
+            }
+        }
+    }
+    
+    func component2Date(_ component: DateComponents) -> NSDate {
+        let calender = NSCalendar(calendarIdentifier: .gregorian)
+        let date = calender?.date(from: component)
+        return date! as NSDate
     }
     
     func getAlertStats() {
