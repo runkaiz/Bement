@@ -15,10 +15,28 @@ class InterfaceController: WKInterfaceController {
 
     @IBOutlet var table: WKInterfaceTable!
     
+    @IBOutlet weak var dateLabel: WKInterfaceLabel!
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
         // Configure interface objects here.
+        var count = 0
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        
+        for item in database.terms {
+            
+            let date = UpcomingInterfaceController.component2Date(item)
+            
+            if date as Date > Date() {
+                let myStringafd = formatter.string(from: date as Date)
+                dateLabel.setText(String(myStringafd))
+                break
+            } else {
+                count += 1
+            }
+        }
         
         table.setNumberOfRows(1, withRowType: "main")
         getData()

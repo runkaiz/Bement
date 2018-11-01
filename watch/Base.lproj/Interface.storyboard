@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14313.18" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14460.31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch40" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14238.10"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14460.16"/>
     </dependencies>
     <customFonts key="customFonts">
         <array key="SF-Pro-Display-Light.otf">
@@ -24,8 +24,8 @@
             <objects>
                 <controller animationDuration="1" id="38E-4L-0Z7" customClass="UpcomingInterfaceController" customModule="watch_Extension">
                     <items>
-                        <label alignment="left" text="Upcoming" id="Zbk-v3-avD">
-                            <fontDescription key="font" name="SFProDisplay-Light" family="SF Pro Display" pointSize="13"/>
+                        <label alignment="left" text="Progress Report " id="Zbk-v3-avD">
+                            <fontDescription key="font" name="SFProDisplay-Light" family="SF Pro Display" pointSize="19"/>
                         </label>
                         <label width="136" height="36" alignment="left" text="99" id="XwK-WR-ZbD">
                             <color key="textColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -74,6 +74,14 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="watch" customModuleProvider="target">
                     <items>
+                        <label width="136" alignment="left" text="End of Term:" id="c1J-ta-tsX">
+                            <fontDescription key="font" style="UICTFontTextStyleTitle3"/>
+                        </label>
+                        <label alignment="left" text="Label" id="TkO-AZ-q9w">
+                            <color key="textColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
+                        </label>
+                        <separator alignment="left" id="AZa-IX-Stl"/>
                         <table alignment="left" id="v5H-yU-VUB">
                             <items>
                                 <tableRow identifier="main" id="cn6-nU-5FZ">
@@ -92,6 +100,7 @@
                         </table>
                     </items>
                     <connections>
+                        <outlet property="dateLabel" destination="TkO-AZ-q9w" id="tdQ-Pn-5R9"/>
                         <outlet property="table" destination="v5H-yU-VUB" id="QKs-lQ-0Qm"/>
                     </connections>
                 </controller>
