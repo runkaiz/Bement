@@ -26,7 +26,7 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>WKCompanionAppBundleIdentifier</key>
-	<string>org.numericdesign.Bement</string>
+	<string>xyz.runkaizhang.Bement</string>
 	<key>WKWatchKitApp</key>
 	<true/>
 </dict>

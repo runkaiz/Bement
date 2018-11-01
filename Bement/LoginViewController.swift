@@ -20,7 +20,7 @@ enum KeychainError: Error {
     case unhandledError(status: OSStatus)
 }
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
+class LoginViewController: UIViewController, UITextFieldDelegate, ATCWalkthroughViewControllerDelegate {
     
     @IBOutlet var LoginButton: UIButton!
     
@@ -39,16 +39,41 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     let dictionary = Locksmith.loadDataForUserAccount(userAccount: "admin")
     let passwords = Locksmith.loadDataForUserAccount(userAccount: "admin-password")
     
+    let walkthroughs = [
+        ATCWalkthroughModel(title: "Efficienct Login System", subtitle: "This login system is very user-friendly and 100% secure when handling your data.", icon: "secure"),
+        ATCWalkthroughModel(title: "Quick Responses", subtitle: "This system have lightning respond time and can provide you first hand data withour delay.", icon: "lighting"),
+        ATCWalkthroughModel(title: "Calender Feeds", subtitle: "Extremely convenient calender system by using Apple's native calender app, keeping you up to date.", icon: "calendar"),
+        ATCWalkthroughModel(title: "Get Notified", subtitle: "Receive notifications when a term report is released to stay on top of everything.", icon: "bell"),
+        ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        lockButton.isHidden = true
+        
+        if isAppAlreadyLaunchedOnce() == false {
+            let walkthroughVC = self.walkthroughVC()
+            walkthroughVC.delegate = self
+            self.addChildViewControllerWithView(walkthroughVC)
+        }
         
         tools.beautifulButton(LoginButton)
         tools.beautifulButton(SupportButton)
         username.delegate = self
         password.delegate = self
         
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        if UIDevice.modelName != "iPhone XS" {
+            if UIDevice.modelName != "iPhone X" {
+                if UIDevice.modelName != "iPhone XS Max" {
+                    if UIDevice.modelName != "iPhone XR" {
+                        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+                        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+                    }
+                }
+            }
+        }
+        
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
         
         if dictionary?["username"] != nil {
             
@@ -56,7 +81,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 authenticateUserTouchID()
                 globalVariable.firstTimeIndicator = true
             }
+        } else {
+            lockButton.fadeOut()
         }
+        print(UIDevice.modelName)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -174,7 +202,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             } else {
                 
             }
-            
         }
     }
     
@@ -267,19 +294,40 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func usernameChanged(_ sender: Any) {
+        UIView.animate(withDuration: 0.25, animations: {
+                
+            self.view.layoutIfNeeded()
+            self.stackView.frame.origin.y = 231
+            self.logoTop.constant = 0
+        })
         
         if username.text == "" {
             if lockButton.isHidden == true {
-                lockButton.fadeIn()
+                if dictionary?["username"] == nil {
+                    lockButton.fadeOut()
+                } else {
+                    lockButton.fadeIn()
+                }
             }
         }
     }
     
     @IBAction func passwordChanged(_ sender: Any) {
         
+        UIView.animate(withDuration: 0.25, animations: {
+                
+            self.view.layoutIfNeeded()
+            self.stackView.frame.origin.y = 231
+            self.logoTop.constant = 0
+        })
+        
         if password.text == "" {
             if lockButton.isHidden == true {
-                lockButton.fadeIn()
+                if dictionary?["username"] == nil {
+                    lockButton.fadeOut()
+                } else {
+                    lockButton.fadeIn()
+                }
             }
         } else {
             if lockButton.isHidden == false {
@@ -288,5 +336,32 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 }
             }
         }
+    }
+    
+    func isAppAlreadyLaunchedOnce()->Bool{
+        let defaults = UserDefaults.standard
+        if let _ = defaults.string(forKey: "isAppAlreadyLaunchedOnce"){
+            print("App already launched")
+            return true
+        }else{
+            defaults.set(true, forKey: "isAppAlreadyLaunchedOnce")
+            print("App launched first time")
+            return false
+        }
+    }
+    
+    func walkthroughViewControllerDidFinishFlow(_ vc: ATCWalkthroughViewController) {
+        UIView.transition(with: self.view, duration: 1, options: .transitionFlipFromLeft, animations: {
+            vc.view.removeFromSuperview()
+            let viewControllerToBePresented = UIViewController()
+            self.view.addSubview(viewControllerToBePresented.view)
+        }, completion: nil)
+    }
+    
+    fileprivate func walkthroughVC() -> ATCWalkthroughViewController {
+        let viewControllers = walkthroughs.map { ATCClassicWalkthroughViewController(model: $0, nibName: "ATCClassicWalkthroughViewController", bundle: nil) }
+        return ATCWalkthroughViewController(nibName: "ATCWalkthroughViewController",
+                                            bundle: nil,
+                                            viewControllers: viewControllers)
     }
 }

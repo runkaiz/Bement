@@ -42,13 +42,23 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B2D667C721862E8700CF8428"
+               BuildableName = "BementUITests.xctest"
+               BlueprintName = "BementUITests"
+               ReferencedContainer = "container:Bement.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B27F6B2D217D6259003FF94E"
-            BuildableName = "temp.app"
-            BlueprintName = "temp"
+            BlueprintIdentifier = "B23C8E52214C14DF007F1220"
+            BuildableName = "watch.app"
+            BlueprintName = "watch"
             ReferencedContainer = "container:Bement.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

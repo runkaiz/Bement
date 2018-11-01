@@ -21,11 +21,11 @@
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>CLKComplicationPrincipalClass</key>
-	<string>ComplicationController</string>
+	<string>$(PRODUCT_MODULE_NAME).ComplicationController</string>
 	<key>CLKComplicationSupportedFamilies</key>
 	<array>
 		<string>CLKComplicationFamilyGraphicBezel</string>
-		<string>CLKComplicationFamilyGraphicCircular</string>
+		<string>CLKComplicationFamilyGraphicCorner</string>
 		<string>CLKComplicationFamilyGraphicRectangular</string>
 		<string>CLKComplicationFamilyModularLarge</string>
 		<string>CLKComplicationFamilyUtilitarianLarge</string>
@@ -35,12 +35,12 @@
 		<key>NSExtensionAttributes</key>
 		<dict>
 			<key>WKAppBundleIdentifier</key>
-			<string>org.numericdesign.Bement.watchkitapp</string>
+			<string>xyz.runkaizhang.Bement.watchkitapp</string>
 		</dict>
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.watchkit</string>
 	</dict>
 	<key>WKExtensionDelegateClassName</key>
-	<string>ExtensionDelegate</string>
+	<string>$(PRODUCT_MODULE_NAME).ExtensionDelegate</string>
 </dict>
 </plist>

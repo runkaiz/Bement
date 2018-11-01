@@ -41,7 +41,7 @@ class UpcomingInterfaceController: WKInterfaceController {
         let calendar = NSCalendar.current
         for item in database.terms {
             
-            let date = component2Date(item)
+            let date = UpcomingInterfaceController.component2Date(item)
             let date1 = calendar.startOfDay(for: Date())
             let date2 = calendar.startOfDay(for: date as Date)
             
@@ -57,7 +57,7 @@ class UpcomingInterfaceController: WKInterfaceController {
         }
     }
     
-    func component2Date(_ component: DateComponents) -> NSDate {
+    public static func component2Date(_ component: DateComponents) -> NSDate {
         let calender = NSCalendar(calendarIdentifier: .gregorian)
         let date = calender?.date(from: component)
         return date! as NSDate

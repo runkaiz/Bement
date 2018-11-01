@@ -18,7 +18,6 @@
 		B2045DEF212A7DD900272036 /* LocksmithInternetAuthenticationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2045DE6212A7DD900272036 /* LocksmithInternetAuthenticationType.swift */; };
 		B2045DF2212A7DF700272036 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2045DF1212A7DF700272036 /* Security.framework */; };
 		B2074B8D2162E22200F5C229 /* TermDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2074B8C2162E22200F5C229 /* TermDates.swift */; };
-		B22236152178138700DD01B3 /* CatalogCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22236142178138700DD01B3 /* CatalogCollectionViewController.swift */; };
 		B2395B4E2159A5AD006B7F0A /* CatalogTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2395B4D2159A5AD006B7F0A /* CatalogTableViewController.swift */; };
 		B2395B502159A67F006B7F0A /* CatalogResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2395B4F2159A67F006B7F0A /* CatalogResources.swift */; };
 		B23C8E57214C14DF007F1220 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B23C8E55214C14DF007F1220 /* Interface.storyboard */; };
@@ -68,8 +67,6 @@
 		B2720439211D78590066AC5E /* MessagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2720438211D78590066AC5E /* MessagesTableViewController.swift */; };
 		B272043B211D7DAF0066AC5E /* QuickSubmitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B272043A211D7DAF0066AC5E /* QuickSubmitViewController.swift */; };
 		B2766A23214F253300C1D2A9 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2766A22214F253300C1D2A9 /* Data.swift */; };
-		B27F6B3B217D625A003FF94E /* temp Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B27F6B3A217D625A003FF94E /* temp Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		B27F6B4A217D625A003FF94E /* temp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = B27F6B2E217D6259003FF94E /* temp.app */; };
 		B27F6B52217D626B003FF94E /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27F6B43217D625A003FF94E /* ComplicationController.swift */; };
 		B283965A2161A7A200034DA4 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28396592161A7A200034DA4 /* UIViewExtensions.swift */; };
 		B295BE82214F325600D7E63C /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B295BE81214F325600D7E63C /* CloudKit.framework */; };
@@ -80,6 +77,18 @@
 		B2BA44DC20EB9FD6009437A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2BA44DB20EB9FD6009437A7 /* Assets.xcassets */; };
 		B2C8C971214ED10600A5AF67 /* UpcomingInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C8C970214ED10600A5AF67 /* UpcomingInterfaceController.swift */; };
 		B2C8C973214F0EEF00A5AF67 /* NextDateTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C8C972214F0EEF00A5AF67 /* NextDateTableCell.swift */; };
+		B2D035A1218A700500F79DBF /* CatalogDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D035A0218A700500F79DBF /* CatalogDetailTableViewController.swift */; };
+		B2D035A3218A850F00F79DBF /* CatalogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D035A2218A850E00F79DBF /* CatalogTableViewCell.swift */; };
+		B2D035A5218A89C600F79DBF /* DeviceKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D035A4218A89C600F79DBF /* DeviceKit.swift */; };
+		B2D667B721861F3D00CF8428 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D667B421861F3C00CF8428 /* UIImage.swift */; };
+		B2D667B821861F3D00CF8428 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D667B521861F3C00CF8428 /* UIColor.swift */; };
+		B2D667B921861F3D00CF8428 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D667B621861F3C00CF8428 /* UIViewController.swift */; };
+		B2D667BE21861F4A00CF8428 /* ATCWalkthroughViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2D667BA21861F4900CF8428 /* ATCWalkthroughViewController.xib */; };
+		B2D667BF21861F4A00CF8428 /* ATCClassicWalkthroughViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2D667BB21861F4900CF8428 /* ATCClassicWalkthroughViewController.xib */; };
+		B2D667C021861F4A00CF8428 /* ATCClassicWalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D667BC21861F4A00CF8428 /* ATCClassicWalkthroughViewController.swift */; };
+		B2D667C121861F4A00CF8428 /* ATCWalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D667BD21861F4A00CF8428 /* ATCWalkthroughViewController.swift */; };
+		B2D667C321861FBF00CF8428 /* ATCWalkthroughModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D667C221861FBF00CF8428 /* ATCWalkthroughModel.swift */; };
+		B2D667CB21862E8700CF8428 /* BementUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D667CA21862E8700CF8428 /* BementUITests.swift */; };
 		B2E5B43A212AD48600CF904E /* ErrorsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E5B439212AD48600CF904E /* ErrorsTableViewController.swift */; };
 		B2E5B43C212AD52900CF904E /* MessageInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E5B43B212AD52900CF904E /* MessageInfoViewController.swift */; };
 		B2E5B43E212ADCD800CF904E /* ErrorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E5B43D212ADCD800CF904E /* ErrorTableViewCell.swift */; };
@@ -87,7 +96,6 @@
 		B2E97A23211AFFF70005BEA9 /* ForgotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E97A22211AFFF60005BEA9 /* ForgotViewController.swift */; };
 		B2E97A25211B2B4C0005BEA9 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E97A24211B2B4C0005BEA9 /* AdminViewController.swift */; };
 		B2F35212215C5B3300E0F436 /* ClagettViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F35211215C5B3300E0F436 /* ClagettViewController.swift */; };
-		B2F35214215DAFDB00E0F436 /* CatalogCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F35213215DAFDB00E0F436 /* CatalogCollectionViewCell.swift */; };
 		EA4AF79B89B391775142DBBD /* Pods_watch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C86ED8319AA6179D0029815 /* Pods_watch.framework */; };
 /* End PBXBuildFile section */
 
@@ -106,19 +114,12 @@
 			remoteGlobalIDString = B23C8E52214C14DF007F1220;
 			remoteInfo = watch;
 		};
-		B27F6B3C217D625A003FF94E /* PBXContainerItemProxy */ = {
+		B2D667CD21862E8700CF8428 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B2BA44C920EB9FD1009437A7 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = B27F6B39217D625A003FF94E;
-			remoteInfo = "temp Extension";
-		};
-		B27F6B48217D625A003FF94E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B2BA44C920EB9FD1009437A7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B27F6B2D217D6259003FF94E;
-			remoteInfo = temp;
+			remoteGlobalIDString = B2BA44D020EB9FD1009437A7;
+			remoteInfo = Bement;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -151,20 +152,8 @@
 			dstSubfolderSpec = 16;
 			files = (
 				B23C8E70214C14E2007F1220 /* watch.app in Embed Watch Content */,
-				B27F6B4A217D625A003FF94E /* temp.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B27F6B4E217D625A003FF94E /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				B27F6B3B217D625A003FF94E /* temp Extension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -183,7 +172,6 @@
 		B2045DE7212A7DD900272036 /* Locksmith.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Locksmith.h; sourceTree = "<group>"; };
 		B2045DF1212A7DF700272036 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		B2074B8C2162E22200F5C229 /* TermDates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermDates.swift; sourceTree = "<group>"; };
-		B22236142178138700DD01B3 /* CatalogCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogCollectionViewController.swift; sourceTree = "<group>"; };
 		B2395B4D2159A5AD006B7F0A /* CatalogTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogTableViewController.swift; sourceTree = "<group>"; };
 		B2395B4F2159A67F006B7F0A /* CatalogResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogResources.swift; sourceTree = "<group>"; };
 		B23C8E53214C14DF007F1220 /* watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = watch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -237,8 +225,6 @@
 		B272043A211D7DAF0066AC5E /* QuickSubmitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickSubmitViewController.swift; sourceTree = "<group>"; };
 		B2766A21214F20FA00C1D2A9 /* watch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = watch.entitlements; sourceTree = "<group>"; };
 		B2766A22214F253300C1D2A9 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
-		B27F6B2E217D6259003FF94E /* temp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = temp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B27F6B3A217D625A003FF94E /* temp Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "temp Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B27F6B43217D625A003FF94E /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		B28396592161A7A200034DA4 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		B284DC39212EA58F0052AD67 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -253,6 +239,20 @@
 		B2BA44E020EB9FD6009437A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2C8C970214ED10600A5AF67 /* UpcomingInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingInterfaceController.swift; sourceTree = "<group>"; };
 		B2C8C972214F0EEF00A5AF67 /* NextDateTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextDateTableCell.swift; sourceTree = "<group>"; };
+		B2D035A0218A700500F79DBF /* CatalogDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogDetailTableViewController.swift; sourceTree = "<group>"; };
+		B2D035A2218A850E00F79DBF /* CatalogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogTableViewCell.swift; sourceTree = "<group>"; };
+		B2D035A4218A89C600F79DBF /* DeviceKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceKit.swift; sourceTree = "<group>"; };
+		B2D667B421861F3C00CF8428 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		B2D667B521861F3C00CF8428 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		B2D667B621861F3C00CF8428 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		B2D667BA21861F4900CF8428 /* ATCWalkthroughViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATCWalkthroughViewController.xib; sourceTree = "<group>"; };
+		B2D667BB21861F4900CF8428 /* ATCClassicWalkthroughViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATCClassicWalkthroughViewController.xib; sourceTree = "<group>"; };
+		B2D667BC21861F4A00CF8428 /* ATCClassicWalkthroughViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATCClassicWalkthroughViewController.swift; sourceTree = "<group>"; };
+		B2D667BD21861F4A00CF8428 /* ATCWalkthroughViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATCWalkthroughViewController.swift; sourceTree = "<group>"; };
+		B2D667C221861FBF00CF8428 /* ATCWalkthroughModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATCWalkthroughModel.swift; sourceTree = "<group>"; };
+		B2D667C821862E8700CF8428 /* BementUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BementUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2D667CA21862E8700CF8428 /* BementUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BementUITests.swift; sourceTree = "<group>"; };
+		B2D667CC21862E8700CF8428 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2E4145C2155B4E100E7F0B8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Interface.strings"; sourceTree = "<group>"; };
 		B2E5B439212AD48600CF904E /* ErrorsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorsTableViewController.swift; sourceTree = "<group>"; };
 		B2E5B43B212AD52900CF904E /* MessageInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageInfoViewController.swift; sourceTree = "<group>"; };
@@ -262,7 +262,6 @@
 		B2E97A24211B2B4C0005BEA9 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
 		B2E97A26211B2B890005BEA9 /* Bement.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Bement.entitlements; sourceTree = "<group>"; };
 		B2F35211215C5B3300E0F436 /* ClagettViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClagettViewController.swift; sourceTree = "<group>"; };
-		B2F35213215DAFDB00E0F436 /* CatalogCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogCollectionViewCell.swift; sourceTree = "<group>"; };
 		C836ACBBEB62D0DCB40A2562 /* Pods_watch_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_watch_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF6F8E08F84FEB82BE13C51 /* Pods_Bement.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bement.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -283,13 +282,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B27F6B37217D625A003FF94E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B2BA44CE20EB9FD1009437A7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -297,6 +289,13 @@
 				B2A4E662212D98B10079C7E6 /* LocalAuthentication.framework in Frameworks */,
 				B295BE82214F325600D7E63C /* CloudKit.framework in Frameworks */,
 				B2045DF2212A7DF700272036 /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2D667C521862E8700CF8428 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,8 +336,8 @@
 				B2C8C972214F0EEF00A5AF67 /* NextDateTableCell.swift */,
 				B23C8E66214C14E1007F1220 /* ExtensionDelegate.swift */,
 				B23C8E68214C14E1007F1220 /* NotificationController.swift */,
-				B2766A22214F253300C1D2A9 /* Data.swift */,
 				B27F6B43217D625A003FF94E /* ComplicationController.swift */,
+				B2766A22214F253300C1D2A9 /* Data.swift */,
 				B23C8E6A214C14E2007F1220 /* Assets.xcassets */,
 				B23C8E6C214C14E2007F1220 /* Info.plist */,
 				B23C8E6D214C14E2007F1220 /* PushNotificationPayload.apns */,
@@ -397,6 +396,7 @@
 				B2BA44D320EB9FD1009437A7 /* Bement */,
 				B23C8E54214C14DF007F1220 /* watch */,
 				B23C8E63214C14E1007F1220 /* watch Extension */,
+				B2D667C921862E8700CF8428 /* BementUITests */,
 				B2BA44D220EB9FD1009437A7 /* Products */,
 				B2E97A27211B2B8D0005BEA9 /* Frameworks */,
 			);
@@ -408,8 +408,7 @@
 				B2BA44D120EB9FD1009437A7 /* Bement.app */,
 				B23C8E53214C14DF007F1220 /* watch.app */,
 				B23C8E5F214C14E1007F1220 /* watch Extension.appex */,
-				B27F6B2E217D6259003FF94E /* temp.app */,
-				B27F6B3A217D625A003FF94E /* temp Extension.appex */,
+				B2D667C821862E8700CF8428 /* BementUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -420,6 +419,10 @@
 				B2E97A26211B2B890005BEA9 /* Bement.entitlements */,
 				B2BA44D420EB9FD1009437A7 /* AppDelegate.swift */,
 				B268D40A21195B06001D7BF1 /* LoginViewController.swift */,
+				B2D667BC21861F4A00CF8428 /* ATCClassicWalkthroughViewController.swift */,
+				B2D667BB21861F4900CF8428 /* ATCClassicWalkthroughViewController.xib */,
+				B2D667BD21861F4A00CF8428 /* ATCWalkthroughViewController.swift */,
+				B2D667BA21861F4900CF8428 /* ATCWalkthroughViewController.xib */,
 				B2E97A24211B2B4C0005BEA9 /* AdminViewController.swift */,
 				B2720438211D78590066AC5E /* MessagesTableViewController.swift */,
 				B2045D8B2129818800272036 /* MessagesTableViewCell.swift */,
@@ -431,16 +434,21 @@
 				B272043A211D7DAF0066AC5E /* QuickSubmitViewController.swift */,
 				B2E97A22211AFFF60005BEA9 /* ForgotViewController.swift */,
 				B2395B4D2159A5AD006B7F0A /* CatalogTableViewController.swift */,
-				B22236142178138700DD01B3 /* CatalogCollectionViewController.swift */,
-				B2F35213215DAFDB00E0F436 /* CatalogCollectionViewCell.swift */,
 				B2F35211215C5B3300E0F436 /* ClagettViewController.swift */,
 				B24B2687212C4ECB00D316F5 /* wifiTableViewController.swift */,
 				B24B2689212C51DD00D316F5 /* OtherViewController.swift */,
+				B2D035A0218A700500F79DBF /* CatalogDetailTableViewController.swift */,
+				B2D035A2218A850E00F79DBF /* CatalogTableViewCell.swift */,
 				B26C0F0921196ACB00750545 /* Functions.swift */,
 				B2045D8921297F7000272036 /* GlobalVariable.swift */,
 				B2074B8C2162E22200F5C229 /* TermDates.swift */,
 				B2395B4F2159A67F006B7F0A /* CatalogResources.swift */,
 				B28396592161A7A200034DA4 /* UIViewExtensions.swift */,
+				B2D667B521861F3C00CF8428 /* UIColor.swift */,
+				B2D667B421861F3C00CF8428 /* UIImage.swift */,
+				B2D667B621861F3C00CF8428 /* UIViewController.swift */,
+				B2D667C221861FBF00CF8428 /* ATCWalkthroughModel.swift */,
+				B2D035A4218A89C600F79DBF /* DeviceKit.swift */,
 				B2BA44D820EB9FD1009437A7 /* Main.storyboard */,
 				B26C0F112119861100750545 /* LaunchScreen.storyboard */,
 				B2BA44DB20EB9FD6009437A7 /* Assets.xcassets */,
@@ -450,6 +458,15 @@
 				B2BA44E020EB9FD6009437A7 /* Info.plist */,
 			);
 			path = Bement;
+			sourceTree = "<group>";
+		};
+		B2D667C921862E8700CF8428 /* BementUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B2D667CA21862E8700CF8428 /* BementUITests.swift */,
+				B2D667CC21862E8700CF8428 /* Info.plist */,
+			);
+			path = BementUITests;
 			sourceTree = "<group>";
 		};
 		B2E97A27211B2B8D0005BEA9 /* Frameworks */ = {
@@ -503,40 +520,6 @@
 			productReference = B23C8E5F214C14E1007F1220 /* watch Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
 		};
-		B27F6B2D217D6259003FF94E /* temp */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B27F6B4F217D625A003FF94E /* Build configuration list for PBXNativeTarget "temp" */;
-			buildPhases = (
-				B27F6B2C217D6259003FF94E /* Resources */,
-				B27F6B4E217D625A003FF94E /* Embed App Extensions */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B27F6B3D217D625A003FF94E /* PBXTargetDependency */,
-			);
-			name = temp;
-			productName = temp;
-			productReference = B27F6B2E217D6259003FF94E /* temp.app */;
-			productType = "com.apple.product-type.application.watchapp2";
-		};
-		B27F6B39217D625A003FF94E /* temp Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B27F6B4B217D625A003FF94E /* Build configuration list for PBXNativeTarget "temp Extension" */;
-			buildPhases = (
-				B27F6B36217D625A003FF94E /* Sources */,
-				B27F6B37217D625A003FF94E /* Frameworks */,
-				B27F6B38217D625A003FF94E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "temp Extension";
-			productName = "temp Extension";
-			productReference = B27F6B3A217D625A003FF94E /* temp Extension.appex */;
-			productType = "com.apple.product-type.watchkit2-extension";
-		};
 		B2BA44D020EB9FD1009437A7 /* Bement */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B2BA44E320EB9FD6009437A7 /* Build configuration list for PBXNativeTarget "Bement" */;
@@ -551,12 +534,29 @@
 			);
 			dependencies = (
 				B23C8E6F214C14E2007F1220 /* PBXTargetDependency */,
-				B27F6B49217D625A003FF94E /* PBXTargetDependency */,
 			);
 			name = Bement;
 			productName = Bement;
 			productReference = B2BA44D120EB9FD1009437A7 /* Bement.app */;
 			productType = "com.apple.product-type.application";
+		};
+		B2D667C721862E8700CF8428 /* BementUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2D667CF21862E8700CF8428 /* Build configuration list for PBXNativeTarget "BementUITests" */;
+			buildPhases = (
+				B2D667C421862E8700CF8428 /* Sources */,
+				B2D667C521862E8700CF8428 /* Frameworks */,
+				B2D667C621862E8700CF8428 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B2D667CE21862E8700CF8428 /* PBXTargetDependency */,
+			);
+			name = BementUITests;
+			productName = BementUITests;
+			productReference = B2D667C821862E8700CF8428 /* BementUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -579,12 +579,6 @@
 					B23C8E5E214C14E1007F1220 = {
 						CreatedOnToolsVersion = 10.0;
 					};
-					B27F6B2D217D6259003FF94E = {
-						CreatedOnToolsVersion = 10.0;
-					};
-					B27F6B39217D625A003FF94E = {
-						CreatedOnToolsVersion = 10.0;
-					};
 					B2BA44D020EB9FD1009437A7 = {
 						CreatedOnToolsVersion = 10.0;
 						SystemCapabilities = {
@@ -605,6 +599,10 @@
 							};
 						};
 					};
+					B2D667C721862E8700CF8428 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = B2BA44D020EB9FD1009437A7;
+					};
 				};
 			};
 			buildConfigurationList = B2BA44CC20EB9FD1009437A7 /* Build configuration list for PBXProject "Bement" */;
@@ -624,8 +622,7 @@
 				B2BA44D020EB9FD1009437A7 /* Bement */,
 				B23C8E52214C14DF007F1220 /* watch */,
 				B23C8E5E214C14E1007F1220 /* watch Extension */,
-				B27F6B2D217D6259003FF94E /* temp */,
-				B27F6B39217D625A003FF94E /* temp Extension */,
+				B2D667C721862E8700CF8428 /* BementUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -648,25 +645,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B27F6B2C217D6259003FF94E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B27F6B38217D625A003FF94E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B2BA44CF20EB9FD1009437A7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				B26C0EFC2119670500750545 /* SF-Pro-Display-UltralightItalic.otf in Resources */,
+				B2D667BF21861F4A00CF8428 /* ATCClassicWalkthroughViewController.xib in Resources */,
+				B2D667BE21861F4A00CF8428 /* ATCWalkthroughViewController.xib in Resources */,
 				B26C0EF32119670500750545 /* SF-Pro-Display-Medium.otf in Resources */,
 				B26C0F012119670500750545 /* SF-Pro-Text-RegularItalic.otf in Resources */,
 				B26C0EF12119670500750545 /* SF-Pro-Text-MediumItalic.otf in Resources */,
@@ -703,6 +688,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B2D667C621862E8700CF8428 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -720,13 +712,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B27F6B36217D625A003FF94E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B2BA44CD20EB9FD1009437A7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -736,31 +721,46 @@
 				B272043B211D7DAF0066AC5E /* QuickSubmitViewController.swift in Sources */,
 				B2045DEC212A7DD900272036 /* LocksmithSecurityClass.swift in Sources */,
 				B24B2688212C4ECB00D316F5 /* wifiTableViewController.swift in Sources */,
+				B2D667B821861F3D00CF8428 /* UIColor.swift in Sources */,
 				B2045DEF212A7DD900272036 /* LocksmithInternetAuthenticationType.swift in Sources */,
 				B2045DEE212A7DD900272036 /* LocksmithAccessibleOption.swift in Sources */,
+				B2D667C121861F4A00CF8428 /* ATCWalkthroughViewController.swift in Sources */,
 				B26C0F102119710900750545 /* SupportTableViewController.swift in Sources */,
 				B2E5B440212AE05500CF904E /* ErrorViewController.swift in Sources */,
-				B22236152178138700DD01B3 /* CatalogCollectionViewController.swift in Sources */,
 				B2395B4E2159A5AD006B7F0A /* CatalogTableViewController.swift in Sources */,
 				B268D40B21195B06001D7BF1 /* LoginViewController.swift in Sources */,
-				B2F35214215DAFDB00E0F436 /* CatalogCollectionViewCell.swift in Sources */,
+				B2D667B921861F3D00CF8428 /* UIViewController.swift in Sources */,
+				B2D667C021861F4A00CF8428 /* ATCClassicWalkthroughViewController.swift in Sources */,
+				B2D035A3218A850F00F79DBF /* CatalogTableViewCell.swift in Sources */,
+				B2D035A5218A89C600F79DBF /* DeviceKit.swift in Sources */,
+				B2D667B721861F3D00CF8428 /* UIImage.swift in Sources */,
 				B2BA44D520EB9FD1009437A7 /* AppDelegate.swift in Sources */,
 				B24B268A212C51DD00D316F5 /* OtherViewController.swift in Sources */,
 				B2E97A25211B2B4C0005BEA9 /* AdminViewController.swift in Sources */,
 				B2045DED212A7DD900272036 /* Dictionary_Initializers.swift in Sources */,
 				B26C0F0A21196ACB00750545 /* Functions.swift in Sources */,
 				B2E5B43E212ADCD800CF904E /* ErrorTableViewCell.swift in Sources */,
+				B2D035A1218A700500F79DBF /* CatalogDetailTableViewController.swift in Sources */,
 				B2074B8D2162E22200F5C229 /* TermDates.swift in Sources */,
 				B2045D8C2129818800272036 /* MessagesTableViewCell.swift in Sources */,
 				B2F35212215C5B3300E0F436 /* ClagettViewController.swift in Sources */,
 				B2E5B43C212AD52900CF904E /* MessageInfoViewController.swift in Sources */,
 				B283965A2161A7A200034DA4 /* UIViewExtensions.swift in Sources */,
+				B2D667C321861FBF00CF8428 /* ATCWalkthroughModel.swift in Sources */,
 				B2045DE9212A7DD900272036 /* LocksmithError.swift in Sources */,
 				B2395B502159A67F006B7F0A /* CatalogResources.swift in Sources */,
 				B2E97A23211AFFF70005BEA9 /* ForgotViewController.swift in Sources */,
 				B2045DEA212A7DD900272036 /* Locksmith.swift in Sources */,
 				B2045D8A21297F7000272036 /* GlobalVariable.swift in Sources */,
 				B2045DEB212A7DD900272036 /* LocksmithInternetProtocol.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2D667C421862E8700CF8428 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2D667CB21862E8700CF8428 /* BementUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -777,15 +777,10 @@
 			target = B23C8E52214C14DF007F1220 /* watch */;
 			targetProxy = B23C8E6E214C14E2007F1220 /* PBXContainerItemProxy */;
 		};
-		B27F6B3D217D625A003FF94E /* PBXTargetDependency */ = {
+		B2D667CE21862E8700CF8428 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B27F6B39217D625A003FF94E /* temp Extension */;
-			targetProxy = B27F6B3C217D625A003FF94E /* PBXContainerItemProxy */;
-		};
-		B27F6B49217D625A003FF94E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B27F6B2D217D6259003FF94E /* temp */;
-			targetProxy = B27F6B48217D625A003FF94E /* PBXContainerItemProxy */;
+			target = B2BA44D020EB9FD1009437A7 /* Bement */;
+			targetProxy = B2D667CD21862E8700CF8428 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -833,7 +828,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = org.numericdesign.Bement.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.runkaizhang.Bement.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -856,7 +851,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = org.numericdesign.Bement.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.runkaizhang.Bement.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -876,7 +871,7 @@
 				IBSC_MODULE = watch_Extension;
 				INFOPLIST_FILE = watch/Info.plist;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = org.numericdesign.Bement.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.runkaizhang.Bement.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -896,89 +891,7 @@
 				IBSC_MODULE = watch_Extension;
 				INFOPLIST_FILE = watch/Info.plist;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = org.numericdesign.Bement.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 5.0;
-			};
-			name = Release;
-		};
-		B27F6B4C217D625A003FF94E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "temp Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = org.numericdesign.Bement.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 5.0;
-			};
-			name = Debug;
-		};
-		B27F6B4D217D625A003FF94E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "temp Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = org.numericdesign.Bement.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 5.0;
-			};
-			name = Release;
-		};
-		B27F6B50217D625A003FF94E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C58CLY4K2U;
-				IBSC_MODULE = temp_Extension;
-				INFOPLIST_FILE = temp/Info.plist;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = org.numericdesign.Bement.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 5.0;
-			};
-			name = Debug;
-		};
-		B27F6B51217D625A003FF94E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C58CLY4K2U;
-				IBSC_MODULE = temp_Extension;
-				INFOPLIST_FILE = temp/Info.plist;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = org.numericdesign.Bement.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.runkaizhang.Bement.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1117,10 +1030,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.numericdesign.Bement;
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.runkaizhang.Bement;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1137,10 +1050,50 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.numericdesign.Bement;
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.runkaizhang.Bement;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		B2D667D021862E8700CF8428 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C58CLY4K2U;
+				INFOPLIST_FILE = BementUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.runkaizhang.BementUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Bement;
+			};
+			name = Debug;
+		};
+		B2D667D121862E8700CF8428 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C58CLY4K2U;
+				INFOPLIST_FILE = BementUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.runkaizhang.BementUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Bement;
 			};
 			name = Release;
 		};
@@ -1165,24 +1118,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B27F6B4B217D625A003FF94E /* Build configuration list for PBXNativeTarget "temp Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B27F6B4C217D625A003FF94E /* Debug */,
-				B27F6B4D217D625A003FF94E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B27F6B4F217D625A003FF94E /* Build configuration list for PBXNativeTarget "temp" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B27F6B50217D625A003FF94E /* Debug */,
-				B27F6B51217D625A003FF94E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		B2BA44CC20EB9FD1009437A7 /* Build configuration list for PBXProject "Bement" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1197,6 +1132,15 @@
 			buildConfigurations = (
 				B2BA44E420EB9FD6009437A7 /* Debug */,
 				B2BA44E520EB9FD6009437A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2D667CF21862E8700CF8428 /* Build configuration list for PBXNativeTarget "BementUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2D667D021862E8700CF8428 /* Debug */,
+				B2D667D121862E8700CF8428 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

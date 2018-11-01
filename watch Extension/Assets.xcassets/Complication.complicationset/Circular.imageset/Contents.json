@@ -1,28 +1,32 @@
 {
   "images" : [
     {
-      "idiom" : "watch",
       "scale" : "2x",
+      "filename" : "circular38mm@2x.png",
+      "idiom" : "watch",
       "screen-width" : "<=145"
     },
     {
-      "idiom" : "watch",
       "scale" : "2x",
+      "filename" : "circular40mm@2x.png",
+      "idiom" : "watch",
       "screen-width" : ">161"
     },
     {
-      "idiom" : "watch",
       "scale" : "2x",
+      "filename" : "circular42mm@2x.png",
+      "idiom" : "watch",
       "screen-width" : ">145"
     },
     {
-      "idiom" : "watch",
       "scale" : "2x",
+      "filename" : "circular44mm@2x.png",
+      "idiom" : "watch",
       "screen-width" : ">183"
     }
   ],
   "info" : {
-    "version" : 1,
-    "author" : "xcode"
+    "author" : "xcode",
+    "version" : 1
   }
 }

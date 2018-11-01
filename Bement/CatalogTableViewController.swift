@@ -68,7 +68,7 @@ class CatalogTableViewController: UITableViewController {
             // Create a variable that you want to send
             let catalogID = indexRow
             
-            let destinationVC = segue.destination as! CatalogCollectionViewController
+            let destinationVC = segue.destination as! CatalogDetailTableViewController
             destinationVC.segueData = catalogID
         }
     }

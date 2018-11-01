@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vhr-DB-jCY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vhr-DB-jCY">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -148,7 +148,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gId-Lt-jzV"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Admin Panel" id="P4q-sG-kdq"/>
+                    <navigationItem key="navigationItem" title="Admin Panel" id="P4q-sG-kdq">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="OYK-Qi-wuj">
+                            <connections>
+                                <segue destination="4cD-r8-ax5" kind="unwind" unwindAction="done:" id="xiw-zx-t71"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="errorButton" destination="pJU-yI-q8r" id="Rlv-rq-tJ6"/>
                         <outlet property="messageButton" destination="rkA-ag-QMF" id="1Qa-mr-5cf"/>
@@ -157,6 +163,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vok-RW-tky" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="4cD-r8-ax5" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3741.5999999999999" y="-344.33497536945816"/>
         </scene>
@@ -267,53 +274,48 @@
             <point key="canvasLocation" x="5346.3999999999996" y="-344.33497536945816"/>
         </scene>
         <!--Title-->
-        <scene sceneID="REx-YT-FJq">
+        <scene sceneID="tSc-PO-wym">
             <objects>
-                <collectionViewController id="vQr-z3-kw8" customClass="CatalogCollectionViewController" customModule="Bement" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" id="qOT-Vz-PuT">
+                <tableViewController id="t7N-N9-lXL" customClass="CatalogDetailTableViewController" customModule="Bement" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="snM-Hf-OQ9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Rnj-MA-t2n">
-                            <size key="itemSize" width="50" height="50"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="MD0-wx-1av" customClass="CatalogCollectionViewCell" customModule="Bement" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" textLabel="pcY-2x-gMB" style="IBUITableViewCellStyleDefault" id="0Ew-Tz-UxP" customClass="CatalogTableViewCell" customModule="Bement" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0Ew-Tz-UxP" id="IMH-jr-nkp">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TlJ-W5-oVX">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        </imageView>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pcY-2x-gMB">
+                                            <rect key="frame" x="16" y="0.0" width="324" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
-                                </view>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="TlJ-W5-oVX" secondAttribute="bottom" id="5xh-b9-oij"/>
-                                    <constraint firstItem="TlJ-W5-oVX" firstAttribute="leading" secondItem="MD0-wx-1av" secondAttribute="leading" id="FJz-wq-qY6"/>
-                                    <constraint firstItem="TlJ-W5-oVX" firstAttribute="top" secondItem="MD0-wx-1av" secondAttribute="top" id="oPd-yz-4rA"/>
-                                    <constraint firstAttribute="trailing" secondItem="TlJ-W5-oVX" secondAttribute="trailing" id="wwG-sX-gIb"/>
-                                </constraints>
+                                </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="image" destination="TlJ-W5-oVX" id="Tn1-kh-gvP"/>
+                                    <outlet property="title" destination="pcY-2x-gMB" id="mjb-3s-KyW"/>
                                 </connections>
-                            </collectionViewCell>
-                        </cells>
+                            </tableViewCell>
+                        </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="vQr-z3-kw8" id="asp-We-ToR"/>
-                            <outlet property="delegate" destination="vQr-z3-kw8" id="mzR-JY-rOq"/>
+                            <outlet property="dataSource" destination="t7N-N9-lXL" id="ZDn-eF-bcS"/>
+                            <outlet property="delegate" destination="t7N-N9-lXL" id="I4y-R3-9jm"/>
                         </connections>
-                    </collectionView>
-                    <navigationItem key="navigationItem" title="Title" largeTitleDisplayMode="never" id="iNc-9N-fpH"/>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hSb-JU-SbO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Title" id="OVo-C3-ODs"/>
+                    <connections>
+                        <outlet property="titleTextDetail" destination="OVo-C3-ODs" id="hBj-hP-jKi"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1D6-Lb-5Eh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="278" y="349"/>
+            <point key="canvasLocation" x="250" y="348"/>
         </scene>
         <!--Library Resources-->
         <scene sceneID="eqX-se-XmM">
@@ -587,7 +589,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="vQr-z3-kw8" kind="show" identifier="resource" id="4kB-xp-gYh"/>
+                        <segue destination="t7N-N9-lXL" kind="show" identifier="resource" id="Xzj-9O-gHc"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LeV-dp-Xb6" userLabel="First Responder" sceneMemberID="firstResponder"/>

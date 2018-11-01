@@ -7,11 +7,10 @@
 //
 
 import UIKit
-import UserNotifications
 import WatchConnectivity
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
@@ -22,19 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             session.delegate = self
             session.activate()
         }
-        
-        let center =  UNUserNotificationCenter.current()
-        center.requestAuthorization(options: [.alert, .sound, .badge]) { (result, error) in
-            //handle result of request failure
-        }
-        
-        let defaultCategory = UNNotificationCategory(identifier: "default",
-                                                     actions: [],
-                                                     intentIdentifiers: [],
-                                                     options: .customDismissAction)
-        
-        // Register the category.
-        center.setNotificationCategories([defaultCategory])
         
         if UserDefaults().bool(forKey: "alert") == true {
             var count = 0
