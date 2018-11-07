@@ -8,13 +8,25 @@
 
 import UIKit
 import WatchConnectivity
+import CoreLocation
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
+    var locationManager: CLLocationManager?
+    var notificationCenter: UNUserNotificationCenter?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        
+        self.locationManager = CLLocationManager()
+        self.locationManager!.delegate = self
+        
+        self.notificationCenter = UNUserNotificationCenter.current()
+        
+        notificationCenter!.delegate = self
         
         if WCSession.isSupported() {
             let session = WCSession.default
@@ -38,15 +50,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
-        /*
-        tools.pushTerms(termName: TermDates.names[0], date: TermDates.fallMidTerm)
-        tools.pushTerms(termName: TermDates.names[0], date: TermDates.fallTerm)
-        tools.pushTerms(termName: TermDates.names[0], date: TermDates.miniTerm)
-        tools.pushTerms(termName: TermDates.names[0], date: TermDates.winterMidTerm)
-        tools.pushTerms(termName: TermDates.names[0], date: TermDates.winterTerm)
-        tools.pushTerms(termName: TermDates.names[0], date: TermDates.springMidTerm)
-        tools.pushTerms(termName: TermDates.names[0], date: TermDates.springTerm)
-                */
+        // Your coordinates go here (lat, lon)
+        let geofenceRegionCenter = CLLocationCoordinate2DMake(42.5482827, -72.6059389)
+        
+        /* Create a region centered on desired location,
+         choose a radius for the region (in meters)
+         choose a unique identifier for that region */
+        let geofenceRegion = CLCircularRegion(center: geofenceRegionCenter,
+                                              radius: 1000,
+                                              identifier: "bement")
+        
+        geofenceRegion.notifyOnEntry = true
+        geofenceRegion.notifyOnExit = true
+        
+        let date = Date()
+        
+        if Calendar.current.isDateInWeekend(date) {
+            
+            locationManager!.startMonitoring(for: geofenceRegion)
+        }
+        
         return true
     }
 
@@ -134,4 +157,104 @@ extension AppDelegate: WCSessionDelegate {
     func sessionDidDeactivate(_ session: WCSession) {
         print("Session Deactivated")
     }
+}
+
+extension AppDelegate: CLLocationManagerDelegate {
+    // called when user Exits a monitored region
+    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
+        if region is CLCircularRegion {
+            // Do what you want if this information
+            self.handleEventWhenExit(forRegion: region)
+        }
+    }
+    
+    // called when user Enters a monitored region
+    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        if region is CLCircularRegion {
+            // Do what you want if this information
+            self.handleEventWhenEnter(forRegion: region)
+        }
+    }
+    
+    func handleEventWhenEnter(forRegion region: CLRegion!) {
+        
+        // customize your notification content
+        let content = UNMutableNotificationContent()
+        content.title = "Welcome to the Bement School!"
+        content.body = "You might want to turn your do not disturb mode one"
+        content.sound = UNNotificationSound.default
+        
+        // when the notification will be triggered
+        let timeInSeconds: TimeInterval = (60 * 15) // 60s * 15 = 15min
+        // the actual trigger object
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeInSeconds,
+                                                        repeats: false)
+        
+        // notification unique identifier, for this example, same as the region to avoid duplicate notifications
+        let identifier = region.identifier
+        
+        // the notification request object
+        let request = UNNotificationRequest(identifier: identifier,
+                                            content: content,
+                                            trigger: trigger)
+        
+        // trying to add the notification request to notification center
+        notificationCenter!.add(request, withCompletionHandler: { (error) in
+            if error != nil {
+                print("Error adding notification with identifier: \(identifier)")
+            }
+        })
+    }
+    
+    func handleEventWhenExit(forRegion region: CLRegion!) {
+        
+        // customize your notification content
+        let content = UNMutableNotificationContent()
+        content.title = "Good bye!"
+        content.body = "You have left the Bement School"
+        content.sound = UNNotificationSound.default
+        
+        // when the notification will be triggered
+        let timeInSeconds: TimeInterval = (60 * 15) // 60s * 15 = 15min
+        // the actual trigger object
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeInSeconds,
+                                                        repeats: false)
+        
+        // notification unique identifier, for this example, same as the region to avoid duplicate notifications
+        let identifier = region.identifier
+        
+        // the notification request object
+        let request = UNNotificationRequest(identifier: identifier,
+                                            content: content,
+                                            trigger: trigger)
+        
+        // trying to add the notification request to notification center
+        notificationCenter!.add(request, withCompletionHandler: { (error) in
+            if error != nil {
+                print("Error adding notification with identifier: \(identifier)")
+            } else {
+                
+            }
+        })
+    }
+}
+
+
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        // when app is onpen and in foregroud
+        completionHandler(.alert)
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        
+        // get the notification identifier to respond accordingly
+        let identifier = response.notification.request.identifier
+        
+        // do what you need to do
+        
+        // ...
+    }
+    
 }
