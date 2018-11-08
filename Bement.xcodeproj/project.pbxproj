@@ -89,6 +89,23 @@
 		B2D667C121861F4A00CF8428 /* ATCWalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D667BD21861F4A00CF8428 /* ATCWalkthroughViewController.swift */; };
 		B2D667C321861FBF00CF8428 /* ATCWalkthroughModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D667C221861FBF00CF8428 /* ATCWalkthroughModel.swift */; };
 		B2D667CB21862E8700CF8428 /* BementUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D667CA21862E8700CF8428 /* BementUITests.swift */; };
+		B2DB0A432193A00900BC07AF /* Algorithmia.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DB0A2C2193A00900BC07AF /* Algorithmia.swift */; };
+		B2DB0A442193A00900BC07AF /* AlgoOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DB0A2E2193A00900BC07AF /* AlgoOption.swift */; };
+		B2DB0A452193A00900BC07AF /* AlgorithmRef.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DB0A2F2193A00900BC07AF /* AlgorithmRef.swift */; };
+		B2DB0A462193A00900BC07AF /* AlgoError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DB0A302193A00900BC07AF /* AlgoError.swift */; };
+		B2DB0A472193A00900BC07AF /* Algorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DB0A312193A00900BC07AF /* Algorithm.swift */; };
+		B2DB0A482193A00900BC07AF /* AlgorithmiaConf.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DB0A322193A00900BC07AF /* AlgorithmiaConf.swift */; };
+		B2DB0A492193A00900BC07AF /* AlgorithmiaClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DB0A342193A00900BC07AF /* AlgorithmiaClient.swift */; };
+		B2DB0A4A2193A00900BC07AF /* AlgoDataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DB0A362193A00900BC07AF /* AlgoDataObject.swift */; };
+		B2DB0A4B2193A00900BC07AF /* AlgoDataDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DB0A372193A00900BC07AF /* AlgoDataDirectory.swift */; };
+		B2DB0A4C2193A00900BC07AF /* AlgoDataFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DB0A382193A00900BC07AF /* AlgoDataFile.swift */; };
+		B2DB0A4D2193A00900BC07AF /* AlgoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DB0A3A2193A00900BC07AF /* AlgoEntity.swift */; };
+		B2DB0A4E2193A00900BC07AF /* AlgoResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DB0A3B2193A00900BC07AF /* AlgoResponseData.swift */; };
+		B2DB0A4F2193A00900BC07AF /* AlgorithmiaAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DB0A3D2193A00900BC07AF /* AlgorithmiaAuth.swift */; };
+		B2DB0A502193A00900BC07AF /* AlgorithmiaSimpleAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DB0A3E2193A00900BC07AF /* AlgorithmiaSimpleAuth.swift */; };
+		B2DB0A512193A00900BC07AF /* AlgoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DB0A3F2193A00900BC07AF /* AlgoRequest.swift */; };
+		B2DB0A522193A00900BC07AF /* AlgoAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DB0A402193A00900BC07AF /* AlgoAPIClient.swift */; };
+		B2DB0A532193A00900BC07AF /* AlgoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DB0A412193A00900BC07AF /* AlgoResponse.swift */; };
 		B2E5B43A212AD48600CF904E /* ErrorsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E5B439212AD48600CF904E /* ErrorsTableViewController.swift */; };
 		B2E5B43C212AD52900CF904E /* MessageInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E5B43B212AD52900CF904E /* MessageInfoViewController.swift */; };
 		B2E5B43E212ADCD800CF904E /* ErrorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E5B43D212ADCD800CF904E /* ErrorTableViewCell.swift */; };
@@ -253,6 +270,24 @@
 		B2D667C821862E8700CF8428 /* BementUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BementUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2D667CA21862E8700CF8428 /* BementUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BementUITests.swift; sourceTree = "<group>"; };
 		B2D667CC21862E8700CF8428 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2DB0A2C2193A00900BC07AF /* Algorithmia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Algorithmia.swift; sourceTree = "<group>"; };
+		B2DB0A2E2193A00900BC07AF /* AlgoOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlgoOption.swift; sourceTree = "<group>"; };
+		B2DB0A2F2193A00900BC07AF /* AlgorithmRef.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlgorithmRef.swift; sourceTree = "<group>"; };
+		B2DB0A302193A00900BC07AF /* AlgoError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlgoError.swift; sourceTree = "<group>"; };
+		B2DB0A312193A00900BC07AF /* Algorithm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Algorithm.swift; sourceTree = "<group>"; };
+		B2DB0A322193A00900BC07AF /* AlgorithmiaConf.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlgorithmiaConf.swift; sourceTree = "<group>"; };
+		B2DB0A332193A00900BC07AF /* Algorithmia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Algorithmia.h; sourceTree = "<group>"; };
+		B2DB0A342193A00900BC07AF /* AlgorithmiaClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlgorithmiaClient.swift; sourceTree = "<group>"; };
+		B2DB0A362193A00900BC07AF /* AlgoDataObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlgoDataObject.swift; sourceTree = "<group>"; };
+		B2DB0A372193A00900BC07AF /* AlgoDataDirectory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlgoDataDirectory.swift; sourceTree = "<group>"; };
+		B2DB0A382193A00900BC07AF /* AlgoDataFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlgoDataFile.swift; sourceTree = "<group>"; };
+		B2DB0A3A2193A00900BC07AF /* AlgoEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlgoEntity.swift; sourceTree = "<group>"; };
+		B2DB0A3B2193A00900BC07AF /* AlgoResponseData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlgoResponseData.swift; sourceTree = "<group>"; };
+		B2DB0A3D2193A00900BC07AF /* AlgorithmiaAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlgorithmiaAuth.swift; sourceTree = "<group>"; };
+		B2DB0A3E2193A00900BC07AF /* AlgorithmiaSimpleAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlgorithmiaSimpleAuth.swift; sourceTree = "<group>"; };
+		B2DB0A3F2193A00900BC07AF /* AlgoRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlgoRequest.swift; sourceTree = "<group>"; };
+		B2DB0A402193A00900BC07AF /* AlgoAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlgoAPIClient.swift; sourceTree = "<group>"; };
+		B2DB0A412193A00900BC07AF /* AlgoResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlgoResponse.swift; sourceTree = "<group>"; };
 		B2E4145C2155B4E100E7F0B8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Interface.strings"; sourceTree = "<group>"; };
 		B2E5B439212AD48600CF904E /* ErrorsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorsTableViewController.swift; sourceTree = "<group>"; };
 		B2E5B43B212AD52900CF904E /* MessageInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageInfoViewController.swift; sourceTree = "<group>"; };
@@ -453,6 +488,7 @@
 				B26C0F112119861100750545 /* LaunchScreen.storyboard */,
 				B2BA44DB20EB9FD6009437A7 /* Assets.xcassets */,
 				B2B46E7B212B046600CA7480 /* Localizable.strings */,
+				B2DB0A2B2193A00900BC07AF /* Algorithmia */,
 				B2045DDF212A7DD900272036 /* Locksmith */,
 				B268D40C2119667B001D7BF1 /* Resources */,
 				B2BA44E020EB9FD6009437A7 /* Info.plist */,
@@ -467,6 +503,63 @@
 				B2D667CC21862E8700CF8428 /* Info.plist */,
 			);
 			path = BementUITests;
+			sourceTree = "<group>";
+		};
+		B2DB0A2B2193A00900BC07AF /* Algorithmia */ = {
+			isa = PBXGroup;
+			children = (
+				B2DB0A2C2193A00900BC07AF /* Algorithmia.swift */,
+				B2DB0A2D2193A00900BC07AF /* Algorithm */,
+				B2DB0A322193A00900BC07AF /* AlgorithmiaConf.swift */,
+				B2DB0A332193A00900BC07AF /* Algorithmia.h */,
+				B2DB0A342193A00900BC07AF /* AlgorithmiaClient.swift */,
+				B2DB0A352193A00900BC07AF /* Data */,
+				B2DB0A392193A00900BC07AF /* Client */,
+			);
+			path = Algorithmia;
+			sourceTree = "<group>";
+		};
+		B2DB0A2D2193A00900BC07AF /* Algorithm */ = {
+			isa = PBXGroup;
+			children = (
+				B2DB0A2E2193A00900BC07AF /* AlgoOption.swift */,
+				B2DB0A2F2193A00900BC07AF /* AlgorithmRef.swift */,
+				B2DB0A302193A00900BC07AF /* AlgoError.swift */,
+				B2DB0A312193A00900BC07AF /* Algorithm.swift */,
+			);
+			path = Algorithm;
+			sourceTree = "<group>";
+		};
+		B2DB0A352193A00900BC07AF /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B2DB0A362193A00900BC07AF /* AlgoDataObject.swift */,
+				B2DB0A372193A00900BC07AF /* AlgoDataDirectory.swift */,
+				B2DB0A382193A00900BC07AF /* AlgoDataFile.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B2DB0A392193A00900BC07AF /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				B2DB0A3A2193A00900BC07AF /* AlgoEntity.swift */,
+				B2DB0A3B2193A00900BC07AF /* AlgoResponseData.swift */,
+				B2DB0A3C2193A00900BC07AF /* Auth */,
+				B2DB0A3F2193A00900BC07AF /* AlgoRequest.swift */,
+				B2DB0A402193A00900BC07AF /* AlgoAPIClient.swift */,
+				B2DB0A412193A00900BC07AF /* AlgoResponse.swift */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		B2DB0A3C2193A00900BC07AF /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				B2DB0A3D2193A00900BC07AF /* AlgorithmiaAuth.swift */,
+				B2DB0A3E2193A00900BC07AF /* AlgorithmiaSimpleAuth.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 		B2E97A27211B2B8D0005BEA9 /* Frameworks */ = {
@@ -720,12 +813,20 @@
 				B2720439211D78590066AC5E /* MessagesTableViewController.swift in Sources */,
 				B272043B211D7DAF0066AC5E /* QuickSubmitViewController.swift in Sources */,
 				B2045DEC212A7DD900272036 /* LocksmithSecurityClass.swift in Sources */,
+				B2DB0A442193A00900BC07AF /* AlgoOption.swift in Sources */,
 				B24B2688212C4ECB00D316F5 /* wifiTableViewController.swift in Sources */,
+				B2DB0A482193A00900BC07AF /* AlgorithmiaConf.swift in Sources */,
+				B2DB0A522193A00900BC07AF /* AlgoAPIClient.swift in Sources */,
 				B2D667B821861F3D00CF8428 /* UIColor.swift in Sources */,
+				B2DB0A472193A00900BC07AF /* Algorithm.swift in Sources */,
 				B2045DEF212A7DD900272036 /* LocksmithInternetAuthenticationType.swift in Sources */,
 				B2045DEE212A7DD900272036 /* LocksmithAccessibleOption.swift in Sources */,
+				B2DB0A4D2193A00900BC07AF /* AlgoEntity.swift in Sources */,
 				B2D667C121861F4A00CF8428 /* ATCWalkthroughViewController.swift in Sources */,
+				B2DB0A462193A00900BC07AF /* AlgoError.swift in Sources */,
 				B26C0F102119710900750545 /* SupportTableViewController.swift in Sources */,
+				B2DB0A492193A00900BC07AF /* AlgorithmiaClient.swift in Sources */,
+				B2DB0A4C2193A00900BC07AF /* AlgoDataFile.swift in Sources */,
 				B2E5B440212AE05500CF904E /* ErrorViewController.swift in Sources */,
 				B2395B4E2159A5AD006B7F0A /* CatalogTableViewController.swift in Sources */,
 				B268D40B21195B06001D7BF1 /* LoginViewController.swift in Sources */,
@@ -733,24 +834,33 @@
 				B2D667C021861F4A00CF8428 /* ATCClassicWalkthroughViewController.swift in Sources */,
 				B2D035A3218A850F00F79DBF /* CatalogTableViewCell.swift in Sources */,
 				B2D035A5218A89C600F79DBF /* DeviceKit.swift in Sources */,
+				B2DB0A502193A00900BC07AF /* AlgorithmiaSimpleAuth.swift in Sources */,
 				B2D667B721861F3D00CF8428 /* UIImage.swift in Sources */,
 				B2BA44D520EB9FD1009437A7 /* AppDelegate.swift in Sources */,
 				B24B268A212C51DD00D316F5 /* OtherViewController.swift in Sources */,
+				B2DB0A532193A00900BC07AF /* AlgoResponse.swift in Sources */,
 				B2E97A25211B2B4C0005BEA9 /* AdminViewController.swift in Sources */,
+				B2DB0A432193A00900BC07AF /* Algorithmia.swift in Sources */,
 				B2045DED212A7DD900272036 /* Dictionary_Initializers.swift in Sources */,
 				B26C0F0A21196ACB00750545 /* Functions.swift in Sources */,
+				B2DB0A512193A00900BC07AF /* AlgoRequest.swift in Sources */,
 				B2E5B43E212ADCD800CF904E /* ErrorTableViewCell.swift in Sources */,
 				B2D035A1218A700500F79DBF /* CatalogDetailTableViewController.swift in Sources */,
+				B2DB0A4F2193A00900BC07AF /* AlgorithmiaAuth.swift in Sources */,
 				B2074B8D2162E22200F5C229 /* TermDates.swift in Sources */,
+				B2DB0A4E2193A00900BC07AF /* AlgoResponseData.swift in Sources */,
 				B2045D8C2129818800272036 /* MessagesTableViewCell.swift in Sources */,
 				B2F35212215C5B3300E0F436 /* ClagettViewController.swift in Sources */,
 				B2E5B43C212AD52900CF904E /* MessageInfoViewController.swift in Sources */,
 				B283965A2161A7A200034DA4 /* UIViewExtensions.swift in Sources */,
 				B2D667C321861FBF00CF8428 /* ATCWalkthroughModel.swift in Sources */,
+				B2DB0A452193A00900BC07AF /* AlgorithmRef.swift in Sources */,
 				B2045DE9212A7DD900272036 /* LocksmithError.swift in Sources */,
 				B2395B502159A67F006B7F0A /* CatalogResources.swift in Sources */,
+				B2DB0A4B2193A00900BC07AF /* AlgoDataDirectory.swift in Sources */,
 				B2E97A23211AFFF70005BEA9 /* ForgotViewController.swift in Sources */,
 				B2045DEA212A7DD900272036 /* Locksmith.swift in Sources */,
+				B2DB0A4A2193A00900BC07AF /* AlgoDataObject.swift in Sources */,
 				B2045D8A21297F7000272036 /* GlobalVariable.swift in Sources */,
 				B2045DEB212A7DD900272036 /* LocksmithInternetProtocol.swift in Sources */,
 			);

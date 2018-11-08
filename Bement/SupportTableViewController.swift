@@ -77,7 +77,7 @@ class SupportTableViewController: UITableViewController {
     }
     
     func makeAPhoneCall()  {
-        let url: NSURL = URL(string: "TEL://4137735967")! as NSURL
+        let url: NSURL = URL(string: "TEL://4137687218")! as NSURL
         UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
     }
 }

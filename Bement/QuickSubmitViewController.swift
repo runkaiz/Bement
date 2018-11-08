@@ -84,9 +84,20 @@ class QuickSubmitViewController: UIViewController, UITextViewDelegate, UITextFie
                 loadingIndicator.hidesWhenStopped = true
                 loadingIndicator.style = UIActivityIndicatorView.Style.gray
                 loadingIndicator.startAnimating();
+                
+                DispatchQueue.main.async {
+                    alert.view.addSubview(loadingIndicator)
+                    self.present(alert, animated: true, completion: nil)
+                }
+                
+                let input = "[" + "\"" + messageField.text + "\"" +  "]"
+                
+                let client = Algorithmia.client(simpleKey: "simUU2Suq089OuJAHIqumIUPNoR1")
+                
+                let algo = client.algo(algoUri: "nlp/ProfanityDetection/1.0.0")
+                algo.pipe(rawJson: input) { resp, error in
                     
-                alert.view.addSubview(loadingIndicator)
-                self.present(alert, animated: true, completion: nil)
+                }
                 //获取当前时间
                 let now = Date()
                     
@@ -106,35 +117,38 @@ class QuickSubmitViewController: UIViewController, UITextViewDelegate, UITextFie
                 
                 publicDatabase.save(messageRecord) {
                     (record, error) in
-                    if let error = error {
+                    if error != nil {
                         
                         let string = String(describing: error)
                         
                         if string != "" {
-                            self.uploadError(error)
+                            self.uploadError(error!)
                             
                             let alert = UIAlertController(title: "oh no...", message: "An error appeared", preferredStyle: .alert)
                             
                             let dismiss = UIAlertAction(title: "Come on", style: .cancel, handler: nil)
                             alert.addAction(dismiss)
                             
-                            self.present(alert, animated: true, completion: nil)
+                            DispatchQueue.main.async {
+                                self.present(alert, animated: true, completion: nil)
+                            }
                         }
                         
                         return
-                    }
+                    } else {
                     
-                    DispatchQueue.main.async {
-                        let alert = UIAlertController(title: "Successful", message: "Successfully uploaded your messages", preferredStyle: .alert)
+                        DispatchQueue.main.async {
+                            self.dismiss(animated: true, completion: nil)
+                        }
                         
-                        let dismiss = UIAlertAction(title: "Hurray!", style: .cancel, handler: { action in
-                            self.performSegue(withIdentifier: "backToLogin", sender: self)
-                        })
-                        
-                        alert.addAction(dismiss)
-                        
-                        self.dismiss(animated: true, completion: nil)
-                        self.present(alert, animated: true, completion: nil)
+                        DispatchQueue.main.async {
+                            let alertSuccess = UIAlertController(title: "Successful", message: "Successfully uploaded your messages", preferredStyle: .alert)
+                            let dismiss = UIAlertAction(title: "Hurray!", style: .cancel, handler: { action in
+                                self.performSegue(withIdentifier: "backToLogin", sender: self)
+                            })
+                            alertSuccess.addAction(dismiss)
+                            self.present(alertSuccess, animated: true, completion: nil)
+                        }
                     }
                 }
             }
