@@ -1,4 +1,5 @@
 # The Bement Parent Portal
+[![BCH compliance](https://bettercodehub.com/edge/badge/1105420698/Bement?branch=master)](https://bettercodehub.com/)
 
 ## What is it?
 It is an app that helps parents at Bement to get access to their account and view term papers in a faster and easier way. 
